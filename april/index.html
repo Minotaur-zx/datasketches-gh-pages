@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='shortcut icon' href='../img/favicon.ico' type='image/x-icon'/ >
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Data Sketches</title>
+    <meta name="author" content="Nadieh Bremer">
+    <meta name="description" content="Data Sketches - April - Community">
+    <meta name="keywords" content="data, visualization, visualisation, data visualization, data visualisation, information, information visualization, information visualisation, dataviz, datavis, infoviz, infovis, collaboration, data art">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Tinos:400,400i|Sacramento|Quicksand|Playfair+Display:400i" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Moment -->
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+
+	  <!-- fancyBox -->
+	  <link rel="stylesheet" href="../plugins/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	  <script type="text/javascript" src="../plugins/fancybox/jquery.fancybox.pack.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+  <header>
+    <!-- Logo and name -->
+    <div>
+      <a class="hide-mobile peach kingBasil no-border" href="../march"><div class="top-links other-month-link textRight">go to March</div></a>
+      <div class="month-logo"><a class="no-border" href=".."><img class="paddingTop20" src="../img/logo.png" width="120" /></a></div>
+      <a class="hide-mobile peach kingBasil no-border" href="../may"><div class="top-links other-month-link textLeft">go to May</div></a>
+    </div>
+    <div>
+      <a class="quicksand no-border" href=".."><div class="top-links datasketch-top-link"><span class="dark-grey">data sketch<span class="dark-pink">|</span>es</span></div></a>
+    </div>
+
+    <!-- Title above -->
+    <div class="row">
+      <div class="col-xs-12 month-page-title">
+        <h2 class="kingBasil peach">April</h2>
+        <h1 class="quicksand">Community</h1>
+      </div>
+    </div>
+  </header>
+
+    <section id="april" class="month-page">
+      <div class="nadieh background col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+      <div class="shirley background col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+
+      <div class="container">
+        <!-- Write-ups -->
+        <div class="row">
+          <!-- Nadieh -->
+          <div class="col-xs-12 col-md-6 write-up">
+            <div class="nadieh">
+              <div class="name paddingBelow kingBasil">Nadieh</div>
+              <div class="time kingBasil"></div>
+              <div class="location quicksand">amsterdam</div>
+
+  			        <a href="code/nadieh"><img src="code/nadieh/img/breather_earth_header.jpg" class="img-responsive img-month-top" alt="A Breathing Earth"></a>
+
+                <h3 class="margin-top-10">week 1 <span class="light-grey">|</span> data</h3>
+
+                <p>I was reading the quarterly magazine of the Dutch branch of the <a href="https://www.worldwildlife.org/">World Wildlife Fund</a> (WWF), which I get for being a donor. Suddenly I wanted to make a visualization that related to something the WWF might do. I "pitched" the idea to Shirley and we went back and forth a bit on what general topic would work for both of us. And then Shirley found her angle, the data visualization survey that had just come out, which gave us our topic of "community".</p>
+
+                <p>At the start of April I asked twitter for help on datasets that one might associate with the WWF and got a whole lot of links (thank you very much dear followers!). However, due to being in the US the entire month, doing conferences & meet-ups and creating the presentation that Shirley and I gave at <a href="https://openvisconf.com/" target="_new">OpenVisConf</a> in Boston on April 24th (which was another amazing conference!), I didn't get to do anything with the links until I was waiting at the gate of my flight home to Amsterdam on April 26th.</p>
+
+                <p>I received a lot of tracking data links, either animal or buoy in the water. But I noticed that the search functionalities of these data repositories is aimed at researchers. I could search datasets based on the id of a paper or name of a scientist. But I couldn't request all tracking data of, say, whales... Another type of dataset that was very prevalent were the choropleths, filled regions on a map, representing things such as protected areas, or animal habitations zones.</p>
+
+                <p>I started to meander through the links, going down the "Earth" related datasets, and I don't know how I got there, but at some point I found myself on the website of <a href="https://www.star.nesdis.noaa.gov/smcd/emb/vci/VH/index.php" target="_new">NOAA STAR</a>, the Center for satellite applications and research. Again, just clicking around, and then I came across an image of the Earth, colored by vegetation health. STAR calls it "No noise (smoothed) Normalized Difference Vegetation Index (SMN)" or "Greenness" for short :). This is what STAR had to say about the data: "[Greenness] can be used to estimate the start and senescence of vegetation, start of the growing season, phenological phases. For areas without vegetation (desert, high mountains, etc.), the displayed values characterize surface conditions."</p>
+                <a class="fancybox" href="data/nadieh/img/STAR_vegetation_health.png"> <img src="data/nadieh/img/STAR_vegetation_health.png" class="img-responsive img-month" alt="STAR map showing vegetation health for week 1 of January 2016"></a>
+
+                <p>And they had a map like this for every week in the year of 2016. There was also an option that showed all the maps in a very rough animation (as in, going through 52 images within a minute or two). Even though the animation was crude, and the color palette, well, not optimal, I really liked seeing the changes of vegetation health throughout the year. I wanted to visualize the same thing, but do it in my own style. To show a continuously "breathing Earth".</p>
+
+                <p>Furthermore, after seeing what <a href="https://twitter.com/dominikus" target="_new">Dominikus Baur</a> did with the <a href="https://github.com/pixijs/pixi.js" target="_new">Pixi.JS library</a>, while we were both presenting at the INCH conference last March, I knew I wanted to try it out as well. I just needed a project where I had to visualize <i>a lot</i> of points. And this idea seemed like the perfect opportunity to give Pixi a try, since there are often thousands if not millions of "pixels" in an image.</p>
+
+                <p>I was very happy to see that STAR also <a href="https://www.star.nesdis.noaa.gov/smcd/emb/vci/VH/vh_ftp.php">shared the data</a> behind the images. However, I had never worked with these levels of sophisticated geo-data before; hdf and GeoTiff files. Thankfully, I had just seen the wonderful presentation of <a href="https://twitter.com/rsimmon" target="_new">Rob Simmon</a> on GDAL (the Geospatial Data Abstraction Library) at OpenVisConf. And according to Google, GDAL should be able to open these kinds of files. I followed the quick and hassle free installation steps as outlined in <a href="https://medium.com/planet-stories/a-gentle-introduction-to-gdal-part-1-a3253eb96082" target="_new">Rob's blog</a>. However, instead of trying to parse the files in the command-line, which Rob's talk was about, I took to Google again to see if there was an R package instead. And of course there was! The appropriately named <a href="https://cran.r-project.org/web/packages/rgdal/index.html" target="_new">rgdal</a>.</p>
+
+                <p>After also getting rgdal to work (you can read my steps <a href="https://github.com/nbremer/datasketches/blob/gh-pages/april/data/nadieh/Prepare%20VIIRS%20files.R" target="_new">at the top of this R file preparing the data</a>), my next few hours were filled with understanding how to read in a GeoTiff file, what it contained, how I could play with it and finally how I could map it (& how to switch map projections!). These blogs really helped to understand the different aspects of working with the data: <a href="http://neondataskills.org/R/Raster-Data-In-R/" target="_new">1</a>, <a href="http://neondataskills.org/GIS-spatial-data/Working-With-Rasters/" target="_new">2</a> and <a href="http://neondataskills.org/R/crop-extract-raster-data-R/" target="_new">3</a> all from the wonderful website of <a href="http://neondataskills.org/R-package/raster/" target="_new">neon data skills</a>. My first goal was to recreate one of the images from the STAR website, so  I knew I had done and understood the steps. It took about 6-8 hours, but I have to admit, even with the sub-optimal color palette, I think the image below is just amazing in its detailed nature (just check out the bigger version by clicking on the image below).</p>
+                <a class="fancybox" href="data/nadieh/img/worldMap_in_R.png"> <img src="data/nadieh/img/worldMap_in_R.jpg" class="img-responsive img-month" alt="Recreated map in R"></a>
+
+                <p>Great, but these images were about 22 million pixels/datapoints, per week! There was no way I could load that amount of data into the browser, and do that 52 times. I therefore had to create lower resolution files. I did some tests and eventually reducing the resolution to about 50 000 (non-water representing) pixels looked like a good middle ground. Small enough for the browser to handle/read, but high enough to still see interesting details.</p>
+
+                <p>As a note to somebody who I had this particular talk with: Yes, I could've made many highly detailed images and then turned these into a mp4 movie. Maybe that would've given the smallest file size with the highest resolution. But! That wasn't my goal this month! I wanted to learn something completely new; WebGL (or libraries build on top of WebGL) and this seemed like a good, but interesting starting project. Therefore, out of a purist approach, I wanted the eventual visualization to consist of <i>actual numeric data</i> read in and then made visual as thousands of small circles.</p>
+
+                <p>My next challenge was to think of a way to save the data in the smallest file(s) possible. Even 52 weeks of 50.000 datapoints each week is going to take a several megabytes. During my time trying to understand the file & data I noticed that > 90% of the weeks contained exactly the same number of datapoints. After some more investigation I saw that the x and y locations of these points were exactly the same. The first four weeks in the year had missing data, but they didn't contain any x-y locations that weren't in the other 48 weeks. I therefore made a separate file containing the x and y variable, and 52 separate files only containing 1 variable; the level of vegetation health. The row number would then connect the vegetation health value to the correct x and y location on the map (you can find all the data <a href="https://github.com/nbremer/datasketches/tree/gh-pages/april/data/nadieh" target="_new">here</a>). This made the file size of 1 week (i.e. 50.000 values) about 250 kB (I also checked out gzip'ing the files, but I couldn't find a way to then unzip them in the browser. Sad, because the files were reduced to only 35 kB)</p>
+
+                <h3>week 2 <span class="light-grey">|</span> sketch</h3>
+
+                <p>Sketching was super simple this month, since my idea was very simple. I wanted to turn the image/pixel based data about vegetation health into thousands of circles. And these circles would animate through the 52 weeks of data, giving the idea of pulsation; getting bigger and darker, although more transparent, when more healthy and smaller, more yellow for low values. And it was just going to be these circles, no other types of mapping "markers" such as country borders, our Earth is beautiful in itself :) I really had to do the more <i>design</i> based aspects (colors, sizes, etc.) with all of the actual data on my screen, so I didn't even brainstorm about more details during the sketch. Instead, most of the page below is filled with ideas on how to create the final datasets. How to make the files as small as possible (in the end I created even more minimal versions that I jotted down in the bottom right section of the left page).</p>
+                <a class="fancybox" href="sketch/nadieh/sketch_breathing_earth_small.jpeg"> <img src="sketch/nadieh/sketch_breathing_earth_small.jpeg" class="img-responsive img-month" alt="The only sketches made for the project"></a>
+
+                <h3>week 3 & 4 <span class="light-grey">|</span> code</h3>
+
+                <p>I started out getting the data on the screen with HTML5 canvas. I knew that d3's standard approach of SVGs was definitely going to fail here, since I also wanted to implement transitions. Therefore, I didn't even try SVGs (however, I always use d3 for things such as scales, colors, the stuff to prepare the visual). Thankfully, canvas is quite straightforward, having done a few other projects in canvas over the past year (like <a href="../february/code/nadieh" target="_new">February's Marble Butterflies</a>). And I only wanted to plot circles at certain locations, so I got that working for 1 map/week's worth of data quite easily. Below are some steps in the process; first just the circles in the right location (all having the same size and color, but differing opacity); adding colors; adding a multiply blend mode and different circle sizes.</p>
+                <a class="fancybox" href="code/nadieh/img/canvas_steps.png"> <img src="code/nadieh/img/canvas_steps.png" class="img-responsive img-month" alt="Three steps showing the creation of the map in canvas"></a>
+
+                <p>I then made a simple interval function that would switch between the 52 maps as fast as it could. So not even animating the whole. And as expected, that took about 2-3 seconds per map. Definitely not a "frame rate" that I could use for natural looking animations.</p>
+
+                <p>Therefore, I dove into Pixi. I opened up a whole bunch of examples, especially those that I could find on <a href="http://blockbuilder.org/search#text=pixi" target="_new">blockbuilder.org</a>, combining d3 with Pixi, like <a href="http://blockbuilder.org/iros/36a18c646f3b3b5b9001ad758bfd8a08" target="_new">this one</a> by <a href="https://twitter.com/ireneros?lang=en" target="_new">Irene Ros</a>. I started out using PIXI.Graphics, but let me spare you any more details of the code, in short, it was surprisingly easy to pick up (especially compared to regl and WebGL that I went into later o_O). However, there were some weird pixel rounding "things" going on...</p>
+                <a class="fancybox" href="code/nadieh/img/pixi_graphics.png"> <img src="code/nadieh/img/pixi_graphics_small.png" class="img-responsive img-month" alt="Strange effects in plotting circles with Pixi"></a>
+                <p>And it was slow...</p>
+
+                <p>I couldn't really find a solution to making Pixi faster for my specific case through Google, so I did the next best thing; I asked it on Twitter</p>
+                <a class="fancybox" href="code/nadieh/img/twitter_question.png"> <img src="code/nadieh/img/twitter_question.png" class="img-responsive img-month" alt="Asking my question on twitter"></a>
+
+                <p>And damn, I was so amazed by all of the people providing ideas! Even when I explained more, or asked more, practically all would reply and even share some sandbox examples 😀 - I had several conversations going on, some of them focusing on using regl or ThreeJS, but I also got some interesting ideas on Pixi. For example, I learned that to get the fastest performance with Pixi (even when it uses WebGL) you have to use something called "Sprites". You can sort of see this as small "images". <a href="http://www.goodboydigital.com/pixijs/bunnymark/" target="_new">This example</a> with bunnies shows it quite well, you can have hundreds of thousands of the same 5 "bunny" images bouncing around. Or <a href="http://www.goodboydigital.com/pixijs/examples/5/" target="_new">this example</a> with the same green square png moving around. But I didn't have images, I had thousands of slightly different circles. But then I got the following tweet from <a href="https://twitter.com/mattdesl" target="_new">Matt DesLauriers</a></p>
+                <a class="fancybox" href="code/nadieh/img/twitter_pixi_png_idea.png"> <img src="code/nadieh/img/twitter_pixi_png_idea.png" class="img-responsive img-month" alt="The idea to use a white circle png in Pixi"></a>
+
+                <p>Which I tried and it worked <i>and</i> it seemed fast enough! However, when you looked closely the circles weren't very circular. They looked rather pixelated, bummer...</p>
+                <a class="fancybox" href="code/nadieh/img/pixi_not_circles.png"> <img src="code/nadieh/img/pixi_not_circles_small.png" class="img-responsive img-month" alt="Pixelated circles with Pixi Sprites"></a>
+
+                <p>And that's when I decided to give <a href="https://github.com/regl-project/regl" target="_new">regl</a> a try. I saw a very inspiring presentation by <a href="https://github.com/mikolalysenko" target="_new">Mikola Lysenko</a> at OpenVisConf featuring bouncing bunnies. And then when <a href="https://twitter.com/pbesh" target="_new">Peter Beshai</a> uploaded <a href="https://bl.ocks.org/pbeshai/51d05995c5410a52116f89738144c622" target="_new">this block that animates 100.000 points with regl</a> (which is also mesmerizing to look at) I knew it was enough to get started with. A bit later <a href="https://twitter.com/rickyreusser" target="_new">Ricky Reusser</a> send me <a href="http://rickyreusser.com/smoothly-animating-points-with-regl/" target="_new">the same demo</a>, but coded slightly different, for those interested.</p>
+
+                <p>At first I hoped to get the hang of regl by going through the above (and other) examples. But after an hour or so I acknowledged the fact that I really didn't understand <i>anything</i> yet and that I had to read some introductions to WebGL, GLSL and shaders, hehe 😅 - It took a while, but my brain slowly started to wrap it's head around the concepts of shaders, fragments, vertices, attributes, uniforms and varyings (some sites that helped me <a href="https://www.html5rocks.com/en/tutorials/three/intro/" target="_new">1</a>, <a href="https://www.html5rocks.com/en/tutorials/webgl/shaders/" target="_new">2</a>, <a href="https://github.com/Jam3/jam3-lesson-webgl-shader-intro" target="_new">3</a>, <a href="https://github.com/Jam3/jam3-lesson-webgl-shader-threejs" target="_new">4</a> and of course the <a href="https://thebookofshaders.com/" target="_new">Book of Shaders</a> (although I only skimmed through the first 2 chapters)).</p>
+
+                <p>I started out with this very simple <a href="https://bl.ocks.org/1wheel/e025cbd91ac499d360a8b3346cb6f9e7" target="_new">example block</a> by <a href="https://twitter.com/adamrpearce" target="_new">Adam Pearce</a> which creates a triangle. I then slowly starting adjusting it, relying heavily on Peter Beshai's block, to show circles on a map. Some things could stump me for quite some time, like opacity not acting like I expected (lower left image)...</p>
+                <a class="fancybox" href="code/nadieh/img/regl_steps_simple_map.png"> <img src="code/nadieh/img/regl_steps_simple_map_small.png" class="img-responsive img-month" alt="Several steps of getting the map working in regl"></a>
+
+                <p>It wasn't only Pixi that had it's difficulties in placing the circles on the map without strange effects. I got the below interesting circular-ish pattern in regl at some point. I eventually fixed the whole issue by making sure the size of the map would be an exact multiple of the number of points in both the horizontal and vertical direction.</p>
+                <a class="fancybox" href="code/nadieh/img/regl_pixel_rounding.png"> <img src="code/nadieh/img/regl_pixel_rounding_small.jpg" class="img-responsive img-month" alt="Strange effects in regl"></a>
+
+                <p>Well, it took <i>a lot</i> of browsing through example code, but eventually I had a map in regl with circles and opacities (although no "multiply" blending going on, I didn't yet know how to get that working). But again, if I zoomed in, I saw the same pixelated effect, AARGH! And here I was really hoping that regl would not have the same issue as Pixi... I did notice that it was a bit faster in rendering than Pixi though.</p>
+                <a class="fancybox" href="code/nadieh/img/regl_pixelated.png"> <img src="code/nadieh/img/regl_pixelated_small.png" class="img-responsive img-month" alt="Regl map still pixelated"></a>
+
+                <p>While trying to find info on getting anti-aliased circles in regl I came across a snippet that showed that Pixi actually has an "anti alias" setting! And not long before, <a href="https://twitter.com/ajdant" target="_new">Alastair Dant</a> made <a href="https://bl.ocks.org/rflow/55bc49a1b8f36df1e369124c53509bb9" target="_new">this animated Pixi example</a> that I tested with 50.000 circles which still seemed to work smoothly. These two interesting avenues to explore brought me back to my Pixi based map.</p>
+
+                <p>Btw, at some point during the data preparation I made a big change in how I saved the final files. However, I made an error, which gave the result below where the locations are randomly shuffled, oops... Not such an interesting map anymore 😅</p>
+                <a class="fancybox" href="code/nadieh/img/pixi_map_random_ordering.png"> <img src="code/nadieh/img/pixi_map_random_ordering_small.jpg" class="img-responsive img-month" alt="Accidental random ordering of the pixel locations"></a>
+
+                <p>Another hour or two of work adjusting the example by Alastair to my data, playing with some anti-aliasing things and I was finally looking at a smoothly changing map, YAY!</p>
+                <video class="img-responsive img-month" src="code/nadieh/img/pixi_smoothly_changing_circles.mp4" autoplay loop></video>
+
+                <p>After I got Pixi working I started another Twitter request to help me with the anti-aliasing and "multiply" blend mode in regl (because I had noticed before that regl was faster than Pixi, so I wanted to give it another try). It wasn't long before <a href="https://twitter.com/tafsiri" target="_new">Yannick Assogba</a> send <a href="https://bl.ocks.org/tafsiri/dba04b04ae949760f96f97a2fba23ba6" target="_new">a block that was a remix on Peter Beshai's version</a>, but then with circles instead of squares. And Alastair helped out again by making a block that animated <a href="http://bl.ocks.org/rflow/39692bd181fb1eb0b077a4caf886b077" target="_new">a lot of circles using ReGL</a> with anti-aliasing (looking amazing btw!). And a day before <a href="https://twitter.com/monfera" target="_new">Robert Monfera</a> had send a block showing how to <a href="http://bl.ocks.org/monfera/85aa9627de1ae521d3ac5b26c9cd1c49" target="_new">transition between anti-aliased shapes in regl</a>. These examples increased my understanding of how to tackle the anti-aliasing, which eventually led me to <a href="http://www.numb3r23.net/2015/08/17/using-fwidth-for-distance-based-anti-aliasing" target="_new">this blog</a> that worked perfectly in my map. Look at those nice circles (even after zooming in):</p>
+                <a class="fancybox" href="code/nadieh/img/regl_antialiased.png"> <img src="code/nadieh/img/regl_antialiased_small.jpg" class="img-responsive img-month" alt="Smooth anti-aliased circles in regl"></a>
+
+                <p>Check! That only left the "multiply" blending that was missing from the the regl version. But that turned out to be one step too far. After a Twitter DM chat with Robert Monfera I had a collection of websites about WebGL blending functions, premultiplied alpha (don't ask...) and some Pixi source code files (Pixi was able to do "multiply" in WebGL, so maybe I could find a <a href="https://github.com/pixijs/pixi.js/blob/58ccf3381566c009c418aa305924539f372281f3/src/core/renderers/webgl/utils/mapWebGLBlendModesToPixi.js#L19" target="_new">clue</a> there). I was very surprised that I could not find a single example of a multiply blend in WebGL through Google (where the multiply was based on many elements overlapping, not just two predefined images). And I guess I shouldn't be surprised that I couldn't figure it out either, having only started learning about shaders 2 days before, hehe. I did get a lot of interesting other color combinations... Well, actually I did get one result where multiply was working (top right image), but I could not combine that with opacity/circle shapes (which, more than 2 days ago, I would've thought was weird, "opacity is separate from color right?"... well no, not quite in WebGL I've since learned). For those interested, these sites really helped me to understand the different blending functions: <a href="http://mrdoob.github.io/webgl-blendfunctions/blendfunc.html" target="_new">1</a>, <a href="http://mrdoob.github.io/webgl-blendfunctions/blendfuncseparate.html" target="_new">2</a>, and a blending <a href="http://bl.ocks.org/rflow/7b6e060f6f26f3006299f73976b480e5" target="_new">example by Alistair</a>.</p>
+                <a class="fancybox" href="code/nadieh/img/regl_blending_errors.png"> <img src="code/nadieh/img/regl_blending_errors_small.png" class="img-responsive img-month" alt="Different errors in trying to create a multiply blending"></a>
+
+                <p>At some point the creator of regl, <a href="https://twitter.com/MikolaLysenko" target="_new">Mikola Lysenko</a>, even started helping me, which was awesome, but we didn't manage to replicate the results that canvas & Pixi were showing 😖 - Eventually I had spend enough time experimenting with the blending. I therefore decided to leave it without any blending. The Pixi version was therefore going to be my "main" project site. However, since I had the regl version animating perfectly fine I decided to clean up the page; better color palette, adding titles and such, and link to it from the eventual main page. That way people can compare the different tool-based versions 🙂</p>
+                <a class="fancybox" href="code/nadieh/img/regl_final_result.png"> <img src="code/nadieh/img/regl_final_result.jpg" class="img-responsive img-month" alt="Final result with regl"></a>
+
+                <p>May 20th UPDATE | Apparently Ricky Reusser hadn't given up the "multiply" fight yet, and about a week after I published "A Breathing Earth" he tweeted <a href="http://codepen.io/rsreusser/pen/YVRXzy?editors=0010" target="_new">a regl demo</a> that had both multiply and opacity working (below is what I turned the demo into so I could compare it to, say, Illustrator). How amazing is that! So now I can say that all 3 versions are exactly the same ^_^ and regl is definitely the fastest. I even had to "slow" it down a bit otherwise it would just whoosh through a year in no time.</p>
+                <a class="fancybox" href="code/nadieh/img/regl_multiply_and_opacity.png"> <img src="code/nadieh/img/regl_multiply_and_opacity.png" class="img-responsive img-month" alt="Adjusted version of Ricky Reussers example that shows that multiply is working"></a>
+
+                <p>I had learned many things while going through all the wonderful examples people had send me. I therefore returned to the canvas version to see if I could make it faster. After a bit of messing around, I managed to get it to switch between maps every second, but that is still too slow for a smooth animation (nonetheless, I also cleaned up the canvas version and added it to the main page for comparison).</p>
+
+                <p>Btw, another new thing I implemented this month was <a href="https://breathejs.org/Using-Breathe.html" target="_new">breathe.js</a>. I heard about it when attending the d3.bayArea meetup last April. I noticed that the final map preparation loop was freezing up the browser for ±10 seconds. And with some very minor changes using breathe.js that wasn't happening anymore, without it seeming to take longer to prepare the data 😀</p>
+
+                <p>Eventually I added a bit more text to <a href="code/nadieh" target="_new">the main final version</a> (and a legend), keeping it very minimal so the focus is on the map. And quick links to the minimal versions that use <a href="code/nadieh/canvas" target="_new">canvas</a>, <a href="code/nadieh/pixi" target="_new">Pixi</a> and <a href="code/nadieh/regl" target="_new">regl</a>. For those interested, I've been timing myself since January, and this month took me 57 hours to complete (from ideation, data, sketching and coding (3x, once for each "tool")), of which I'm guessing the regl "multiply" stuff took at least 10 hours...</p>
+                <a href="code/nadieh"><img src="code/nadieh/img/breathing_earth_final_result.png" class="img-responsive img-month" alt="Final result of the 'Breathing Earth' visual"></a>
+
+                <p>Having chosen the regl library to work with WebGL I decided not to go into ThreeJS as well. It was just too much to handle in one week, so many new programming libraries, hehe. Nonetheless, I still want to share these 3 examples that show the concept of changing circles that I received through Twitter: <a href="https://bl.ocks.org/robinhouston/4b736b08f369a94c419098a72e11c47b" target="_new">a block with 50.000 circles animated with WebGL</a> custom made by <a href="https://twitter.com/robinhouston" target="_new">Robin Houston</a> and two codepens with 50.000 animated circles, one using <a href="http://codepen.io/mattdesl/pen/YVENeL" target="_new">circle "pentagons" in ThreeJS</a> and another version using <a href="http://codepen.io/mattdesl/pen/LyOxqd" target="_new">DataTextures in ThreeJS</a> both custom made by <a href="https://twitter.com/mattdesl" target="_new">Matt DesLauriers</a>.</p>
+
+                <p>This was a <i>very</i> technical "month" for me. Sure, the visual in itself isn't so <i>out of the box</i> as the typical month, it's been done before in different ways, but as I often tell others, you can't expect to create wonderful, crazy new things when you're just starting out with a tool. Instead, I haven't learned so many new (coding) languages/libraries within a week, since, well, maybe ever. And I couldn't have done it without the help of a lot of people. I would specifically like to thank Robert Monfera, Alastair Dant, Ricky Reusser, Matt DesLauriers, Peter Beshai, Mikola Lysenko, Yannick Assogba, Robin Houston, Amelia Bellamy-Royds, Jan Willem Tulp, Mike Brondbjerg, Paul Murray, and Mathieu Henri who have all helped me in different areas of either Pixi, regl, ThreeJS and more. I don't think I would've been able to get my map(s) working without the ideas and examples they shared. THANK YOU!</p>
+
+            </div>
+          </div>
+
+          <!-- Shirley -->
+          <div class="col-xs-12 col-md-6 write-up">
+            <div class="shirley">
+              <div class="name paddingBelow kingBasil">Shirley</div>
+              <div class="time kingBasil"></div>
+              <div class="location quicksand">san francisco</div>
+
+              <a href="https://medium.com/visualizing-the-field/655-frustrations-doing-data-visualization-e1087c8176fc" target='_new'><img src="code/shirley/header.png" class="img-responsive img-month-top" alt=""></a>
+
+              <p>
+                Hi, let me start with some context: Nadieh and I originally came up with the topic back in March 2017, because the first ever <a href='https://medium.com/@Elijah_Meeks/2017-data-visualization-survey-results-40688830b9f2' target='_new'>data visualization community survey</a> had come out (there's been two more since), and I wanted to do something with the results.  I started on the project right after <a href='http://www.openvisconf.com/2017/' target='_new'>OpenVis Conf</a> in Boston (where Nadieh and I both got to present about data sketches!), and it took until late September to complete the visualization and accompanying blog post.  And honestly it really only took that long because I'm really slow and abhor writing, and then afterwards I was so done with writing about the project that I put off the process write-up until now...June 2019.
+              </p>
+
+              <p>
+                It's been quite a while since I've worked on the project (and a lot has happened since), so I'm going to try my best to remember what I did and what my motivations were.  I feel like I'm playing detective, all I have to go off of are a bunch of screenshots, github commits, and sketchbook entries and I just have to piece it all together.
+              </p>
+
+              <p>
+                So here I go~
+              </p>
+
+              <h3 class="margin-top-10">week 1 <span class="light-grey">|</span> data</h3>
+
+              <p>
+                This was probably one of the best months for data: the survey had already happened, and <a href='http://twitter.com/Elijah_Meeks' target='_new'>Elijah</a> (who had instigated the survey) had already been so awesome as to clean all the survey responses.  It had <a href='https://github.com/data-visualization-society/data_visualization_survey/blob/master/data/questions_2017.txt' target='_new'>45 questions</a> and 981 responses, all in a nicely formatted - and let me repeat, CLEANED UP - CSV file.
+              </p>
+
+              <p>
+                Honestly, I don't think I've ever had it easier.  That's probably why I wanted to do the project in the first place 😜
+              </p>
+
+              <p>
+                So with my data collecting and cleaning already done for me (hehe), I went on to explore the data.  The very first thing I did to try and understand my data was to list out all the questions I found interesting/relevant:
+                <a class="fancybox" href="sketch/shirley/analyze_questions.jpg"> <img src="sketch/shirley/analyze_questions.jpg" class="img-responsive img-month"></a>
+                Since the premise of the survey was Elijah's claim that dataviz practitioners were leaving because of the current state of the industry, my primary question was: why might people leave the field?  But because there's no direct way to measure that with the survey responses, I decided to go with a proxy: "Do you want to spend more time or less time visualizing data in the future?"  I then organized the relevant questions into categories: how they got to their dataviz jobs, the aspects of their role that might affect their job satisfaction, and finally, their frustrations.
+              </p>
+
+              <p>
+                One of the talks at Openvis Conf had been about <a href='https://vega.github.io/vega-lite/examples/' target='_new'>Vega-Lite</a>, a charting library for quickly composing interactive graphics, and I decided to give it a try for my data exploration.  Below is a set of histograms, and each of them answer the question "Percent of your day focused on X":
+                <a class="fancybox" href="data/shirley/percenttime.jpg"> <img src="data/shirley/percenttime.jpg" class="img-responsive img-month"></a>
+                Which taught me that most people don't get to focus on any one part of the dataviz creation process, and probably have to juggle and do most or all the parts.  I then tried to put some of the qualitative questions into bar charts:
+                <a class="fancybox" href="data/shirley/qualitative.jpg"> <img src="data/shirley/qualitative.jpg" class="img-responsive img-month"></a>
+                And that taught me not to try visualizing any of the open-ended qualitative questions (because I'm not sure if I got anything useful from those bar charts), but rather to stick to those questions that had quantitative or multiple choice questions.
+              </p>
+
+              <h3>week 2 <span class="light-grey">|</span> sketch</h3>
+
+              <p>
+                When thinking about why people might want to leave the field, the very first question I had was: are there any correlations between how much of their day is spent on creating dataviz, and whether they want to more or less of it in the future?
+              </p>
+
+              <p>
+                So I used a stacked bar chart, where the y-positions were the percent of day spent on data visualization, with the top bars being 0-10% and the bottom most being 90-100%.  Colors represent whether they want to do more/less dataviz, with bars to the left of the gap being "much less" or "less", and to the right being "same", "more", or "much more".
+                <a class="fancybox" href="code/shirley/histogram.png"> <img src="code/shirley/histogram.png" class="img-responsive img-month"></a>
+                (<a href='https://bl.ocks.org/sxywu/302940f09387063010b47dbd790be47f' target='_new'>Code</a>)
+              </p>
+
+              <p>
+                But it turned out that majority of the respondents wanted to do the same amount or more dataviz creation - which might actually be more a bias of the survey, since the people filling out the survey would probably want to stay in the field going forward. So I wondered if that would change if I added the other parts of dataviz creation into it (data prep, data engineering, data science, design):
+                <a class="fancybox" href="sketch/shirley/horizontal_histogram.jpg"> <img src="sketch/shirley/horizontal_histogram.jpg" class="img-responsive img-month"></a>
+                I also wondered if I could identify what part of the process people were most frustrated with, by seeing how much of their day was dedicated to that task, and whether they wanted to do more or less of it.  Unfortunately, this is what it looked like with the data in:
+                <a class="fancybox" href="code/shirley/split_histogram.png"> <img src="code/shirley/split_histogram.png" class="img-responsive img-month"></a>
+                It's definitely another case of good intentions, didn't explore the data enough.  Also, I  was only thinking about how to mash those three questions together and wasn't thinking about readability or how easy it'd be to understand (zero sympathy for the end user...who's usually me).
+              </p>
+
+              <p>
+                But the biggest problem with it was that it didn't tell me much because I was showing absolute numbers instead of percentages so I couldn't compare between the bars.  But I also wanted to show the absolute numbers, because I wanted the user to be able to hover over (or brush and filter) and see the individual responses.  And then it occurred to me: beeswarm plots.
+              </p>
+
+              <h3>week 3 & 4 <span class="light-grey">|</span> code</h3>
+
+              <p>
+                For the second iteration, I decided to make the individual responses more obvious by representing them as dots in a beeswarm plot (which has the nice added benefit of being more compact and thus easy to glance through then the weird bar chart I had before).  I also decided to not concentrate on the different dataviz functions, and concentrate on a different question: whether dataviz is a focus of their work.  The dots were split vertically into the answers they gave, with top being "primary", middle being "secondary", and bottom being "one of several".  And instead of using whether the respondent wanted to do more or less dataviz as the proxy (there were too many that answered "more", and not enough with "less" to make it an even split), I decided to use whether they answered with frustrations as proxy instead.  I placed those that answered with frustrations on the left of the split, and those without on the right.  The color was their years of experience doing data visualization, and a filled circle meant that they intended to go into dataviz.
+                <a class="fancybox" href="code/shirley/beeswarm.png"> <img src="code/shirley/beeswarm.png" class="img-responsive img-month"></a>
+                (<a href='https://bl.ocks.org/sxywu/e1f0938ce926562e8fd69b100b03e58c' target='_new'>Code</a>)
+              </p>
+
+              <p>
+                I liked this first prototype, but was bothered by how hard it was to compare those that did or did not answer with a frustration so I put them on top of each other.  I also realized that whether dataviz was their primary focus (or other questions like whether they had dataviz leadership) probably wouldn't have much relation with how many years they had been doing dataviz, so updated the metric to percent of day focused on dataviz and colored by that.  And finally to make it easy to compare across answers - or even whether the respondent had frustrations or not - I added a box-and-whisker plot on top of the beeswarms.
+                <a class="fancybox" href="code/shirley/box_whisker.png"> <img src="code/shirley/box_whisker.png" class="img-responsive img-month"></a>
+                I wasn't quite happy with the look of the box plot, and when I show it to my friend <a href='https://twitter.com/infowetrust' target='_new'>RJ</a>, he immediately had the suggestion of having the box plot in the middle and those without frustrations above and those with below the box plots.  He explained to me the importance of visual metaphors, that those with frustrations should drip down (like they're weighed down) and those without frustrations should rise up.
+                <a class="fancybox" href="sketch/shirley/box_whisker.jpg"> <img src="sketch/shirley/box_whisker.jpg" class="img-responsive img-month"></a>
+                I implemented the split beeswarm by using <a href='https://github.com/d3/d3-force' target='_new'>D3's force layout</a> (and in particular, the <a href='https://github.com/d3/d3-force#positioning' target='_new'>positioning</a> and <a href='https://github.com/d3/d3-force#collision' target='_new'>collision</a> forces) to calculate the position of each dot, but at each tick I make sure the dots don't go past a certain vertical position (<a href='https://bl.ocks.org/mbostock/1129492' target='_new'>bounded force layout</a>):
+                <a class="fancybox" href="code/shirley/split_beeswarm.png"> <img src="code/shirley/split_beeswarm.png" class="img-responsive img-month"></a>
+                Added in the box-plot in the middle (though it took quite a few tweaks to get it to a satisfying point), and I had the visual for this month:
+                <a class="fancybox" href="code/shirley/split+box.png"> <img src="code/shirley/split+box.png" class="img-responsive img-month"></a>
+                After that, I compiled the <a href='https://github.com/sxywu/community/blob/master/src/data/metadata.json' target='_new'>list of relevant questions</a>:
+                <a class="fancybox" href="sketch/shirley/final_questions.jpg"> <img src="sketch/shirley/final_questions.jpg" class="img-responsive img-month"></a>
+                I put two of the visualizations side-by-side, with the ability to change the input questions with a dropdown and filter the responses with a brush.  I used React.js to help me manage all the state changes (though it was definitely a lot easier than when I had to keep track of the filters for Hamilton), and in retrospect, I'd definitely update the box plot on filter too.
+                <a class="fancybox" href="code/shirley/brush.gif"> <img src="code/shirley/brush.gif" class="img-responsive img-month"></a>
+                I wanted to have at least two of the questions visualized at any given time because I wanted to compare between them and see if I could find any correlations.  I knew early on that I'd want to use it for analysis, and to write a blog post with my learnings (I was on the hook to publish something for <a href='http://medium.com/visualizing-the-field' target='_new'>Visualizing, The Field</a> that year).  So with my exploratory tool completed, I went on to look at each question and jot down any interesting things I noticed:
+                <a class="fancybox" href="sketch/shirley/correlations.jpg"> <img src="sketch/shirley/correlations.jpg" class="img-responsive img-month"></a>
+                To try and figure out what might cause people to leave the field, I decided to define a "successful" dataviz role as one that got to spend a large percent of their time on dataviz, with a higher perceived salary.  I used those two metrics, and looked through the answers for what might correlate with "unsuccessful" dataviz roles, and found that those:
+                <ul>
+                  <li>On an embedded team,</li>
+                  <li>Not hired to work on data visualization,</li>
+                  <li>Does data visualization as only one of several tasks, and</li>
+                  <li>Has a subordinate relationship with the stakeholder of their visualization.</li>
+                </ul>
+                correlated the most with lower perceived salaries, and less time on dataviz.  I then filtered by respondents that fell in those categories, and collected all of their frustrations:
+                <a class="fancybox" href="sketch/shirley/frustrations1.jpg"> <img src="sketch/shirley/frustrations1.jpg" class="img-responsive img-month"></a>
+                <a class="fancybox" href="sketch/shirley/frustrations2.jpg"> <img src="sketch/shirley/frustrations2.jpg" class="img-responsive img-month"></a>
+                <a class="fancybox" href="sketch/shirley/frustrations3.jpg"> <img src="sketch/shirley/frustrations3.jpg" class="img-responsive img-month"></a>
+                I tried my best to categorize their frustrations, and with what I learned (most frustrations seemed to fall under two primary categories: those stemming from others in the organization, and those from the technology) I wrote about what we could do to potentially alleviate these frustrations.  The blog post can be found <a href='https://medium.com/visualizing-the-field/655-frustrations-doing-data-visualization-e1087c8176fc' target='_new'>here</a>.
+              </p>
+
+              <p>
+                And this is my final exploratory tool:
+                <a href="http://sxywu.com/community/"><img src="code/shirley/final.jpg" class="img-responsive img-month"></a>
+                Even though I really <em>really</em> abhored all the writing, I'm really happy about the content of my blog post.  And though there are always things I want to improve, I also am satisfied with my final visualization.  I was able to take away two important lessons: to use Vega-Lite or other similar charting libraries to quickly explore the data, and to use visual metaphors to better communicate the nature of the dataset (and more often than not, make the visualization more interesting).  Most importantly, I'm glad of all that I learned analyzing the survey data and writing about the community's frustrations.  It has informed a lot of what I do inside and outside of my  work: to prototype on ideas and designs with my clients while doing my best to educate them on different charts and their uses, to get better on designing effective visualizations, and to create workshops and talks geared towards frontend developers to make D3.js and dataviz more approachable.
+              </p>
+              <!-- <a class="fancybox" href="code/shirley/separate_embedded.png"> <img src="code/shirley/separate_embedded.png" class="img-responsive img-month"></a>
+              <a class="fancybox" href="code/shirley/higher_salary.png"> <img src="code/shirley/higher_salary.png" class="img-responsive img-month"></a>
+              <a class="fancybox" href="code/shirley/lower_salary.png"> <img src="code/shirley/lower_salary.png" class="img-responsive img-month"></a> -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Our names and website below -->
+        <div class="row">
+          <div class="nadieh col-xs-6">
+            <div class="name kingBasil">Nadieh</div>
+            <div class="quicksand"><a href="http://www.visualcinnamon.com/">VisualCinnamon.com</a></div>
+          </div>
+
+          <div class="shirley col-xs-6">
+            <div class="name kingBasil">Shirley</div>
+            <div class="quicksand"><a href="http://sxywu.com/">sxywu.com</a></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="april-guest" class="month-page">
+      <div class="guest background-guest col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+
+      <div class="container guest-container">
+        <!-- Write-up -->
+        <div class="row">
+          <!-- Guest -->
+          <div class="col-xs-12 col-md-12 write-up">
+            <div class="guest">
+			  <div class="guest-introduction quicksand">introducing our guest</div>
+              <div class="name-guest paddingBelow kingBasil">Sonja Kuijpers</div>
+              <div class="time kingBasil"></div>
+              <div class="location quicksand paddingBelow">eindhoven</div>
+
+                <a href="http://www.studioterp.nl/voices-that-care/"><img src="code/guest/Voices that Care, a datavisualization by STUDIO TERP-cover.jpg" class="img-responsive img-month-top" alt="Voices that care"></a>
+
+                <p>
+                  It’s always nice to catch up with Nadieh and since we both live in the Netherlands we meet each other on several occasions such as the Infographics Congress last March where this time she dropped me a question: if I was interested in joining in as a guest on Data Sketches. If I was interested? I responded pretty calm (I think..?) but inside I went ‘hurray’ cause I greatly admire Nadiehs and Shirleys projects and their openness on the processes. Then when the idea of taken part landed I completely freaked for the same reason: I feel so unskilled compared to them doing their code, D3 and all that jazz. It didn’t quite help watching them these last months showing up on different venues, talking on their super-interesting well-designed datavisualizations and the tools they master. Luckily they both ensured me they asked me precisely for the reason I handle my projects differently from them. I come from an design-background; I studied Public Space at the Design Academy and formerly had a career at a landscaping /urban design company. I use other tools and I mainly work manually in Illustrator. Nadieh and Shirley would like to see how I tackle and visualize a dataset my own way, which can be kind of ‘monnikenwerk’ as we say in Dutch.
+                </p>
+
+                <p>
+                  Well. My journey then.
+                </p>
+
+                <h3>week 1 <span class="light-grey">|</span> data</h3>
+
+                <p>
+                  The subject first suggested was Charity. I feel there’s a lot of data out there by many great Charities that could be communicated in great ways but we all got depressed by the subject cause, you know, it almost always considers the amount of people (or animals) dying or going to die of some terrible disease, famine or natural or accidental disaster.
+                </p>
+
+                <p>
+                  To not demoralize our viz-month the subject changed to community but I lingered on the charity subject because I was triggered by my memories of the Eighties. My nostalgia goes way more back than Nadiehs and Shirleys :-). I was becoming a teenager back then and got introduced to popmusic, popculture and idols. There was a vibe those days on community, on artists uniting to make a difference. They came together to record songs for charity. Many of those songs are considered tacky and that’s true in my opinion (all these horrible, horrible covers!) but I do must say I do a pretty well Cyndi Laupers “Well, well, well, let's realize that a change can only come” and always choke up during the chorus of “Do they know it’s Christmas”. (I have my flaws)
+                </p>
+
+                <p>
+                  That same vibe isn’t around any more but I started wondering on the current state of Charity songs: are they still being created and who’s singing them and for what cause?
+                </p>
+
+                <p>
+                  <strong>What’s to find in the data?</strong>
+                </p>
+
+                <p>
+                  I started looking for data considering Songs for Charity. I found several lists including <a href='https://en.wikipedia.org/wiki/Charity_record' target='_new'>wikipedia.org/wiki/Charity_record</a> which I do acknowledge is incomplete, but it was the best I could find and I had to start somewhere. I started completing and sorting the data: dates, singers, cause/category in Google Sheets using Scraper (Chrome add-on) and had to do a lot of manually searching and altering data due to misspelling, missing data on the artists, and sometimes aliases of artists. Again, I did the best I could but I’m sure I’ve overlooked some info and well, it’s ‘a’ list not ‘the’ list because it’s mostly western market oriented (with some exceptions) and probably many other songs are not listed.
+                  <a class="fancybox" href="data/guest/screenprint_scraper.jpg"><img  class="img-responsive img-month" src="data/guest/screenprint_scraper.small.jpg" /></a>
+                  I’ve thought of visualizing which song made the most profit but that was undoable due to the timerange (songs dating back to the Eighties), non-traceable record-sales, the inflation and which way the money went eventually (that’s somewhat obscure as well sometimes). There’s just simply not enough data available on this subject.
+                  <a class="fancybox" href="data/guest/170523_STUDIO-TERP_viz-Charity-songs-sketch 01.jpg"><img  class="img-responsive img-month" src="data/guest/170523_STUDIO-TERP_viz-Charity-songs-sketch-01.small.jpg" /></a>
+                  What I also considered was some viz on the lyrics so maybe a word count or focus on themes: hope, rescue, comic Relief etc.
+                </p>
+
+                <p>
+                  There was data on the charities sang for so I started ordering, grouping and classifying the songs by their initial goal or regrouped them to a unifying category.
+                </p>
+
+                <p>
+                  The categories being:
+                  <ol style='text-align:left'>
+                    <li>famine, poverty, disadvantaged people, homeless / refugees</li>
+                    <li>diseases (aids, cancer, other diseases), health (common health)</li>
+                    <li>children</li>
+                    <li>Comic Relief</li>
+                    <li>equality / empowerement/ awereness</li>
+                    <li>victims of terror / war, support veterans / heroes / soldiers</li>
+                    <li>environment</li>
+                    <li>sports</li>
+                    <li>disaster: accident</li>
+                    <li>disaster: nature</li>
+                  </ol>
+                  <a class="fancybox" href="data/guest/screenshot datasheet.jpg"><img  class="img-responsive img-month" src="data/guest/screenshot-datasheet.small.jpg" /></a>
+                </p>
+
+                <h3>week 2 <span class="light-grey">|</span> sketch</h3>
+
+                <p>
+                  Now Illustrator is probably the program I’m best skilled at (acknowledging I know only this part) but I’m not going to dive into detail to much on the tools because that’ll take too much time and if you would like to know more I advise you to watch some beginner-tutorials, practice or contact me if you have any questions.
+                  As I was educated at the Design Academy and worked at a landscaping design company I had to use various design-programs so I learned on the go, but I must say I did and still make lots of styling/layout-decisions based on intuition.
+                </p>
+
+                <p>
+                  At the start of a project I try to sketch what I’d like to achieve and sometimes I get the wildest ideas but there’s also this realization that keeping it simple (we’ve seen enough discussions on that subject) mostly works best. Conclusion this time: no circular layout (which I’m pretty fond of) or much decoration. Most of the times my sketches are rather messy. I’m just no Alfonso or Giorgia :-(
+                  <a class="fancybox" href="sketch/guest/170523_STUDIO-TERP_viz-Charity-songs-sketch-05.png"><img  class="img-responsive img-month" src="sketch/guest/170523_STUDIO-TERP_viz-Charity-songs-sketch-05.png" /></a>
+                  <a class="fancybox" href="sketch/guest/170523_STUDIO-TERP_viz-Charity-songs-sketch-04.small.jpg"><img  class="img-responsive img-month" src="sketch/guest/170523_STUDIO-TERP_viz-Charity-songs-sketch-04.small.jpg" /></a>
+                </p>
+
+                <h3>week 3 <span class="light-grey">|</span> design</h3>
+
+                <p>
+                  Next to the sketching I also search for inspiration (mostly on my Pinterest boards which you can find <a href='https://nl.pinterest.com/studioterp/' target='_new'>here</a>) and / or I have some style in mind which I like to apply.
+                </p>
+
+                <p>
+                  I start of with creating swatches and try to pick some fonts to have some kind of frame to work with. This of course gets altered and supplemented during the process but personally I need those first “restrictions” to get going. And like I mentioned my styling has to do with intuition which I believe most of the times turns out just fine :-)
+                </p>
+
+                <p>
+                  I started of creating a timeline which mentions all the songs and information on what went on at that time. But in the end well that’s all it is, a timeline, and I felt it wasn’t compelling / insightful enough to publish. Ta ta to the many hours spent on it but I’m still figuring out a way to publish it an intriguing way some other time.
+                  <a class="fancybox" href="code/guest/Screenshot_timeline.jpg"><img  class="img-responsive img-month" src="code/guest/Screenshot_timeline.small.jpg" /></a>
+                  For now I felt I had to aim at something else and since our subject did change to “communities” that’s where I tried to shift my focus.
+                </p>
+
+                <p>
+                  Since we all probably know that Michael Jackson was a great contributor to (children-related) charities and that Bono has been doing stuff with like every other famous artist on the planet, I was wondering how many songs in this list did artists write / sing / contribute to and with whom. As I did want to make my main-graph visually not to tangled / cramped or to big to fit on a screen I made the decision to only visualize the artists who sang (note: not play an instrument or organize or contribute in another way) more than twice. This left me with 26 artists to visualize.
+                  <a class="fancybox" href="code/guest/26 artists.jpg"><img  class="img-responsive img-month" src="code/guest/26 artists.small.jpg" /></a>
+                  Now the main-graph was pretty straightforward at first: I just connected the songs on the timeline at the left, with the artists on the list at the right by drawing curvy lines. I used a gradient on these lines (along stroke!) so it all wouldn't get too meshed together. I also decided to split the songs per artist in ensemble category using small symbols. The Symbols-tool comes in very handy if you need to add many similar icons or other elements: you draw one single icon or other element on your artboard, then select this and add it to the Symbols-panel (just drag it into it and choose your settings) and you can place it in your design where needed (drag it from the panel into your design or copy-paste from first one). Then next, when you decide they need adjustments you do not need to redesign each individual element in your design, you just change the one symbol in the panel and all placed elements change accordingly.
+                  <a class="fancybox" href="code/guest/gradient.png"><img  class="img-responsive img-month" src="code/guest/gradient.png" /></a>
+                  <a class="fancybox" href="code/guest/first setup large graph.jpg"><img  class="img-responsive img-month" src="code/guest/first setup large graph.small.jpg" /></a>
+                  Not satisfied with the “connectedness”of artists I added another layer on the right showing the network of cooperations. And to get more insight in the totals of ensemble category I added another layer at the left.
+                  <a class="fancybox" href="code/guest/large graph.jpg"><img  class="img-responsive img-month" src="code/guest/large-graph.small.jpg" /></a>
+                  Since I left the timeline graph for what it was I felt I had to add depth on my current graph, creating clarity, answering my question “Who participated on which song and with whom of those 26 did they do that with?”. I fiddled around with some ideas and try-outs on what else to show/tell and soon came to these sort of small-multiple of each individual artist (Ooh, don’t we all just L.O.V.E. small multiples?!). It was quite elaborate to work this out, 26 times multiplying a basic graph and then deleting all unneeded elements, but somehow that’s where the fun starts for me: it’s somehow meditative to do these repetitive actions (to a certain amount of course!) and when convinced the turnout will be just fine I simply submerge in the task.
+                  <a class="fancybox" href="code/guest/steps small multiples.jpg"><img  class="img-responsive img-month" src="code/guest/steps-small-multiples.small.jpg" /></a>
+                  And then. Then I lost almost everything due to my file crashing, damaged beyond repair!, my program also crashing, had to re-install, and of course in the rush I didn’t save alternative versions. I know, I know! Stupid me! Had to go into meditation-mode all over again but that’s a bit hard while in an disillusioned-wanting-to-throw-my-laptop-out-of-the-window-cursing mood.
+                </p>
+
+                <p>
+                  So, I drank a large beer, got my act together and knowing the correct steps, knowing the time it would cost me (I learned from the first time around so I could skip some steps which I found out were unnecessary) and I got back onto it. I also decided to create the small multiples in a separate file and paste them into the final at the end to avoid the total getting to big/slow (and crash again).
+                  <a class="fancybox" href="code/guest/170523_STUDIO TERP_viz Charity songs total legend.jpg"><img  class="img-responsive img-month" src="code/guest/170523_STUDIO-TERP_viz-Charity-songs_small-multiple_legend.small.jpg" /></a>
+                  A small multiple of an artist (which sometimes is a duo or a group) shows only the connections of the artist of matter to the songs they sang and the connections to other artists they participated with. I emphasized the lines of the concerning artist by fading the other artists lines. I could have included much more info (how many artists in total per song /artist/ corporations other than in these songs, covers) but I found I had to stick to a certain amount of data to not clutter the graphs and avoid spending way more time on collecting data and this project as a whole.
+                </p>
+
+                <p>
+                  I created a layout showing the artists small multiples in the same order as in the artist list in the main graph and added some info on Michael, Bono and Elton since they contributed the most.
+                </p>
+
+                <p>
+                  I found out (too late) there’s this page on the world of celebrity giving, named “Look to the Stars” which gives a great insight in who donates to what charity and for which cause. I definitely would want to go work on that data in another project.
+                </p>
+
+                <p>
+                  So I know there are no heavy conclusions to draw out of this viz but it does show some insight in which decade(-s) artists participated and with whom. Sometimes as expected, as which is the case with Michael Jackson and Bono, but sometimes somehow surprising: while also successful then, why was Jon Bon Jovi not participating in the Eighties?
+                  <a class="fancybox" href="code/guest/170523_STUDIO TERP_viz Charity songs_small multiple_Michael Jackson.jpg"><img  class="img-responsive img-month" src="code/guest/170523_STUDIO-TERP_viz-Charity-songs_small-multiple_Michael-Jackson.small.jpg" /></a>
+                  <a class="fancybox" href="code/guest/170523_STUDIO TERP_viz Charity songs_small multiple_Bono.jpg"><img  class="img-responsive img-month" src="code/guest/170523_STUDIO-TERP_viz-Charity-songs_small-multiple_Bono.small.jpg" /></a>
+                  <a class="fancybox" href="code/guest/170523_STUDIO TERP_viz Charity songs_Jon Bon Jovi.jpg"><img  class="img-responsive img-month" src="code/guest/170523_STUDIO-TERP_viz-Charity-songs_small-multiple_Jon-Bon-Jovi.small.jpg" /></a>
+                  Now the whole process took way more time then anticipated (like it mostly does with autonomous projects) and due to the change in direction and the described ‘hiccup’ my viz is way overdue but I enjoyed the ride and I hope people will enjoy my visualization. The communication with Nadieh and Shirley was comforting and helpful as were the critiques by my partner Tamara who is also an (architectural) designer and is always there to glance over my designs and check if they’re comprehensible.
+                </p>
+
+                <p>
+                  For now I consider this a wrap up!
+                </p>
+
+                <p>
+                  Meantime I’ve also been working on my website (which was about time to go online) and
+                  I have a little treat on my independent-projects pages: I’m adding a link to the Adobe Color CC library so you can download the basic colors I’ve used in these projects. <a href='https://color.adobe.com/nl/Voices-that-Care---a-datavisualization-on-Charity-songs-by-STUDIO-TERP-color-theme-9606957/' target='_new'>Here</a> you find the colors for this dataviz, I hope you enjoy!
+                </p>
+
+                <p>
+                  And just to get (back) into that 80’s vibe, listen / watch this Charity song: <a href='https://www.youtube.com/watch?v=qZktrrqT1A0' target='_new'>Stars</a> by Hear N’Aid. Not my genre but epic! ;-)
+                </p>
+
+                <p>
+                  Cheers, Sonja
+                </p>
+
+                <a href="http://www.studioterp.nl/voices-that-care/" target='_new'> <img src="code/guest/170523_STUDIO TERP_viz Charity songs total-small.jpg" class="img-responsive img-month"></a>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Guest name and website below -->
+        <div class="row">
+          <div class="guest col-xs-12">
+            <div class="name kingBasil">Sonja</div>
+            <div class="quicksand"><a href="http://www.studioterp.nl/">STUDIO TERP</a></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="guest-month">
+      <div class="container">
+        <div>
+          <span>a monthly collaboration between </span>
+          <span class="kingBasil">Nadieh Bremer & Shirley Wu</span>
+        </div>
+        <div class="quicksand">
+          <a href="https://twitter.com/datasketches">@datasketches</a><span class="pipe-divider">  |  </span>#datasketches
+        </div>
+        <div class="about-link quicksand">
+          <a href="../about">about</a><span class="pipe-divider">  |  </span><a href="../feed.xml">rss</a><span class="pipe-divider">  |  </span><a href="https://tinyletter.com/datasketches">newsletter</a>
+        </div>
+      </div>
+    </footer>
+
+	<script>
+  function setTime() {
+    var format = 'h:mm a';
+    var time = new Date();
+    var nadieh = moment(time, format).tz("Europe/Amsterdam");
+    var shirley = moment(time, format).tz("America/Los_Angeles");
+	  var guest = moment(time, format).tz("Europe/Amsterdam");
+    $('.nadieh .time').text(nadieh.format(format));
+    $('.shirley .time').text(shirley.format(format));
+	  $('.guest .time').text(guest.format(format));
+
+    var nadiehColor = nadieh.hour();
+    nadiehColor = nadiehColor >= 18 || nadiehColor <= 6 ? 'dark' : 'light';
+    var shirleyColor = shirley.hour();
+    shirleyColor = shirleyColor >= 18 || shirleyColor <= 6 ? 'dark' : 'light';
+    var guestColor = guest.hour();
+    guestColor = guestColor >= 18 || guestColor <= 6 ? 'dark' : 'light';
+
+    $('.nadieh').removeClass('light dark').addClass(nadiehColor);
+    $('.shirley').removeClass('light dark').addClass(shirleyColor);
+	  $('.guest').removeClass('light dark').addClass(guestColor);
+  }
+
+  $( document ).ready( function() {
+    setTime();
+    setInterval(setTime, 60000);
+    $(".fancybox").fancybox({
+      openEffect : 'fade',
+      closeEffect : 'fade',
+      padding: 0,
+      helpers: {
+      overlay: {
+        locked: false
+      }
+      }
+    });
+  });
+    </script>
+
+    <!-- Google analytics -->
+	<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-43942889-3', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>

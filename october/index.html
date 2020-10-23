@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='shortcut icon' href='../img/favicon.ico' type='image/x-icon'/ >
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Data Sketches</title>
+    <meta name="author" content="Nadieh Bremer">
+    <meta name="description" content="Data Sketches - October - Presidents & Royals">
+    <meta name="keywords" content="data, visualization, visualisation, data visualization, data visualisation, information, information visualization, information visualisation, dataviz, datavis, infoviz, infovis, collaboration, data art">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Tinos:400,400i|Sacramento|Quicksand|Playfair+Display:400i" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Moment -->
+    <script src="http://momentjs.com/downloads/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	  <!-- fancyBox -->
+	  <link rel="stylesheet" href="../plugins/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	  <script type="text/javascript" src="../plugins/fancybox/jquery.fancybox.pack.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+  <header>
+    <!-- Logo and name -->
+    <div>
+      <a class="hide-mobile peach kingBasil no-border" href="../september"><div class="top-links other-month-link textRight">go to September</div></a>
+      <div class="month-logo"><a class="no-border" href=".."><img class="paddingTop20" src="../img/logo.png" width="120" /></a></div>
+      <a class="hide-mobile peach kingBasil no-border" href="../november"><div class="top-links other-month-link textLeft">go to November</div></a>
+    </div>
+    <div>
+      <a class="quicksand no-border" href=".."><div class="top-links datasketch-top-link"><span class="dark-grey">data sketch<span class="dark-pink">|</span>es</span></div></a>
+    </div>
+
+    <!-- Title above -->
+    <div class="row">
+      <div class="col-xs-12 month-page-title">
+        <h2 class="kingBasil peach">October</h2>
+        <h1 class="quicksand">Presidents & Royals</h1>
+      </div>
+    </div>
+  </header>
+
+    <section id="october" class="month-page">
+      <div class="nadieh background col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+      <div class="shirley background col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+
+      <div class="container">
+        <!-- Write-ups -->
+        <div class="row">
+          <!-- Nadieh -->
+          <div class="col-xs-12 col-md-6 write-up">
+            <div class="nadieh">
+              <div class="name paddingBelow kingBasil">Nadieh</div>
+              <div class="time kingBasil"></div>
+              <div class="location quicksand">amsterdam</div>
+
+  			     <a href="code/nadieh/"><img src="code/nadieh/img/royal_constellations_header.png" class="img-responsive img-month-top" alt="Royal constellations"></a>
+
+              <h3 class="margin-top-10">week 1 <span class="light-grey">|</span> data</h3>
+
+              <p>Because I'm going on vacation on October 15th I only have 2 weeks to complete this month (gulp). And I also have to cram a completely new 40 minute presentation in my head for the Fronteers conference that I'm speaking at on October 6th (great fun, but also time consuming). But that's not going to stop me from trying to have a lot of fun with this month's visual!</p>
+
+              <p>We originally wanted to do something with the US elections, but with the way that turned out... So Shirley said she instead would love to look into Obama. However, as a non-American that topic didn't really interest me. However, perhaps how the Americans see/feel about the presidential family is how Europeans might feel about the royal families in Europe. So that's how we ended up with our current theme.</p>
+
+              <p>The first thing that came to mind when I thought about the royals, was their bloodlines. Due to all of that intermarriage I was sure most royals in Europe would be relatives of each other. The question was then, how close of a relative? As always I was pretty sure there would be loads of nice datasets to find about the royal bloodlines. But, as in the previous months, that turned out differently. Sure, many people had drawn some images of the closest relatives of some royals in Europe. But I really didn't want to do too much manual data gathering this month.</p>
+
+              <p>Luckily there was <a href="http://www.daml.org/2001/01/gedcom/royal92.ged">1 file</a> that I found that seems to be <i>the</i> information source in terms of royal genealogy. However, it was made in 1992 so it is missing the recent additions to the royal families. Also, when I was looking for "interesting" royals to highlight, such as the last king of Italy, or Franz Ferdinand (who's assassination sparked WWI) I found that often these lines stopped a few generations before. I therefore manually added about ±150 people to the file (which was a bit of a challenge because the file is in a strange format; a <i>gedcom</i> file) that took at least 5 hours over the two weeks...</p>
+
+              <p>I did the data preparation in R as usual. Family trees are something for a network layout, so the odd format (see the screenshot below, it contained lines on individuals & families) had to be transformed into a nodes & links file that d3's force layout knows how to handle. Not too difficult, but it still required quite some lines of code to eventually be able to run through the whole file and get the info out and into some data sets.</p>
+              <a class="fancybox" href="data/nadieh/royal_gedcom_file_structure.jpg"> <img src="data/nadieh/royal_gedcom_file_structure.png" class="img-responsive img-month" alt="The individuals and family section of the royal gedcom file structure"></a>
+
+              <p>And that was all I did beforehand, just getting the node & link files in good shape. But while wrangling my way through d3's force layout I thought about new things to add or values to pre-calculate to get more insights from the structure of the network.</p>
+
+              <p>For example, I wanted to do something with the birth year of a person, but this wasn't know for everybody. I therefore wrote a small script that tries to find a good guess; either by looking if the death date is know (and then subtracting about 60 years), or looking at the birth or death date of the spouse, children or parents, in that order (again subtracting or adding some years to account for generational differences). Not perfect, but I didn't need perfect dates for the idea that I had in mind.</p>
+
+              <p>My final addition to the data was to calculate who was the royal each person was most closely related to (and within how many steps). I wanted to have this pre-calculated so that I had access to this beforehand in the visualization. Saves a lot of calculation time :)</p>
+
+              <p>You can read a more elaborate account of the preparation on <a href="https://github.com/nbremer/datasketches/tree/gh-pages/october/data/nadieh">the GitHub page of the dataset</a></p>
+
+              <h3>week 2 <span class="light-grey">|</span> sketches</h3>
+
+              <p>I truly didn't know what kind of network the data was going to give me, so this month I actually didn't really sketch on paper, but <i>sketched with code</i> in some way I guess. Getting to know d3v4's new force functions and trying out different settings for practically all variables.</p>
+
+              <p>Below you can see a selection of screenshots that outlines my journey through getting to know the network. I've added the time when I took the screenshot to give you an idea of how long it took to go from one step to the other.<br>My first result was a major network that blew up far beyond my humble 1000 x 1000px SVG. Increasing the gravity made a useless hairball. I eventually found some settings that seemed to reveal a bit of structure, but I needed to increase the SVGs size to 6000 x 6000px, I couldn't get it too fit into a smaller size... By now I saw that I really needed some more context to find insights. Therefore, I decided to add birth year to my data, since it is the best underlying variable that brings sense to the connections in this network, and then color the nodes by that (dark blue = long ago - yellow = recent).</p>
+              <a class="fancybox" href="sketches/nadieh/network_sphere_phase.jpg"> <img src="sketches/nadieh/network_sphere_phase_small.jpg" class="img-responsive img-month" alt="Screenshots of the first sphere like phases of the network"></a>
+
+              <p>Because birth year wasn't known for about 40% of the people in the network I first tried <i>a lot</i> of different things to somehow turn off the gravity for these nodes, so that they would be held in place through the links they had to other nodes for which the birth year was known. Like little springs. I asked around for help, looked into d3v4's underlying code of the force functions, but eventually there was no way around it. So I instead decided to estimate the birth year. Finally, there was some form of network that was getting slightly insightful.</p>
+              <a class="fancybox" href="sketches/nadieh/network_horizontal_phase.jpg"> <img src="sketches/nadieh/network_horizontal_phase_small.jpg" class="img-responsive img-month" alt="Screenshots of the horizontal like phases of the network using birth year to pull them apart"></a>
+
+              <p>But I still felt like it wasn't really getting anywhere. I continued again on another day and I was so depressed with the network and its potential that I didn't even take screenshots of my attempts for quite some time. I was thinking of just giving up on this network and try to use the data in a different way (or use some other data, how much the royals are getting from the taxpayers money is always a hot topic for example).</p>
+
+              <p>But I wanted to try one final thing to see if it turned out better, looking more at the design itself; the colors and such. The 12 current royal hereditary leaders were most important so I made them big and noticeable. I also spread them out evenly along the vertical axis in an attempt to pull apart the network a bit more, taking into account which were closely connected (placing these together) and the most loosely connected royal leaders on the outside.</p>
+
+              <p>The connected nodes reminded me of constellations of stars in the sky, so I switched to a dark theme where the nodes were colored yellow and added <a href="http://www.visualcinnamon.com/2016/06/glow-filter-d3-visualization.html">a touch of glow</a>. And with the initial idea of connections between current royal leaders I calculated the distance from each node to a royal and then adjusted their opacities to depend on their closest distance to a royal. So the people closest to a royal would be very visible and this would diminish to almost completely transparent for those more than 6 steps away from all of the 12 royal leaders.</p>
+              <a class="fancybox" href="sketches/nadieh/network_star_phase.png"> <img src="sketches/nadieh/network_star_phase_small.jpg" class="img-responsive img-month" alt="Screenshot of the star theme with the royals made more visible"></a>
+
+              <p>And that's when I finally started to see some potential. I decided that I had to focus on that connection to a current royal leader more and see where that would take me. The visual still needed about 2500px in width to have a nice spread of the nodes, but horizontal scrolling is not preferred, so I turned it 90 degrees so it would be a vertical scroll. To pull apart the network even more I calculated the (average) royal to which each node was closest. I used that info to generate a slight horizontal pull of the nodes to their closest royal descendants. As you can see in the image below right this genealogy is mostly focused on the English bloodline :)</p>
+              <a class="fancybox" href="sketches/nadieh/network_vertical_phase.png"> <img src="sketches/nadieh/network_vertical_phase_small.png" class="img-responsive img-month" alt="Screenshots of the switch to a vertical layout and royal gravity"></a>
+
+              <p>I wasn't really interested in the people born more than ±300 years ago, because it was already apparent that the current royals are most highly connected in the last 200 years, so I decided to remove everybody with an (estimated) birth date from before 1000. I also squished the vertical date scale even more towards older times to make the total visual less high and more focused on the last 2 centuries.</p>
+              <a class="fancybox" href="sketches/nadieh/network_final_sketch_phase.png"> <img src="sketches/nadieh/network_final_sketch_phase_small.jpg" class="img-responsive img-month" alt="Screenshot of the final phase that finally convinced me that there was potential enough in the network"></a>
+
+              <p>And that's when I finally ended up with a network structure that I was happy with. That even in a static state already showed some insight into how connected the current royal leaders are. Now I could finally move on from my digital <i>sketching</i> and think about the details & interactivity to make the closest connection between people more apparent.</p>
+
+              <h3>week 3 & 4 <span class="light-grey">|</span> code</h3>
+
+              <p>There's definitely a very vague line between this month's sketching and coding, since the sketching already took quite a bit of coding. But after getting the layout in the right position I focused on getting the interactions in there. There were two main things I wanted to achieve; showing how far "6-degrees of separation" (i.e. 6 generations back & 6 generations forward) would spread from a hovered over person into the network: "To which other current royal leaders is the King of Spain connected within 6 steps?" for example. The second thing was showing the shortest path. When I had a basic hover working I saw that some people had very big networks within 6 steps, so it was difficult to really see how two people were connected. I therefore wanted to be able to click on a person and then click on some other person in the network to see the shortest path between those people.</p>
+
+              <p>I usually start out very simple, so to look for 6 steps beyond a person I just wrote a while loop that ran 6 times and looked at the people connected to the selected persons from the previous loop. Not very smart or performing. But it's easy, fast to set up and then I could determine if the result on the visual was as I'd hoped. Only after I saw that the hover of 6 steps had potential did I look into using key-value maps to quickly request all the people connected to one person, which made the calculation almost instant.</p>
+              <a class="fancybox" href="code/nadieh/img/royal_constellations_hover_colors.png"> <img src="code/nadieh/img/royal_constellations_hover_colors_small.jpg" class="img-responsive img-month" alt="The result of a hover over a person"></a>
+
+              <p>I'm sure some people think my choice of color for the hovers is a non optimal one, going from a blue to white to red; not very intuitive. But this was a very deliberate choice. Since I was seeing the network as stars & constellations I thought it would be a nice analogy to color the "stars" to the colors that actual stars shine in. The very hottest, biggest stars are blue, going to white, yellow, orange and then red stars which are the coolest (& smallest) stars. Due to my Astronomy background this color scheme is straightforward to me (and I build these projects as experiments for myself foremost 😄 ).</p>
+
+              <p>Due to more of a mistake I ended up with a version in which you see the steps grow, from 1 step away from a person to 2, 3 and so on. And this was giving a much better intuitive feel about what these colors represented that I actually put it into the final version. I'm still stumped that I didn't think of doing that from the start 😳</p>
+
+              <p>Because the nodes are a bit small I found that hovering over a node exactly was a bit of a chore. So I used the voronoi technique (<a href="http://www.visualcinnamon.com/2015/07/voronoi.html">I wrote a blog</a> about this a year ago) in which I attach bigger, but clipped, circles underneath the nodes that capture the mouseover event. In the image below I've made them visible when I was investigating an error (the straight vertical line in there was wrong).</p>
+              <a class="fancybox" href="code/nadieh/img/voronoi_applied_to_nodes.png"> <img src="code/nadieh/img/voronoi_applied_to_nodes_small.png" class="img-responsive img-month" alt="A voronoi technique applied to the nodes"></a>
+
+              <p>At first I was afraid that with almost 3000 nodes in the network that a shortest path calculation would take too much time. I nevertheless wanted to first actually make it work and only then see if it was something that might survive until the final version. I knew about Dijkstra's algorithm, but no need to invent the wheel again, so I found <a href="https://github.com/julianbrowne/dijkstra/blob/master/javascripts/ShortestPathCalculator.js">a script on Github</a> that I adjusted to my needs. Surprisingly enough it performed amazingly well, it returned a path before I could blink. Personally, I very much like the small dotted rings that rotate around the two selected people 😃</p>
+              <a class="fancybox" href="code/nadieh/img/shortest_path_visualized.png"> <img src="code/nadieh/img/shortest_path_visualized_small.jpg" class="img-responsive img-month" alt="The visual representation of the shortest path"></a>
+
+              <p>What caused me most headaches this month was performance in general. How to make sure that something like a mouseover would only trigger when somebody was hovering over a node instead of just moving their mouse over the grid of nodes. How to only run a mouseout when the 6-degrees-animation had kicked in and not on every switch from node to node (and thus performing a transitions from an already yellow end state to the same end state). And even more of these things, all to make sure the browser only did things when a visual change was needed (and then only on the "affected" parts of the visual). This did cause the end result to work very smooth on my 0.5 year old Macbook in Chrome, but strangely enough it is taking significantly longer to do the visual updates in both Firefox and Safari (if somebody can explain why please let me know!). Of course it's also slower on my personal 6 year old Macbook, but not <i>too</i> bad.</p>
+
+              <p>The animated gif below shows the interactions available; hover, click and 2nd click (It's a bit slow because I have to capture gifs on my 6 year old Mac and my browser slows down during a capture).</p>
+              <a class="fancybox" href="code/nadieh/img/royals_hover_click_small.gif"> <img src="code/nadieh/img/royals_hover_click_small.gif" class="img-responsive img-month" alt="Animated gif of the hover and click effects"></a>
+
+              <p>Which brings me to the final section. Like August I again did this month in half the alloted time. This time because I'm going on vacation for 3 weeks (yay!). But... <i>if I had had 2 more weeks</i>: I would try to create a version in canvas (and figure out how to do the interactions in there) that would hopefully be more performing. I would want to create a search function where you can find any royal in the data (although the names aren't always in there spelled perfectly, but it would be a start). And finally I would want to look into making the network even more squished so that you would be able to see more of the total height at once.</p>
+
+              <a href="code/nadieh"> <img src="code/nadieh/img/royal_constellations_final.jpg" class="img-responsive img-month" alt="The final result of the Royal Constellations"></a>
+
+              <p>But I'm happy with what I managed in 2 weeks (while also having other obligations in my free time). It may not be as smooth in terms of interactions as I had hoped, it does do exactly what I wanted: showing how interconnected the European royal families really are, who the "linking pins" are in this network and what the shortest path is between two persons. And I learned a heck of a lot more about d3v4's force options. You can find the final result <a href="code/nadieh">here</a>.</p>
+
+              <p></p>
+
+            </div>
+          </div>
+
+          <!-- Shirley -->
+          <div class="col-xs-12 col-md-6 write-up">
+            <div class="shirley">
+              <div class="name paddingBelow kingBasil">Shirley</div>
+              <div class="time kingBasil"></div>
+              <div class="location quicksand">san francisco</div>
+
+              <a href="http://sxywu.com/obamas" target='_new'>
+                <img src="code/shirley/final.png" class="img-responsive img-month-top" alt="">
+              </a>
+
+              <h3 class="margin-top-10">week 1 <span class="light-grey">|</span> data</h3>
+
+              <p>
+                Originally Nadieh and I had October slotted for the elections, so that we could potentially have something ready by voting day.  But as October approached, I realized more and more that I wanted absolutely nothing to do with the election other than to...vote not-Trump.  So as October approached and we were musing what to do instead, I realized: a future president getting voted in also means a current president leaving the White House.
+              </p>
+
+              <p>
+                And we may not all agree on what the Obama administration has or hasn't done politically, but I think most of us can agree: the Obamas are one damn cool couple.  Like, the slightly dorky parents that I wouldn't mind associating with if they were my friends' parents.  Like that time last year when Mr. President recorded <a href='https://www.buzzfeed.com/andrewgauthier/the-president-uses-a-selfie-stick?utm_term=.vkE0Z8E9e#.hoM0Ar1wO' target='_new'>a video of himself talking to a mirror</a> so that he could plug his new healthcare.gov.  Or when recently Madame First Lady <a href='https://www.youtube.com/watch?v=ln3wAdRAim4' target='_new'>Carpool Karaoke'd with James Corden</a> and she was so hilariously relatable.  And then I realized that weirdly perhaps I was going to miss them being our POTUS and FLOTUS.
+              </p>
+
+              <p>
+                So I wanted to do something silly and light-hearted to thank them for their eight years in office.  And the first thing I could think of was all of their appearance on late-night talk shows I watched on Youtube (that <a href='https://www.youtube.com/watch?v=ziwYbVx_-qg' target='_new'>slow jam the news</a> so good).  I started digging around to see if there was a list of talk show appearances for both Barack and Michelle - and it was IMDb to the rescue again!  Both of them had their own IMDb pages, and after going through <a href='http://www.imdb.com/name/nm1682433/' target='_new'>Barack Obama's 214 credits as self</a> and <a href='http://www.imdb.com/name/nm2349292/?ref_=nv_sr_1' target='_new'>Michelle's 123</a> while cross-referencing the <a href='https://en.wikipedia.org/wiki/List_of_late-night_American_network_TV_programs' target='_new'>Wikipedia article on the list of late-night American network TV programs</a> I was able to get this list:
+                <a class="fancybox" href="data/shirley/all_appearances.png"> <img src="data/shirley/all_appearances.png" class="img-responsive img-month"></a>
+                (<a href='https://github.com/sxywu/obamas/blob/master/data/shows.txt' target='_new'>Full list of appearances</a>)
+              </p>
+
+              <p>
+                Using that information, I was able to use the <a href='https://developers.google.com/youtube/v3/docs/search/list' target='_new'>Youtube Search API</a> to search for keyword "obama", filtered down by channelId and published within 5 days of the interview date (<a href='https://github.com/sxywu/obamas/blob/master/data/getVideos.js' target='_new'>code</a>).  Unfortunately, because I wasn't sure how many videos were published for each interview (if at all), I set the maxResults to 15.  This meant that I would get back videos within those days that had nothing to do with the Obamas, and I had to <a href='http://bl.ocks.org/sxywu/877fcab8c7f02789a7c03413ec800c58' target='_new'>manually go through all of the videos</a> to weed out the irrelevant ones (there were 244 videos and 186 were ultimately filtered out).
+              </p>
+
+              <p>
+                Here is the final list (it loads quite slowly because of all the embedded videos, for which I apologize):
+                <a class="fancybox" href="data/shirley/all_videos.png"> <img src="data/shirley/all_videos.png" class="img-responsive img-month"></a>
+                (<a href='http://bl.ocks.org/sxywu/raw/2aaf535cd8a68c056f4646235f005ab7' target='_new'>Full list of videos</a>)
+              </p>
+
+              <p>
+                The list is unfortunately incomplete, since there were interviews with past shows/hosts like the Late Show with David Letterman and the Tonight Show with Jay Leno that weren't on Youtube.  I chose to keep them out instead of trying to find the videos on other websites or on unofficial channels, in the hopes that this would make for cleaner data.
+              </p>
+
+              <!-- <a class="fancybox" href="data/shirley/.png"> <img src="data/shirley/.png" class="img-responsive img-month" alt=""></a> -->
+
+              <h3>week 2 <span class="light-grey">|</span> sketches</h3>
+
+              <p>
+                <a href='http://visfest.com/d3unconf-2016/' target='_new'>D3.unconf</a> was on the 16th and 17th of this month, and the second day was dedicated to hacking - a perfect opportunity to work on datasketches.  But I was feeling a little lost on what to do with the data and mentioned this to both <a href='https://twitter.com/enjalot' target='_new'>Ian</a> and <a href='https://twitter.com/trinary' target-'_new'>Erik</a>.
+              </p>
+
+              <p>
+                Which, in retrospect, was probably a big mistake.  Because Ian was like, "you should get the captions for each video and do something with the words!" and Erik was like, "wouldn't it be cool if you could run facial detection on the video and correlate their emotions with what they're saying?".  And I was like, "GUYS you know I only have a month to do this?!"
+              </p>
+
+              <p>
+                But Alas, like a poor version of Inception, the idea was planted and it took root.
+              </p>
+
+              <p>
+                I couldn't find an affordable way to pass whole videos into any facial recognition software, but thankfully I was at the very resourceful D3.unconf.  Within a few minutes an alternative was suggested: take screenshots of the video and pass the images into <a href='https://cloud.google.com/vision/' target='_new'>Google's Vision API</a> (provided by <a href='https://cloud.google.com/' target='_new'>Google Cloud</a>, who just happened to be one of the sponsors for the unconference).  Here's what I did:
+
+                <ol>
+                  <li>Take the list of all videos, and download them (and their captions, if available) with <a href='https://github.com/fent/node-youtube-dl' target='_new'>youtube-dl</a> (<a href='https://github.com/sxywu/obamas/blob/master/data/downloadVideos.js' target='_new'>code: downloadVideos.js</a>)</li>
+                  <li>Use <a href='https://github.com/joegesualdo/vtt-to-json' target='_new'>vtt-to-json</a> to convert the captions into JSON and get the timestamp of every time someone talked, and use that timestamp to screenshot the video with <a href='https://github.com/fluent-ffmpeg/node-fluent-ffmpeg' target='_new'>fluent-ffmpeg</a> (<a href='https://github.com/sxywu/obamas/blob/master/data/screenshotVideos.js' target='_new'>code: screenshotVideos.js</a>)</li>
+                  <li>For each screenshot, upload it to Google Vision API (https://cloud.google.com/vision/), which gave back data of any faces it found in the image as well as the bounds of the face and head:
+                    <a class="fancybox" href="sketches/shirley/google_vision.png"> <img src="sketches/shirley/google_vision.png" class="img-responsive img-month"></a>
+                  And much more, like what it thinks the picture is of, and what famous locations it might contain.  (<a href='https://github.com/sxywu/obamas/blob/master/data/annotateImages.js' target='_new'>code: annotateImages.js</a>)
+                  </li>
+                  <li>Save the videos' captions into one JSON file (<a href='https://github.com/sxywu/obamas/blob/master/data/getSubtitles.js' target='_new'>code: getSubtitles.js</a>), then join them with the annotated image data from the Vision API (<a href='https://github.com/sxywu/obamas/blob/master/data/annotationSubtitles.js' target='_new'>code: annotationSubtitles.js</a>)</li>
+                </ol>
+              </p>
+
+              <p>
+                This whole process took a few days, and once I finally had all the data cleaned I got started on the sketching.  I learned my lesson from the last month, and made sure to explore the basic shape of the data, as well as all the different types of data I had on hand:
+                <a class="fancybox" href="sketches/shirley/sketch1.jpg"> <img src="sketches/shirley/sketch1.jpg" class="img-responsive img-month"></a>
+              </p>
+
+              <p>
+                Once I had all that figured out, I started thinking about what I wanted to convey.  I knew it was ambitious, but I wanted to make full use of such a rich dataset, and also get across why even though there were 44 appearances (after I did this, the number increased to 46) I only had screenshots for 29 videos.  I've also been wanting to try my hand at a scrollytelling for a while to test my technical skills, so I mapped out my first few sections:
+                <a class="fancybox" href="sketches/shirley/sketch2.jpg"> <img src="sketches/shirley/sketch2.jpg" class="img-responsive img-month"></a>
+              </p>
+
+              <p>
+                After the previous sketch, I actually took a few days to build out those first few sections first.  This also helped me get a better feel of the video data, which I hadn't explored in as much detail as the hosts and appearances data.  I had originally envisioned something where all the videos would be lined up in rows, and a timeline would show a bar graph of word frequence based on the captions, and all the times that the POTUS and FLOTUS laughed.  But I soon realized that that was WAY too much data to try and show on one screen.  So I came up with the following sequence to introduce the videos and to only show the selected video's timeline of captions and laughs:
+                <a class="fancybox" href="sketches/shirley/sketch3.jpg"> <img src="sketches/shirley/sketch3.jpg" class="img-responsive img-month"></a>
+              </p>
+
+              <p>
+                I was originally even more ambitious and had planned on showing details for each caption, not just the screenshot at the time of the caption with the emojis on the faces.  I had planned on showing for each word in the caption the emojis and hosts most frequently associated with that word in a timeline of its own.  I'm so glad I didn't do that, because it would have just been overkill.  (Sometimes, even if we have the data, we don't gotta.)
+              </p>
+
+              <h3>week 3 & 4 <span class="light-grey">|</span> code</h3>
+
+              <p>
+                So as soon as I figured out that the Google Vision API gave me the bounds of faces and heads, I knew I had to put emojis on the faces:
+                <a class="fancybox" href="code/shirley/emoji_head.png"> <img src="code/shirley/emoji_head.png" class="img-responsive img-month"></a>
+                And boy, do I not regret; it brought me so much joy.  The rest of the visualization is basically just a build up to the end tool to explore all the photos with emojis on their faces.
+                <a class="fancybox" href="code/shirley/emoji_head2.png"> <img src="code/shirley/emoji_head2.png" class="img-responsive img-month"></a>
+              </p>
+
+              <p>
+                But before I get into the details of the implementation, let me just say: I am NEVER getting this ambitious for a one-month *side* project ever again.  This month's implementation brought me through quite a few first-time technical challenges:
+                <ul>
+                  <li>Animation based on scroll</li>
+                  <li>Cropping SVG images</li>
+                  <li>Horizontal fisheye with images</li>
+                  <li>MOBILE</li>
+                  <li>MAKING SCRUBBING THE FISHEYE SMOOTH ON MOBILE</li>
+                </ul>
+                And because I was just trying to get it all done, I didn't take much time to take screenshots of my progress (which I regret ☹️).
+              </p>
+
+              <p>
+                The first thing I wanted to do was to implement animation tied to scrolling like <a href='https://twitter.com/tonyhschu' target='_new'>Tony</a>'s <a href='http://www.r2d3.us/visual-intro-to-machine-learning-part-1/'>A Visual Introduction to Machine Learning</a> - it always seemed like a fun technical challenge.  The key is to interpolate between two sections, and I worked out the logic to be:
+                <a class="fancybox" href="code/shirley/code_calculation.jpg"> <img src="code/shirley/code_calculation.jpg" class="img-responsive img-month"></a>
+                So when the user got to be halfway down the section (I actually ended up using 25% instead), I would calculate the elements' positions for the current section and for the next section and interpolate between them.  From there until the user entered the top of the next section, I would pass the amount scrolled into the interpolation to get the x/y positions (and even, for the videos, the radius).  <a href='https://github.com/sxywu/obamas/blob/master/src/App.js#L163-L263' target='_new'>Here is the code</a>, which took quite a bit of fiddling.
+                <a class="fancybox" href="code/shirley/scrolling.gif"> <img src="code/shirley/scrolling.gif" class="img-responsive img-month"></a>
+                (It's much smoother on the website - I ran the Chrome Dev Tools Profiler religiously to weed out any unperformant code!)  One of my favorite parts is when I scroll to the first timeline, and the links animate between the host and the Obamas to connect them.
+              </p>
+
+              <p>
+                Another interaction that made me really happy was hovering the hosts to see the corresponding guest appearances.  A very simple implementation, but helped so much in making the tangle of links easier to navigate:
+                <a class="fancybox" href="code/shirley/hover_host.png"> <img src="code/shirley/hover_host.png" class="img-responsive img-month"></a>
+                Another favorite; This one's showing all the videos with captions, and the filled circle radius is the number of views, and the other ring radius is the duration of the video.  It's fun to see that some of the videos got a lot of views despite being shorter in duration, or vice versa.  The small dots on the ring is every time Google Vision API said there were expressions of joy, so you can see whether the laughter was even throughout the video, or were concentrated in specific blocks.  My favorite part about this though, is actually in the description, where I calculate the number of times there were laughs for the POTUS and FLOTUS and finding out that the FLOTUS has significantly more laughter:
+                <a class="fancybox" href="code/shirley/show_captions.png"> <img src="code/shirley/show_captions.png" class="img-responsive img-month"></a>
+              </p>
+
+              <p>
+                And here is the timeline with the emojis on their faces:
+                <a class="fancybox" href="code/shirley/timeline.png"> <img src="code/shirley/timeline.png" class="img-responsive img-month"></a>
+                And as soon as I saw that timeline, I knew I needed to have a fisheye effect.  I had seen the <a href='http://www.nytimes.com/newsgraphics/2014/02/14/fashion-week-editors-picks/' target='_new'>New York Times implementation</a> of the horizontal fisheye to navigate through fashion week images, and Nadieh had <a href='http://bl.ocks.org/nbremer/e73086c0c3ebd2693a95962b561cbf05' target='_new'>adjusted that code</a> a few months ago when we were considering using the effect for the front page of datasketches.  But the code was for canvas, and I was already committed with SVG; it took a bit of digging to find an SVG equivalent for cropping images (<a href='https://www.w3.org/TR/SVG/coords.html#PreserveAspectRatioAttribute' target='_new'>preserveAspectRatio</a> and the <a href='https://github.com/sxywu/obamas/blob/master/src/visualizations/SelectedVideo.js#L214-L220' target='_new'>key is to set the viewBox width the same as the image width</a>).  It took a few more passes of Nadieh's code and the original <a href='https://github.com/d3/d3-plugins/blob/master/fisheye/fisheye.js' target='_new'>fisheye code</a> to realize that all I needed was the <a href='https://github.com/sxywu/obamas/blob/master/src/visualizations/SelectedVideo.js#L17-L26' target='_new'>little bit of code</a> that mapped an x-coordinate to its new position based on the distortion.  From there, it was just <a href='https://github.com/sxywu/obamas/blob/master/src/visualizations/SelectedVideo.js#L279-L302' target='_new'>passing in the hovered x-position and re-rendering</a>.
+                <a class="fancybox" href="code/shirley/fisheye.gif"> <img src="code/shirley/fisheye.gif" class="img-responsive img-month"></a>
+                What I'm happiest about with this fisheye though, is that I made it work on mobile!  When I used touchmove by myself, scrubbing was extremely buggy and finicky on mobile.  After thinking the whole day of a different interaction I could have with the timeline on mobile, I realized that d3 already had a great touch implementation with <a href='https://github.com/d3/d3-drag' target='_new'>d3.drag()</a>; the interaction on mobile using d3 drag for the fisheye was so smooth it was magical butter 😍
+              </p>
+
+              <p>
+                And finally, here is the (intro of the) finished piece:
+                <a href='http://sxywu.com/obamas/' target='_new'><img src="code/shirley/header.png" class="img-responsive img-month"></a>
+                This month was definitely killer, but I am also super happy I stuck it through.  I'm really proud of all that I was able to figure out, and that I now have a completed scrollytelling under my belt.  The most suprising though, is my newly acquired sense of fearlessness, where I really feel that if there's something I want to implement, I'll be able to figure out how to do it given enough time and the right Google searches.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Our names and website below -->
+        <div class="row">
+          <div class="nadieh col-xs-6">
+            <div class="name kingBasil">Nadieh</div>
+            <div class="quicksand"><a href="http://www.visualcinnamon.com/">VisualCinnamon.com</a></div>
+          </div>
+
+          <div class="shirley col-xs-6">
+            <div class="name kingBasil">Shirley</div>
+            <div class="quicksand"><a href="http://sxywu.com/">sxywu.com</a></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div>
+          <span>a monthly collaboration between </span>
+          <span class="kingBasil">Nadieh Bremer & Shirley Wu</span>
+        </div>
+        <div class="quicksand">
+          <a href="https://twitter.com/datasketches">@datasketches</a><span class="pipe-divider">  |  </span>#datasketches
+        </div>
+        <div class="about-link quicksand">
+          <a href="../about">about</a><span class="pipe-divider">  |  </span><a href="../feed.xml">rss</a><span class="pipe-divider">  |  </span><a href="https://tinyletter.com/datasketches">newsletter</a>
+        </div>
+      </div>
+    </footer>
+
+	<script>
+  function setTime() {
+    var format = 'h:mm a';
+    var time = new Date();
+    var nadieh = moment(time, format).tz("Europe/Amsterdam");
+    var shirley = moment(time, format).tz("America/Los_Angeles");
+    $('.nadieh .time').text(nadieh.format(format));
+    $('.shirley .time').text(shirley.format(format));
+
+    var nadiehColor = nadieh.hour();
+    nadiehColor = nadiehColor >= 18 || nadiehColor <= 6 ? 'dark' : 'light';
+    var shirleyColor = shirley.hour();
+    shirleyColor = shirleyColor >= 18 || shirleyColor <= 6 ? 'dark' : 'light';
+
+    $('.nadieh').removeClass('light dark').addClass(nadiehColor);
+    $('.shirley').removeClass('light dark').addClass(shirleyColor);
+  }
+
+  $( document ).ready( function() {
+    setTime();
+    setInterval(setTime, 60000);
+    $(".fancybox").fancybox({
+      openEffect : 'fade',
+      closeEffect : 'fade',
+      padding: 0,
+      helpers: {
+      overlay: {
+        locked: false
+      }
+      }
+    });
+  });
+    </script>
+    
+    <!-- Google analytics -->
+	<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-43942889-3', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>

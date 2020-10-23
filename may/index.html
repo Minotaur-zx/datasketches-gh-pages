@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='shortcut icon' href='../img/favicon.ico' type='image/x-icon'/ >
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Data Sketches</title>
+    <meta name="author" content="Nadieh Bremer">
+    <meta name="description" content="Data Sketches - May - Myths & Legends">
+    <meta name="keywords" content="data, visualization, visualisation, data visualization, data visualisation, information, information visualization, information visualisation, dataviz, datavis, infoviz, infovis, collaboration, data art">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Tinos:400,400i|Sacramento|Quicksand|Playfair+Display:400i" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Moment -->
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+
+	  <!-- fancyBox -->
+	  <link rel="stylesheet" href="../plugins/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	  <script type="text/javascript" src="../plugins/fancybox/jquery.fancybox.pack.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+  <header>
+    <!-- Logo and name -->
+    <div>
+      <a class="hide-mobile peach kingBasil no-border" href="../march"><div class="top-links other-month-link textRight">go to April</div></a>
+      <div class="month-logo"><a class="no-border" href=".."><img class="paddingTop20" src="../img/logo.png" width="120" /></a></div>
+      <a class="hide-mobile peach kingBasil no-border" href="../june"><div class="top-links other-month-link textLeft">go to June</div></a>
+    </div>
+    <div>
+      <a class="quicksand no-border" href=".."><div class="top-links datasketch-top-link"><span class="dark-grey">data sketch<span class="dark-pink">|</span>es</span></div></a>
+    </div>
+
+    <!-- Title above -->
+    <div class="row">
+      <div class="col-xs-12 month-page-title">
+        <h2 class="kingBasil peach">May</h2>
+        <h1 class="quicksand">Myths & Legends</h1>
+      </div>
+    </div>
+  </header>
+
+    <section id="april" class="month-page">
+      <div class="nadieh background col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+      <div class="shirley background col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+
+      <div class="container">
+        <!-- Write-ups -->
+        <div class="row">
+          <!-- Nadieh -->
+          <div class="col-xs-12 col-md-6 write-up">
+            <div class="nadieh">
+              <div class="name paddingBelow kingBasil">Nadieh</div>
+              <div class="time kingBasil"></div>
+              <div class="location quicksand">amsterdam</div>
+
+                <a href="code/nadieh"><img src="code/nadieh/img-write-up/figures_in_the_sky_header.png" class="img-responsive img-month-top" alt="Figures in the Sky"></a>
+
+                <h3 class="margin-top-10">year 1 <span class="light-grey">|</span> inspiration</h3>
+
+                <p>I can't believe it took me a whole year before I finally figured out what to do with this! Doing the first 10 projects in ±10.5 months, and then needing a full year for the final 2 o_O Well, better late than never I guess.</p>
+                <p>For a while, RJ & <a href="https://twitter.com/dataandme">Mara Averick</a> (our guests this month), Shirley and me wanted to do 1 big project together. Based on the amazing dataset that RJ had about the different versions of Cinderella. RJ had done the research, Mara the data cleaning and initial analyses, I had made some rough designs, but eventually we never started actually programing :S I can't quite remember why, but I think trying to work on exactly the same project, in our free time, across several time zones, just was too much complexity.</p>
+                <a class="fancybox" href="data/nadieh/img/cinderella_sketches.png"> <img src="data/nadieh/img/cinderella_sketches_small.jpg" class="img-responsive img-month" alt="Some of the sketches that I made for the big project we initially wanted to do together"></a>
+
+                <p>And so for the next few months I really did try to think of what to do with this month. And I <i>so much</i> wanted to do something with Disney, another topic that I am personally passionate about. But I just couldn't find a good idea, or the data wasn't out there (and I was <i>not</i> ready to watch every movie to make my own dataset (this time)).</p>
+                <p>And so, during May,  at <a href="http://www.openvisconf.com/">OpenVis Conf</a> 2018 in Paris I finally decided that I should give up on Disney and try something else. The talks definitely helped to inspire me, especially <a href="https://twitter.com/enjalot">Ian Johnson's</a> talk about <a href="https://cloud.google.com/blog/big-data/2017/12/drawings-in-the-cloud-introducing-the-quick-draw-dataset">Google's Quickdraw dataset</a>.</p>
+                <div class="img-gallery-wrapper">
+                    <a class="fancybox" rel="gallery-quickdraw" href="data/nadieh/img/quickdraw_ian.jpg"><img src="data/nadieh/img/quickdraw_ian.jpg" class="img-responsive img-gallery-2" alt="A t-SNE based visual of Quickdraw's dataset on drawing brushes, made by Ian Johnson" /></a>
+                    <a class="fancybox" rel="gallery-quickdraw" href="data/nadieh/img/quickdraw_skulls_ian.jpg"><img src="data/nadieh/img/quickdraw_skulls_ian.jpg" class="img-responsive img-gallery-2" alt="A t-SNE based visual of Quickdraw's dataset on drawing skulls, made by Ian Johnson" /></a>
+                </div>
+
+                <p>Maybe something about the "mythical" words in Quickdraw and how they're drawn, like dragons and mermaids? Something about dragons in general? Or about myths from many different cultures and their timelines and similarities? But no, that would probably mean <i>a lot</i> of manual data gathering... However, myths across cultures... that suddenly reminded me of constellations! Myths and legends in the sky! I know my favorite constellations: Orion & the Swan (or to be more precise, the "Summer triangle"). But what did other cultures make of those same stars? What shapes and figures did they see in the same sky?</p>
+                <p>And finally, that idea sparked a feeling of enthusiasm and wonder in me in such a way that I knew it felt right. Of course, as an Astronomer, it also felt kind of appropriate to have my final data sketches project to be connected to actual stars ^_^</p>
+
+                <h3>week 1 <span class="light-grey">|</span> data</h3>
+
+                <p>Of course, that idea still hinged on data availability. I thought that the subject I had chosen would be specific enough for Google. But alas, trying to search for <i>constellation</i> data was heavily intermixed with astrology...</p>
+                <p>But I was on the train from Paris back to Amsterdam and I would give myself the full 3 hours to keep looking for data. I did find some promising things about the "modern" 88 constellations, but <i>nothing</i> about constellations from multiple cultures. That is, until I came across <a href="http://stellarium.org/">Stellarium</a>, which is an amazing looking 3D stellarium for your laptop. Even better, it's open source and you can access all its data on <a href="https://github.com/Stellarium/stellarium">GitHub</a>. And as the giant cherry on that cake, they have a folder called <i>skycultures</i> in which there is information on constellations from ±25 different cultures from across (almost) the entire world! Aztec, Hawaiian, Japanese, Navajo, and many more. Exactly what I needed</p>
+                <p>Of course, that data was not in the format that I wanted for my visualization. And although the data was in a structured format, it wasn't a trivial-to-process CSV file. Luckily, Stellarium has a very extensive User Guide that explains exactly how to interpret the data. For example, for the "stick figures", or the lines between stars, the data looks as follows: </p>
+                <a class="fancybox" href="data/nadieh/img/constellationship_data.png"> <img src="data/nadieh/img/constellationship_data.png" class="img-responsive img-month" alt="Screenshot of the constellation 'star-connection' data"></a>
+
+                <p>Where each row is 1 constellation. With the constellation's id at the start, then the number of connections in the constellation, and after that so-called <i>Hipparcos star id's</i>, where each pair of 2 HIP id's would mean a line between those two stars. (for more info, see section 9.7 of the user guide). I converted these files into something very similar to the typical <a href="https://bl.ocks.org/mbostock/2949937"><i>links</i> file</a> of a network, with a source id and target id per row (thus a row per line to draw).</p>
+                <p>I pulled the full names of the constellations from each <i>constellation_names.eng.fab</i> file. And I created a file that contains all the constellations (id's) that a specific star is connected to. However, there was still 1 important "subject" that I was missing in terms of data; the stars.</p>
+                <p>Thankfully, that's a dataset I'm already familiar with and have used on a few earlier astronomy themed visualizations. The <a href="https://github.com/astronexus/HYG-Database">HYG database</a> contains lots of information about many, many stars. I took the <a href="https://en.wikipedia.org/wiki/Right_ascension">right ascension</a> and <a href="https://en.wikipedia.org/wiki/Declination">declination</a> (you can see these as the latitude and longitude of the sky) so I could place the stars on a map. The Hipparcos id, to connect them to the "stick-figure" data. The <i>apparent magnitude</i> (how bright the star looks) to use as size. And finally, I used the star's <i>color index</i> information (which is not color exactly) to get an (effective) temperature, which I could then use to color the stars (it would be a shame not to color the stars to the way they actually appear to us). For that last step I used the formulas that I found in the source code of <a href="https://sites.uni.edu/morgans/stars/b_v.html">this website</a>.</p>
+                <a class="fancybox" href="data/nadieh/img/celestial_map_Frederik_de_Wit.jpg"> <img src="data/nadieh/img/celestial_map_Frederik_de_Wit.jpg" class="img-responsive img-month" alt="Celestial map from 1670, by the Dutch cartographer Frederik de Wit"></a>
+
+                <p>Oh, and I filtered the stars to only include those that are bright enough to be seen by the naked eye (in the middle of nowhere), which is an <i>apparent magnitude</i> smaller than 6.5. Strangely enough there were 65 stars that were used in constellations that are (much) fainter than that. So technically we shouldn't be able to see them (without instruments). However, after spending more time with the data throughout the project, I now have the idea that these are probably misclassified stars. They have very close neighbors that are bright enough to be seen, but by accident the person creating the constellation file selected the wrong star's HIP id to use. And along the project I did fix a few of these that were visible in the end results.</p>
+
+                <p>Besides all the Sky Maps, I also wanted to show something a bit more "statistical", using a bigger set of data. And the thing that sparked my interest the most (and fit the story the best) was seeing how the data would look when you'd plot brightness versus the number of constellations that each star is used in. Is there a trend? If so, which stars are deviating from that and why? So, I made a quick and dirty plot in R using ggplot</p>
+                <a class="fancybox" href="data/nadieh/img/scatterplot_mag_vs_num_const.png"> <img src="data/nadieh/img/scatterplot_mag_vs_num_const.png" class="img-responsive img-month" alt="Scatterplot showing apparent magnitude versus no. of constellations for ±2200 stars"></a>
+
+                <p>However, while investigating this scatterplot more closely, I noticed that my star data was missing more "proper" star names that I wanted. Almost all the 9 stars of <a href="https://en.wikipedia.org/wiki/Pleiades">the Pleiades</a> were not named! So I searched for a bigger list of named stars and found a sort-of official list of ±350 stars on <a href="https://en.wikipedia.org/wiki/List_of_proper_names_of_stars">Wikipedia</a>.</p>
+                <p>However, these only contained the names. I needed to know their HIP ids to connect them to the data. Thankfully, there is the <a href="https://www.universeguide.com/star/atlas">Universe Guide</a> where the URL's are based on the star's name, and it contains the HIP id in the <i>h1</i> header. I therefore used the <a href="https://cran.r-project.org/web/packages/rvest/index.html">rvest</a> package in R to download the Universe Guide page of all of the stars on the wiki list (which I copied into Excel using the basic "data from web" option), grab the <i>h1</i> from each page, and  only keep the HIP id from the text (and of course had to do some manual look-ups for (only) a dozen names that didn't return results from the Universe Guide). In the last step I joined the "proper star names" dataset to the original HYG dataset to have a <i>much</i> more complete set of star names :)</p>
+
+                <p><i>A final note about the data:</i> There are no "officially" declared constellation figures. There are indeed 88 official constellations, but the only thing that is recorded is what area of the sky that constellation takes up (kind of like how the US states divide up the land), but there is no official consensus on how the "stick-figure" part of the constellation should be drawn. I've therefore decided to use the data from Stellarium as my "single source of truth".</p>
+
+                <h3>week 2 <span class="light-grey">|</span> sketch</h3>
+
+                <p>This month was very light on actual sketching. Mostly because the basic idea in itself is quit simple: focus on 1 star and visualize all the constellations that use that star. Using different colored lines for each constellation and surrounding each star with a donut-like mini chart that would show by which constellations that star is used (apart from the "main focus" star). You can see the tiny sketch in my brainstorm below (bottom of the left page)</p>
+                <a class="fancybox" href="sketch/nadieh/sketch_ideas.png"> <img src="sketch/nadieh/sketch_ideas_small.jpg" class="img-responsive img-month" alt="Brainstorming ideas for this month"></a>
+
+                <p>I wanted the map of the stars to look like a combination between current and ancient Sky Maps. To use the deep blue colors of space. Set data-based sizes and colors of the stars (and make them glow!). But to also draw the ecliptic line, use the markings of the background lines ("grid-lines" in the sky in a way), where some would be signified by the Zodiac sign; in general give it a feel of the old maps. Such as this exquisite one made by Alexander Jamieson in 1822</p>
+                <a class="fancybox" href="sketch/nadieh/Alexander_Jamieson_Celestial_Atlas.jpg"> <img src="sketch/nadieh/Alexander_Jamieson_Celestial_Atlas_small.jpg" class="img-responsive img-month" alt="Plate 1 from A Celestial Atlas by Alexander Jamieson from 1822"></a>
+
+                <p>Another part of the project that took up more pages in my little notebook was math (as usual). As you can see in the final project, if there are multiple constellations that use the same two stars to draw a line between, I draw those lines side by side. And although that is really simple to draw when the stars are perfectly aligned either horizontally or vertically, for every other option (so 99.99% of the time) it wasn't that trivial. Or so I thought...</p>
+                <a class="fancybox" href="sketch/nadieh/sketch_lines_1.png"> <img src="sketch/nadieh/sketch_lines_1_small.jpg" class="img-responsive img-month" style="max-width: 400px;" alt="Sketches of the math trying to figure out how to get lines next to each other"></a>
+
+                <p>I started out thinking it would probably require a combination of sines and cosines, with perhaps four different cases (how the target star was positioned relative to the source star). In the sketches above and below how I'm trying to see if there are indeed different solutions for those four cases. But eventually it all came to do relatively simple vector math; finding the <i>normal vector</i>, and for each new constellation move up a little farther along the normal vector (I only realized this solution very late, which is contained within that sort-of red circles small drawing that my Apple pencil is pointing to)</p>
+                <a class="fancybox" href="sketch/nadieh/sketch_lines_2.png"> <img src="sketch/nadieh/sketch_lines_2_small.jpg" class="img-responsive img-month" alt="Sketches of the math trying to figure out how to get lines next to each other"></a>
+
+                <p>On the right-bottom side of the sketch above you can see the final piece of math that I needed to position the constellations around one big main map. Like I've mentioned a few times before, math is truly your best friend in creating more unique data visuals, especially geometry!</p>
+
+                <p>Finally, as mentioned in the data section, I wanted to add some more "statistical" charts. The first was a scatterplot showing star brightness versus the number of constellations it appeared in. The image below left is the, extremely rough, sketch I drew. Really, it's so simple, it almost wasn't needed. But it's always good to roughly sketch out an idea, in case your mind is glossing over some thinking error.</p>
+                <div class="img-gallery-wrapper">
+                    <a class="fancybox" rel="gallery-stats-sketch" href="sketch/nadieh/sketch_stats_scatter.png"><img src="sketch/nadieh/sketch_stats_scatter.png" class="img-responsive img-gallery-2" alt="Very rough sketch of the star scatterplot" /></a>
+                    <a class="fancybox" rel="gallery-stats-sketch" href="sketch/nadieh/sketch_stats_bar.png"><img src="sketch/nadieh/sketch_stats_bar.png" class="img-responsive img-gallery-2" alt="Very rough sketch of the culture bar chart" /></a>
+                </div>
+
+                <p>I also wanted to show people that some cultures have very small constellations on average (few stars per shape) and others have very intricate ones. For that I draw the, also extremely rough, bar chart in the sketch above right. As you'll see in the code section below, I did create a basic version of it, but ended up incorporating this data in quite a different (visual) way.</p>
+
+                <h3>week 3 & 4 & 5 & 6 & 7 & 8 <span class="light-grey">|</span> code</h3>
+
+                <p>My first goal, before focusing on the actual data visualization side of things, was to create a "base map" of the sky. I've never created my own, so I did a little research on what kind of <a href="https://github.com/d3/d3-geo#projections">projection</a> is typically used, and decided to go with a <a href="https://github.com/d3/d3-geo#geoStereographic">Stereographic</a> projection.</p>
+
+                <p>With about 9000 stars for the full sky, mini donut charts and many constellation lines, I knew that I wanted to create this project with HTML5 canvas, not SVG, due to performance reasons. So, I loaded my star data, set-up my d3 code following <a href="http://bl.ocks.org/nitaku/9607405">several</a> <a href="https://bl.ocks.org/mbostock/c7e85d2b47d11982db38">other</a> <a href="https://bl.ocks.org/pmplewa/0e36cce6c9c5edb31e18d41ad1f82c4e">examples</a> of sky maps found on <a href="http://blockbuilder.org/search">blockbuilder</a>. I thought I had done everything right, pressed save and saw a thin weird stripe of stars (image below left), which gave me the feeling of "Ugh, with such a crappy first result that I thought would be correct, did I take on the wrong subject...?" (I've never truly worked with projections before, outside of the extremely default Mercator).</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/projection_location_fail.png"> <img src="code/nadieh/img-write-up/projection_location_fail.png" class="img-responsive img-month" alt="Failures of trying to map the stars"></a>
+
+                <p>After more careful comparison of the other sky map examples and mine, I saw I had forgotten some transformation calculation of the RA (right ascension) and declination. A few code adjustments later and I had the map above right. However, it was still too abstract for me to see if it was correct or just a random collection of points 😅 (although in hindsight I am now able to point out the stars that make up Orion on the left, can you?)</p>
+
+                <p>I felt that the one thing that would probably help me realize if the stars were correctly plotted was to add the graticule lines, using <i>d3.geoGraticule()</i>. Thankfully the existing d3 based sky map examples helped out again. And when I learned how to rotate the projection to face North and added the lines for the modern constellations I finally knew for sure that the stars were in the correct location (Orion is now on the middle right, seeming as if rotated 90 degrees counter-clockwise in the image below right).</p>
+                <div class="img-gallery-wrapper">
+                    <a class="fancybox" rel="gallery-skymap-start" href="code/nadieh/img-write-up/skymap_adding_graticule.png"><img src="code/nadieh/img-write-up/skymap_adding_graticule_small.jpg" class="img-responsive img-gallery-2" alt="Adding the background graticule lines for reference" /></a>
+                    <a class="fancybox" rel="gallery-skymap-start" href="code/nadieh/img-write-up/skymap_pointing_north.png"><img src="code/nadieh/img-write-up/skymap_pointing_north_small.jpg" class="img-responsive img-gallery-2" alt="Rotating the projection to face North" /></a>
+                </div>
+
+                <p>After a few more tests, I finally understood how to use the RA & declination coordinates of 1 particular star to rotate the projection to center on the star. And so, for the rest of the sky map building I focussed mostly on the central star of Orion. I guess it's my favorite constellation because many of its stars are very bright, such as Betelgeuse, Bellatrix and Rigel. So bright even that on a good night you can <i>see</i> that Betelgeuse is truly shining in a reddish color! It's therefore an easy constellation shape to pick out. I was also able to see it from the living room window of my childhood home for many winters. And as the cherry on the Orion-cake, my all-time favorite Hubble photo is of the <a href="http://hubblesite.org/image/1826/news_release/2006-01">Orion Nebula</a>, which sits right in the middle of Orion's lower almost triangle section.</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/skymap_orion_basic.png"> <img src="code/nadieh/img-write-up/skymap_orion_basic_small.jpg" class="img-responsive img-month" alt="Focusing on the Orion constellation"></a>
+
+                <p>As you can see in the images above, I was already using the magnitude to scale the radius of each star; the brighter they appear to us, the bigger the circle. Now it was time to look at the colors of these circles. I started with a temperature-to-color scale I'd already investigated and developed to be very similar to the star's actual perceivable colors for a <a href="https://www.visualcinnamon.com/portfolio/exoplanet-neighbors">Scientific American</a> piece on our "nearby stars" that I created the visualization for. Adding several more blue tones for the much brighter stars that are present in this bigger dataset of stars. For a while I played around with making the colors more vibrant. However, that definitely created a sky that was way too colorful (image below left).</p>
+                <p>But even with the more real and nuanced colors, and adding a glow to each star (with canvas's <i>shadowBlur</i> property), the bigger stars looked a bit flat to me. In reality, a star looks a bit brighter in the center and dimmer around its edge. I've already experimented with this before in my <a href="http://bl.ocks.org/nbremer/eb0d1fd4118b731d069e2ff98dfadc47">recreation of an HR-diagram</a> (which is a very famous & useful scatterplot used in Astronomy). Luckily, canvas also has a <i>createRadialGradient</i> property. And during my "<a href="https://www.visualcinnamon.com/portfolio/a-year-in-flights">A Year in Flights</a>" data art project I'd played with creating a unique gradient for each data element in canvas, so I copied most of the code from there, and adjusted it to a radial instead of linear gradient.</p>
+                <p>I used <a href="https://gka.github.io/chroma.js/">chroma.js</a> to make slightly brighter and darker colors based on the 1 color I had for each star. It took some experimentation to figure out the best settings though. The image below right was definitely <i>not</i> correct (I'd made the stars bigger to better assess how well the gradients looked).</p>
+                <p>It's an effect that people won't consciously notice, but it does make that slight attention to detail that I think subconsciously adds to the whole experience (you can see it better in the first circular image farther below).</p>
+                <div class="img-gallery-wrapper">
+                    <a class="fancybox" rel="gallery-skymap-colors" href="code/nadieh/img-write-up/skymap_star_colors_intense.png"><img src="code/nadieh/img-write-up/skymap_star_colors_intense_small.jpg" class="img-responsive img-gallery-2" alt="Starting on the color scale of the stars" /></a>
+                    <a class="fancybox" rel="gallery-skymap-colors" href="code/nadieh/img-write-up/skymap_star_colors_gradient.png"><img src="code/nadieh/img-write-up/skymap_star_colors_gradient_small.jpg" class="img-responsive img-gallery-2" alt="Creating tiny gradients for each star" /></a>
+                </div>
+
+                <p>Most sky maps that I'm familiar with are not rectangular. They ones I used as a child, and those I find most beautiful, are circular. I therefore clipped the square to a circle. And on the outside I added a dashed line around it. It's typically used to denote degrees, but here it's just there for ornamentation.</p>
+                <p>I also added a dashed line inside the map to show the so-called <i>ecliptic</i>. You can faintly see it curving from North to South on the right-hand side in the image below. This is the path that the Sun makes across the sky (relative to us). Because our Earth's rotational axis is 23.44° tilted with respect to the plane in which the planets go around the Sun, the ecliptic is not a straight line following 0° declination. Again, just an embellishment to make the whole look more interesting (although the ecliptic at least reveals information).</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/skymap_circle_clip.png"> <img src="code/nadieh/img-write-up/skymap_circle_clip_small.jpg" class="img-responsive img-month" alt="Clipping the map to a circle"></a>
+
+                <p>Similar to maps of Earth, maps of the stars also often show a grid of lines with the hours of RA (24 hours being a full day) and degrees of declination along the outside edge. In the crazy number of the useful features d3's geo functionality has, I hoped that perhaps it would also have some function that would calculate the graticule-edge-crossing-location, but sadly it didn't.</p>
+                <p>I therefore did the next best thing. I went to the geo channel of d3's Slack group and asked how to find the pixel locations where the graticule lines cross the clipping circle.</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/graticule_slack_question.png"> <img src="code/nadieh/img-write-up/graticule_slack_question_small.jpg" class="img-responsive img-month" alt="Asking my graticule question in d3's Slack geo channel"></a>
+
+                <p>And it took <a href="https://twitter.com/recifs">Philippe Rivière</a> (aka @fil, one of THE best projection/map creators of today) only little over an hour to supply the link to a fully fledged <a href="https://beta.observablehq.com/@fil/finding-intersections-between-the-graticule-and-the-clip-s">example in Observable</a>! Which is mathematically calculated. However, for different rotations the math gets a lot harder. So difficult that Philippe made a <a href="https://beta.observablehq.com/@fil/finding-intersections-method-2">"brute force" example</a>. I won't explain the details, but I'm very purposely putting the brute force in quotation marks there, because I'd say his method is still way too smart and elegant to be called that. Many, many thanks to Philippe for his freely given effort to solve the problem, because I don't think I would've come up with something nearly as good and concise 🙌</p>
+                <p>In the image below left you can see how I added some obvious extra markings to check that the function that I adjusted from Philippe's was giving back the right locations. Hotpink is my go-to color 😜</p>
+                <p>I replaced the yellow and red circles by the actual degree numbers. At first I wanted to keep the notation of the RA in hours, but I really liked the usage of the zodiac signs in Alexander Jamieson's map (see the sketch section above). I therefore followed his example; using the Zodiac signs for 12 "major-RA" lines and only use 10° and 20° for the 2 minor-RA lines in between the major-Zodiac lines (see image below right).</p>
+                <div class="img-gallery-wrapper">
+                    <a class="fancybox" rel="gallery-skymap-graticule" href="code/nadieh/img-write-up/graticule_edges_location.png"><img src="code/nadieh/img-write-up/graticule_edges_location_small.jpg" class="img-responsive img-gallery-2" alt="Checking to see if the code found the right locations of the graticule line edges" /></a>
+                    <a class="fancybox" rel="gallery-skymap-graticule" href="code/nadieh/img-write-up/graticule_edge_symbols.png"><img src="code/nadieh/img-write-up/graticule_edge_symbols.png" class="img-responsive img-gallery-2" alt="Placing zodiac symbols on the correct Right Ascension line" /></a>
+                </div>
+
+                <p>And then it was time for the final big aspect that I had in mind for the sky map base; space itself. Right now the background color of "space" was the same dark blue. But I've been fortunate enough to visit some truly amazing places for star gazing during vacations, such as the Namib or Australian deserts. And I'll never forget how awestruck I was by seeing the tendrils, "clouds" and glow of the Milky Way streaking across the sky.</p>
+                <p>And this is really where my design was taking a step away from reality, but I <i>really</i> wanted to add some depth to each image by mimicking some lighter color streaks across the background. Not quite insinuating it was the Milky Way, but just not perfectly the same color. A bit like I'd seen in Nicholas Rougeux's <a href="https://www.c82.net/work/?id=357">Literary Constellations</a> project.</p>
+                <p>At OpenVisConf I'd just seen some "behind-the-scenes" tests by Ian for his Quickdraw talk. And a few bloopers too, although they looked more like abstract art that I wouldn't mind having in my house :) In some of those tests and bloopers he was using <a href="https://github.com/d3/d3-contour">d3's contour</a> function to show densities and it gave exactly the kind of feeling I was looking for.</p>
+                <p>I therefore started experimenting with contours as well. First creating a dummy dataset that was jittered along a simple sine function and then applying <i>d3.contourDensity()</i> to turn the points into a shape. It took a lot of tries and different settings before I kind of figured out how to tweak my dummy dataset to give different levels of contours that were the right size of "blobbyness"</p>
+                <div class="img-gallery-wrapper">
+                    <a class="fancybox" rel="gallery-skymap-pink-space" href="code/nadieh/img-write-up/space_pink_swirl.png"><img src="code/nadieh/img-write-up/space_pink_swirl_small.jpg" class="img-responsive img-gallery-2" alt="Using d3's contour function to create a swirly background, in pink for now" /></a>
+                    <a class="fancybox" rel="gallery-skymap-pink-space" href="code/nadieh/img-write-up/space_pink_swirl_areas.png"><img src="code/nadieh/img-write-up/space_pink_swirl_areas_small.jpg" class="img-responsive img-gallery-2" alt="Creating different levels in the contour" /></a>
+                </div>
+
+                <p>I added more random fluctuations into the sine "swirl" so it would look different for each refresh of the sky map. And yeah, hotpink isn't the right color for space either... A final touch I added was to blur the contours, for extra background fuzzy-ness (image below right). Just like SVG, canvas also has a <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/filter">wide range of filters</a> to apply (not implemented in Safari weirdly enough though).</p>
+                <div class="img-gallery-wrapper">
+                    <a class="fancybox" rel="gallery-skymap-blue-space" href="code/nadieh/img-write-up/space_blue_areas.png"><img src="code/nadieh/img-write-up/space_blue_areas_small.jpg" class="img-responsive img-gallery-2" alt="Setting nice space-like blue colours for the contours" /></a>
+                    <a class="fancybox" rel="gallery-skymap-blue-space" href="code/nadieh/img-write-up/space_blue_blurred.png"><img src="code/nadieh/img-write-up/space_blue_blurred_small.jpg" class="img-responsive img-gallery-2" alt="Blurring the contours gives the final effect" /></a>
+                </div>
+
+                <p>Adding a North and South pointer, again more for added ornamentation (but correct at least), and my "base map" was done! (and that took up more time than the whole month of July 😭  why don't I do simple things anymore...)</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/skymap_base_final.png"> <img src="code/nadieh/img-write-up/skymap_base_final_small.png" class="img-responsive img-month" alt="The final result of the base for each Sky Map"></a>
+
+                <p>ALRIGHT! And now we are <i>finally</i> ready for the actual data visualization part of things (๑•̀ㅂ•́)ง✧</p>
+
+                <p>I started with creating a small donut chart around each star that was part of a constellation. Even though I chose 1 particular star to focus on, many of its neighboring stars would also be part of the different constellations. Therefore I wanted to visualize how many constellations used each star.</p>
+                <p>And because I was working in canvas, it really didn't matter how many tiny donut charts I would create, the page doesn't really get any slower. Thankfully, this was a rather straightforward part by looking at examples found on <a href="http://blockbuilder.org/search#text%3Ddonut%20canvas%3Bd3version%3Dv4">blockbuilder</a>. First a simple version with only white slices and not much later the colored version that I wanted with rounded edges and a bit of padding.</p>
+                <p>I chose to switch and focus on the brightest star in th night sky: Sirius. During my exploration beforehand I had already noticed that there was a lot of variety in how cultures used the stars in that section of the sky (Orion on the other hand is <i>very</i> similar in many cultures, which you can see farther below).</p>
+                <div class="img-gallery-wrapper">
+                    <a class="fancybox" rel="gallery-donut" href="code/nadieh/img-write-up/donut_basic.png"><img src="code/nadieh/img-write-up/donut_basic_small.jpg" class="img-responsive img-gallery-2" alt="Creating a mini donut chart around each constellation star" /></a>
+                    <a class="fancybox" rel="gallery-donut" href="code/nadieh/img-write-up/donut_color.png"><img src="code/nadieh/img-write-up/donut_color_small.jpg" class="img-responsive img-gallery-2" alt="A more finished version of the donut charts" /></a>
+                </div>
+
+                <p>The lines in between the stars was a bit of a different story. I wanted these lines to be placed alongside each other, but I only had the exact center location of each star, so calculating the offset in the x & y direction that each extra line would need wasn't trivial. You could already see my (mostly useless) math in the sketch section above, until I <i>finally</i> remembered not to think in geometry (which created the wrong image below left), but in vectors and the normal vector.</p>
+                <p>Doing some tests to check if all went well, fixed a bug that had to do with if a star was either a "source" or a "target" star (middle image blow). And finally having the correct result of lines nicely placed alongside each other (image below right).</p>
+                <div class="img-gallery-wrapper">
+                    <a class="fancybox" rel="gallery-lines-setup" href="code/nadieh/img-write-up/lines_setup_wrong.png"><img src="code/nadieh/img-write-up/lines_setup_wrong_small.jpg" class="img-responsive img-gallery-3" alt="It might look ok, but it definitely isn't" /></a>
+                    <a class="fancybox" rel="gallery-lines-setup" href="code/nadieh/img-write-up/lines_setup_source_vs_target.png"><img src="code/nadieh/img-write-up/lines_setup_source_vs_target_small.jpg" class="img-responsive img-gallery-3" alt="Checking a fix between source and target settings" /></a>
+                    <a class="fancybox" rel="gallery-lines-setup" href="code/nadieh/img-write-up/lines_setup_correct.png"><img src="code/nadieh/img-write-up/lines_setup_correct_small.jpg" class="img-responsive img-gallery-3" alt="Correclty having streaks of lines between the stars" /></a>
+                </div>
+
+                <p>To see if this concept truly worked for the more "famous" stars in the sky I looked at <i>Ursa Major</i> (the Big Bear, or partly better know as the <i>Big Dipper</i>. Well, the Big Dipper seems to be a very obvious collection of stars, since <i>many</i> cultures use practically the same shape. So many even that the width of the constellation lines between stars is much bigger than the diameter of the stars (image below left). I wasn't quite sure what I thought of that...</p>
+                <p>I therefore made a small update to turn the lines in curved lines that would always start and end in the star's central location (image below right).</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/lines_curved_straight_ursa_major.png"> <img src="code/nadieh/img-write-up/lines_curved_straight_ursa_major_small.jpg" class="img-responsive img-month" alt="Comparing curved to straight lines in Ursa Major"></a>
+
+                <p>And also made a version for Orion that would only curve groups of lines if there were more than ±10 lines in between two stars.</p>
+                <p>I then showed the different options to Shirley, and she told me that it's so <o>normal</o> to see the lines between constellation images as straight lines that the curves just didn't look right in this instance. Which I indeed completely agreed with. I guess the very thick line bundles in both constellation did help to better show the main thing I wanted to convey with these visuals: there is a predominant shape to be made of those stars that many different cultures all across the World picked up on.</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/lines_curved_straight_orion.png"> <img src="code/nadieh/img-write-up/lines_curved_straight_orion_small.jpg" class="img-responsive img-month" alt="Comparing curved to straight lines in Orion"></a>
+
+                <p>However, these groups of constellations showed me that using 1 particular zoom level and center would definitely not work to properly show all constellations. For example, the dark red constellation is partly outside of the circle that I was using for Orion. I therefore spend way too long (before I finally figured it out...) to automatically calculate the optimum zoom level, rotation and center that would nicely fit any constellation that I would give the program. No matter if it was only a small portion of the sky, or across half the sky (the white circle shows the star that I'm focusing on).</p>
+                <div class="img-gallery-wrapper">
+                    <a class="fancybox" rel="gallery-constellation" href="code/nadieh/img-write-up/constellation_orion.png"><img src="code/nadieh/img-write-up/constellation_orion_small.jpg" class="img-responsive img-gallery-2" alt="Focusing on Betelgeuse in modern constellation of Orion" /></a>
+                    <a class="fancybox" rel="gallery-constellation" href="code/nadieh/img-write-up/constellation_sirius_hawaii.png"><img src="code/nadieh/img-write-up/constellation_sirius_hawaii_small.jpg" class="img-responsive img-gallery-2" alt="Focusing on Sirius in a star-line of Hawaiian cultures" /></a>
+                </div>
+
+                <p>I also discovered this beauty of a constellation below that comes from several tribes in South America and is called Veado (which Google tells me is similar to 'deer'). I would say that it seems a bit too specific for a constellation that can "easily" be found in the sky, but that's perhaps just my own bias.</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/constellation_veado_south_america.png"> <img src="code/nadieh/img-write-up/constellation_veado_south_america.png" class="img-responsive img-month" alt="One of my favorite new constellations; Veado, from South America"></a>
+
+                <p>In the default sky map version it was difficult to focus on the constellation of one particular culture. I therefore added each separate constellation in a ring around the main one. The math wasn't hard (see the sketch section above for my notes on this). And thankfully I had anticipated this so the charting function that created the central version could just as easily be used to show a single constellation, or even the constellations of completely different stars by making slight adjustments to the data that you supplied to it. Using canvas's handy <i>drawImage</i> function together with the offscreen canvas possibility, I added the mini circles in a ring to the main canvas in very little time (for once!).</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/circles_full_sky_map.png"> <img src="code/nadieh/img-write-up/circles_full_sky_map_small.jpg" class="img-responsive img-month" alt="The separate constellations in a ring around the main one"></a>
+
+                <p>That immediately showed me two things. For one, this was <i>excruciatingly</i> slow! But also, the complete sky map on the mini circles wasn't needed at all. They were too small anyway to really have any visual effect, and they were too distracting from the central map. Luckily, removing elements from the mini maps would also make them faster to load. The main thing to see were the constellation shapes anyway, which was the most performant part of the sky map's 3 "layers"; the glowing stars, the lines & donut charts and finally the entire background.</p>
+                <p>I was sadly seeing some anti-aliasing effects in the mini maps because I was still creating each map at a fixed size of about 1000 px and then drawing them to the small regions around the main map. After some googling I found an <a href="https://stackoverflow.com/a/17862644/2586314">interesting answer</a> on stackOverflow that down-scaled a canvas in steps. After some fiddling around, and apparently doing it completely wrong at the start which gave me this weird, extremely upscaled version only showing 1 "giant colored pixel", I got it working and ended up with the final version below right.</p>
+                <div class="img-gallery-wrapper">
+                    <a class="fancybox" rel="gallery-circle-band" href="code/nadieh/img-write-up/circles_too_far_expanded.png"><img src="code/nadieh/img-write-up/circles_too_far_expanded_small.jpg" class="img-responsive img-gallery-2" alt="I don't even remember what went wrong here..." /></a>
+                    <a class="fancybox" rel="gallery-circle-band" href="code/nadieh/img-write-up/circles_final_look.png"><img src="code/nadieh/img-write-up/circles_final_look_small.jpg" class="img-responsive img-gallery-2" alt="The final look of the circular sky map with the mini circles around it" /></a>
+                </div>
+
+                <p>Finally, I added some interaction so you could click any of the outside mini circles to see it drawn properly in the center. And I could've stopped there. It was a complete visualization in its own right. But just showing Betelgeuse felt so incomplete! I had so much more data that I could use to tell a fuller and more interesting story. So even though I had already racked up way too many hours to get to this point, I decided that this month would become a complete article, with beginning, middle & end. Or in other words, even more visuals (◍•﹏•)</p>
+
+                <p>One other visual I definitely wanted to add was an (almost) full sky map that would show all of the constellations of one chosen culture. One where you could select each culture and have the map update. With how complete my circular sky map function already was, setting up the base for this was a piece of cake! In essence the only change I had to make, except for a different width/height & not clipping to a circle anymore, was to change the projection from stereographic to an equirectangular one. This produced the visual in the image below</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/full_width_map_start.png"> <img src="code/nadieh/img-write-up/full_width_map_start_small.jpg" class="img-responsive img-month" alt="A full-width rectangular sky map"></a>
+
+                <p>I was quite happy with the result, so I decided to use this for the header of the full article as well. And to make it just a <i>touch</i> more fun, I made it moveable! I was inspired after seeing the amazing 2nd installment of <a href="http://www.r2d3.us/visual-intro-to-machine-learning-part-2/">R2D3</a> come out, where the animations don't stop immediately when you stop scrolling. I asked one of the creators, <a href="http://twitter.com/tonyhschu/">Tony Schu</a> how on Earth that was done. And that's how I got introduced to the world of "reactive animations", <a href="https://css-tricks.com/animated-intro-rxjs/">rxjs</a> and LERP. Well, getting the subtle "moving" effect working on my full-width sky map took <i>hours</i>, ugh (lots of new stuff to learn about <i>observables</i>). Since this isn't a visual thing, I don't have any screenshots of intermediate stages, but I can at least show you the final result:</p>
+                <video class="img-responsive img-month" src="code/nadieh/img-write-up/full_width_moving_header.mp4" autoplay loop></video>
+
+                <p>I made the actual culture-selecting-interactive version farther down the page with the constellation layer plotted on top. And of course, this also has the option to move the map horizontally on a mousemove or swipe. For these full sky map I made sure to have the background lighter patches follow the actual rough location of the Milky Way :)</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/full_width_map_culture.png"> <img src="code/nadieh/img-write-up/full_width_map_culture_small.jpg" class="img-responsive img-month" alt="The full-width sky map with all the constellations of one culture on top"></a>
+
+                <p>Are you still with me! Sorry for the long post, hehe, but this month was just amazingly complex and had many moving pieces. But we're almost there now!</p>
+
+                <p>Next up was a section of small multiples. Betelgeuse might be a fascinating star, but there are so many more stars to explore! Like I've said before, the function to create the full sky map with all of its constellations could be used for any star, although you do have to supply a few settings, such as how far to zoom in and how far the star should be offset from the exact center of the circle (this is also the reason that I didn't make every star clickable, because you do need some extra settings to make it look good). But that meant that quickly creating a few smaller circles was <i>relatively</i>> fast to set up.</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/small_multiple_start.png"> <img src="code/nadieh/img-write-up/small_multiple_start_small.jpg" class="img-responsive img-month" alt="A set of 4 smaller sky maps each focusing on a different star"></a>
+
+                <p>What ended up taking several hours was the exact <i>design</i> of how the small multiples would look on the page, and manually going through about a hundred stars and selecting the ±15 I thought looked the most interesting & diverse. I have to admit, I'm still not 100% happy with how the final small multiple section looks, but I've tried <i>a lot</i> of different things; circles, glowing edges, circular text, a combination, and more. The final (bottom-right) is the result that displeased me the least...</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/small_multiple_design_stages.png"> <img src="code/nadieh/img-write-up/small_multiple_design_stages_small.jpg" class="img-responsive img-month" alt="Some of the different designs the small multiples went through with the final result bottom right"></a>
+
+                <p>The final visual pieces to add to the page were the statistical chart. Starting with the scatterplot showing the brightness of a star versus the number of constellations it's included in. Since ±2200 stars were included in at least one constellation, I again used canvas for the base (but used a separate SVG on top for all the axes, text, interactivity and annotations). That made it easy to reuse the same coloring of the stars as I had in the sky maps. However, with the white background those colors looked way too soft, and it was too distracting as well (image below left). Removing the radial gradient and adding a <i>multiply</i> effect to darken overlaps helped somewhat (image below right).</p>
+                <div class="img-gallery-wrapper">
+                    <a class="fancybox" rel="gallery-scatterplot" href="code/nadieh/img-write-up/scatterplot_plot_initial.png"><img src="code/nadieh/img-write-up/scatterplot_plot_initial_small.jpg" class="img-responsive img-gallery-2" alt="Using the same star 'colors' as I did for the sky maps" /></a>
+                    <a class="fancybox" rel="gallery-scatterplot" href="code/nadieh/img-write-up/scatterplot_no_gradient.png"><img src="code/nadieh/img-write-up/scatterplot_no_gradient_small.jpg" class="img-responsive img-gallery-2" alt="Removing the radial gradient of the stars" /></a>
+                </div>
+
+                <p>However, I felt that the colors were still too soft. Therefore, I made the colors more vibrant an added a bit of "glow" around the edges. Cleaned up the axes a bit and the visual style of the scatterplot was done.</p>
+                <p>But initially I wanted to add another chart next to it. One that would show that some cultures use very few stars on average in constellations and others use a lot. A simple bar chart seemed like it would work. However, when I had a simple one on my screen, I noticed that it wasn't fitting with the color scheme of the scatterplot. And more importantly, the two charts just weren't about the same topic/insight, so no use in putting them side by side. Eventually I implemented the essence of the bar chart into the culture "boxes" at the bottom of the article. And that freed up some space on the right of the scatterplot for annotations!</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/scatterplot_bar_chart.png"> <img src="code/nadieh/img-write-up/scatterplot_bar_chart.png" class="img-responsive img-month" alt="An almost finished scatterplot and bar chart"></a>
+
+                <p>Often overlooked, but annotations are one of the best ways to make a chart understandable to an audience, and it's the ideal way to highlight exactly those things that you, as the creator, want. And for at least a year now, my go-to is the wonderful <a href="http://d3-annotation.susielu.com/">d3-annotations plugin</a> by <a href="http://www.susielu.com/">Susie Lu</a>. Yup. Made <i>heavy</i> use of annotations in this particular chart 😉</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/scatterplot_annotations.png"> <img src="code/nadieh/img-write-up/scatterplot_annotations_small.jpg" class="img-responsive img-month" alt="The final look of the scatterplot with many annotations"></a>
+
+                <p>And since a scatterplot almost begs for a tooltip-like hover event, I added a mouseover that would show the star that you're hovering. But not in a tooltip, instead it reveals some text in the chart itself. I'm not a big fan of pop-up tooltips actually.</p>
+
+                <p>Not a dataviz element, but I added a section at the bottom of the article that tells more about each culture. From where they are for the lesser known ones, or some other small tidbit of info that reveals itself on a hover. It's here that I implemented the bar chart as those tiny bars at the bottom of each box.</p>
+                <p>When you select a culture, the full sky map updates to show the constellations of that culture. But the selected culture also becomes fully colored. And as a general tip, as far as I know you can't animate gradients in CSS. However, using d3's <i>styleTween</i> function on the <i>background</i> CSS property you can! I could mimic the animation of the background from the subtle color on the left + grey on the right, to full color throughout 😄</p>
+                <a class="fancybox" href="code/nadieh/img-write-up/culture_boxes.png"> <img src="code/nadieh/img-write-up/culture_boxes.png" class="img-responsive img-month" alt="All the cultures in their own overview"></a>
+
+                <p>And then, then I replaced as many of the visuals as I could by images! 😱 Yes, no use to have each visitor's browser build up the quite heavy sky maps if they weren't interactive. I started with the small multiples, saving each tiny canvas as a png, running them through <a href="https://imagecompressor.com/">an optimizer</a> to reduce file size, and then only referencing the images and not running the functions anymore.</p>
+                <p>When I saw how well that was working to reducing the page load time on my older devices, I started replacing more. Such as the smaller images of Sirius and Dubhe. And the header above. Which before was a canvas that you could only move back and forth a little. But by saving the image and applying that to the background of the header section, I could use the wonderful background properties or <i>repeat</i> to make the sky map infinitely long and moveable.</p>
+                <p>For the full sky map at the bottom of the page I use a mix of images and canvas. The canvas part now only draws the constellation lines on top of an image. Well, to be exact, I draw the canvas to the <i>background-image</i> CSS property using canvas' handy <i>dataToURL</i> function. The final result is thus really two full width divs; the bottom one that never changes and has space + stars, and a top one with constellation lines that is a background image which gets redrawn/replaced whenever a new culture is selected.</p>
+
+                <p>Finally, when I had the full version complete, I send out a request to several dataviz friends (Shirley included of course) to ask for feedback. Also asked my dad for feedback, as the "normal person who typically doesn't understand what I'm doing" case 😜 Which got me some great suggestions for small changes that just added to the overall attention-to-detail and useability.</p>
+
+                <p>This month was my longest month in terms of hour investment (although <a href="../march">March's Beautiful in English</a> isn't far behind). I clocked about 110 hours, but I think the reality is about 15% more, due to not starting to time myself when I thought I would only spend 5 minutes to check something and suddenly I was an hour in...</p>
+                <p>Below you can see the top of the full & <a href="code/nadieh" target="_new">final article</a> (it's too long to show completely here). I'm super happy to have created another project that combines my love of Astronomy with my passion for dataviz. I'm proud of the result, even though I am guessing that it won't really be picked up, since it isn't some pop-culture or recently-in-the-news topic. But with <a href="../january">Dragon Ball Z</a>, <a href="../november">Fantasy book</a> and <a href="../june">Card Captor Sakura</a> before, I'm now used to creating things for a small group of people that are as enthusiastic about a niche topic as myself 😁</p>
+                <a href="code/nadieh" target="_new"><img src="code/nadieh/img-write-up/Figures_in_the_Sky_full_page_final_top_small.jpg" class="img-responsive img-month" alt="The top of the final article"></a>
+
+                <p>PS: There are also several high-quality giclée prints available of this project in <a href="https://shop.visualcinnamon.com/collections/figures-in-the-sky" target="_new">my online shop!</a></p>
+
+                <p>DAMN! I can't believe that I'm finally DONE!! Twelve months/installments of data sketches, in about 2 years. I've truly loved making these projects. Working with and getting to know Shirley ❤️. And pushing myself technically and creatively. I'm super happy I did it, and have gotten a ton of good stuff out of it, such as clients, conferences, more friends! (but I'm not crazy enough to be doing this again 😜) </p>
+            </div>
+          </div>
+
+          <!-- Shirley -->
+          <div class="col-xs-12 col-md-6 write-up">
+            <div class="shirley">
+              <div class="name paddingBelow kingBasil">Shirley</div>
+              <div class="time kingBasil"></div>
+              <div class="location quicksand">san francisco</div>
+
+              <a href="https://christmasexperiments.com/2018/23/legends" target='_new'>
+                <img src="code/shirley/header.jpg" class="img-responsive img-month-top" alt="">
+              </a>
+
+              <h3 class="margin-top-10">year 1 <span class="light-grey">|</span> inspiration</h3>
+
+              <p>
+                So just like Nadieh, this month took me <em>forever</em> to figure out a dataset and angle for.  So even though it says May, I didn't finish this until December 2018 (wow I'm bad), and I'm writing this in January 2019 (wow I'm SUPER bad).
+              </p>
+
+              <p>
+                And just like Nadieh says, we thought this would be a super project with RJ and Mara about all the different tellings of Cinderella.  But after a few months of working on it on the side, the project quietly fizzled out (probably mainly to do with time issues with everyone's busy schedules).  After that, I was quite honestly at a loss.  We had chosen this topic, myths & legends, because it had sounded like a cool topic with a lot of potential.  But when I actually sat down to think about it, what I came up with either didn't excite me, or would have been logistically difficult to get the data.  I bounced from Chinese and Asian mythology, to class Chinese literature, to Mythbusters episodes.
+              </p>
+
+              <p>
+                Then, the idea came to me after watching <a href='http://www.crazyrichasiansmovie.com/' target='_new'>Crazy Rich Asians</a>.  I loved <a href='https://en.wikipedia.org/wiki/Michelle_Yeoh' target='_new'>Michelle Yeoh</a> in the movie, but it wasn't until I went and read up more about her that I learned she was accomplished and legendary and badass.  It made me wonder about all the legendary women that I have no idea about, and the idea took shape from there.
+              </p>
+
+
+              <h3 class="margin-top-10">week 1 <span class="light-grey">|</span> data</h3>
+
+              <p>
+                Once I had the idea about legendary women, the next question was how to go about gathering the data.  Pretty early on I decided to use Wikipedia, and I thought I might try to scrape it for the "top" women on there.  I didn't have any idea how to define "top", though (page views? page length? links into page?) and even though I saw <a href='https://pudding.cool/2018/10/wiki-breakout/' target='_new'>a Pudding article that scraped Wikipedia</a>, I still wasn't sure how I wanted to go about it.  (I was also on a bit of a time crunch.)
+              </p>
+
+              <p>
+                Then it hit me that perhaps I should be looking for a definitive list, and I somehow ended up on <a href='https://en.wikipedia.org/wiki/List_of_female_Nobel_laureates' target='_new'>a page of the 51 female Noble Laureates</a>.  I hadn't heard of most of them, and I wanted to learn more about them.  It was perfect.
+
+                <a class="fancybox" href="data/shirley/wiki_list.png"> <img src="data/shirley/wiki_list.png" class="img-responsive img-month"></a>
+                <em>(Part of the Wikipedia page of the 51 women.)</em>
+              </p>
+
+              <p>
+                From there, all I had to research was the different ways to access the Wikipedia API.  It was a little hard to navigate (I wasn't sure if I should be using <a href='https://www.wikidata.org/wiki/Wikidata:Main_Page' target='_new'>Wikidata</a> or <a href='https://www.mediawiki.org/wiki/API:Main_page' target='_new'>MediaWiki</a> which is what comes up when I search "Wikipedia API", for example), but thankfully Pudding had me covered.  A quick dig through their <a href='https://github.com/the-pudding/wiki-billboard-data' target='_new'>wiki-billboard-data repo</a> led me to <a href='https://github.com/the-pudding/wiki-billboard-data/blob/54a0acb25413f02fc5938b05254239fdaa5ad8bc/scripts/current/get-people.js#L2' target='_new'>their script</a> using <a href='https://www.npmjs.com/package/wikijs' target='_new'>wikijs</a>, and I could just interface with that node package instead.
+              </p>
+
+              <p>
+                From there, all I had to do was copy and paste the table of female Noble Laureates into <a href='https://docs.google.com/spreadsheets/d/1Y9AETF58KMmp4_S2Mp7u0opsOEjee9hA8TfcdSBkQpI/edit?usp=sharing' target='_new'>a spreadsheet</a>, and do some light formatting/cleaning.  (This is probably one of the most important lessons I learned about data gathering from Nadieh, which is that spreadsheets are great for cleaning data.  The unenlightened me used to try and write code to scrape it, and it'd take me so much longer.  When I gathered data for Hamilton, I literally typed out the commas between each cell in a row in my CSV, I was so stupid.)  I then exported the spreadsheet as CSV, then used an <a href='https://www.csvjson.com/csv2json' target='_new'>online converter</a> to get the <a href='https://github.com/sxywu/legends/blob/master/scripts/legends_raw.json' target='_new'>data into JSON format</a>.
+              </p>
+
+              <p>
+                After that, I wrote a <a href='https://github.com/sxywu/legends/blob/master/scripts/getWiki.js' target='_new'>simple script</a> using wikijs to grab some more information about each woman, including the number of links in to their page ("backlinks") and the number of sources at the bottom to get the <a href='https://github.com/sxywu/legends/blob/master/assets/legends.json' target='_new'>final dataset</a>.
+              </p>
+
+              <p>
+                Even though the idea took forever to come up with, the actual data gathering only took a few hours 😅
+              </p>
+
+              <h3>week 2 <span class="light-grey">|</span> sketch</h3>
+
+              <p>
+                I'll be honest, I've been thinking on and off about this project for so long that I can't even remember all the ideas I had come up with.  All I remember is that I was going through the <a href='https://www.informationisbeautifulawards.com/showcase?action=index&award=2018&controller=showcase&page=1&pcategory=short-list&type=awards'>Information is Beautiful Awards shortlist</a> when I realized I should be pinning the entries I really like.  Which made me realize that I should clean up and organize <a href='https://www.pinterest.com/shirleyxywu/' target='_new'>my Pinterest board</a> better, since I used to have all my dataviz inspiration in one board and I should put them into even more descriptive categories like "radial", "spatial", "network", "scrolly", etc.
+              </p>
+
+              <p>
+                And as I was going through and cleaning my board, I came across this gorgeous painting of crystals by artist <a href='https://www.thechaperon.ca/gallery/tesseract-crystals' target='_new'>Rebecca Chaperon</a> that I had pinned years back:
+                <a class="fancybox" href="sketch/shirley/crystals.jpg"> <img src="sketch/shirley/crystals.jpg" class="img-responsive img-month"></a>
+                And immediately, I knew I wanted to programmatically recreate them.  Because how beautiful would it be if I could represent these legendary women as bright, colorful crystals?
+              </p>
+
+              <p>
+                Maybe I had other ideas before this (I probably did), but I can't remember them anymore - this felt so immediately, compellingly right.
+              </p>
+
+              <p>
+                It wasn't long before I had come up with the other details: the size of the crystals would represent the woman's influence, the number of links into her Wikipedia page.  The number of faces on the crystal would be mapped to the number of sources at the bottom of her page (because she's "multi-faceted" hehehe get it), it would be colored by the category of her field.  The only thing that evaded me for a while was how to position the crystals; for the longest time, I could only think to lay them out in 2-dimensions, in x/y positions and have the reader scroll through them.
+              </p>
+
+              <p>
+                And then I took <a href='https://twitter.com/mattdesl' target='_new'>Matt DesLauriers</a>'s <a href='https://frontendmasters.com/courses/canvas-webgl/'>Creative Coding workshop</a> on Frontend Masters, where he taught canvas, three.js, and WebGL.  The workshop opened my mind up to the third dimension, and I knew immediately that I was going to use the z-axis for the date they received their award; the closer they were, the more recent the award.  <a href='https://twitter.com/infowetrust' target='_new'>RJ</a> further suggested that I should have threads connecting those that collaborated with each other, and have their positions be affected by those pulls also (I didn't have time to implement this).
+              </p>
+
+              <p>
+                All of this came to me so quickly and naturally, that I didn't do a single sketch.  (I went through my notebook, and there aren't any at all.)
+              </p>
+
+              <h3>week 3 & 4 <span class="light-grey">|</span> code</h3>
+
+              <p>
+                This was a great month for code.
+              </p>
+
+              <p>
+                For the last few years, I've been wanting to make a physical <em>something</em>, and last year (2018) I finally decided to make it a goal to be part of a physical installation.  But for majority of the year, I didn't know what I wanted to <em>do</em> for a physical installation.  Every time I thought about it, I'd just get stuck thinking in terms of 2D projections on the walls and not know how to take advantage of all the <em>floor space</em>.
+              </p>
+
+              <p>
+                And then one day, it hit me (I'm not sure what triggered it) that of course I don't know how to think in 3D physical spaces, because I work digitally in 2D all day long.  So if I could teach myself to work in 3D digitally, then it should follow that I could think in 3D physical spaces also.  I put three.js and WebGL at the top of my to-learn list.
+              </p>
+
+              <p>
+                In late October, I took <a href='https://twitter.com/mattdesl' target='_new'>Matt</a>'s <a href='https://frontendmasters.com/courses/canvas-webgl/'>Creative Coding workshop</a>, and learned the basics of three.js and an intro to fragment and vertex shaders.  I learned the <a href='https://en.wikipedia.org/wiki/Right-hand_rule' target='_new'>right-hand rule</a>: use the thumb for x-axis (increases going right), index finger for y-axis (increases going up, which is the opposite of SVG and canvas), and the middle finger for z-axis (increases out the screen and coming towards us).  I learned that the WebGL world doesn't operate in pixels, but rather units (that we can think of as feet or meters or whatever we like).
+                <a class="fancybox" href="code/shirley/workshop.jpg"> <img src="code/shirley/workshop.jpg" class="img-responsive img-month"></a>
+                <em>(Notes from the workshop, and from the <a href='https://thebookofshaders.com' target='_new'>Book of Shaders</a>.)</em>
+              <p>
+
+              <p>
+                Then in mid-November, <a href='https://twitter.com/makio64' target='_new'>David Ronai</a> asked me if I was interested in participating in <a href='https://christmasexperiments.com' target='_new'>Christmas Experiments</a>, an annual WebGL advent calendar.  I was really hesitant to accept, since I had never worked in WebGL before, but David encouraged me to give it a try and that he'd put me later in the month so that I'd have more time.  I agreed, knowing that the deadline would give me the motivation I needed to complete the project.
+              </p>
+
+              <p>
+                I started on December 1st, and made it a goal to do a little bit each weekday until I could get to something presentable on the 23rd (the slotted date for my Christmas XP).
+              </p>
+
+              <p>
+                I started by reading the first two chapters of <a href='https://www.amazon.com/WebGL-Programming-Guide-Interactive-Graphics/dp/0321902920' target='_new'>WebGL Programming Guide</a> that <a href='https://twitter.com/misaki_mofu' target='_new'>Misaki Nakano</a> recommended for me, which taught me how WebGL was set up.  I then re-took just the three.js section of Matt's workshop so that I could see what heavy lifting three.js was doing for us.  After the workshop, I started an <a href='https://beta.observablehq.com/@sxywu/three-js-exploration-shapes' target='_new'>Observable notebook</a> to figure out the minimum amount of setup it took to draw something in three.js (a renderer, a camera, and a scene, and then call <code>renderer.render(scene, camera)</code> to draw).  I always like understanding how something works at its base, so this was really helpful to figure out.
+              </p>
+
+              <p>
+                After setting up the notebook, I wanted to create a crystal shape.  I decided to use the <a href='https://threejs.org/docs/index.html#api/en/geometries/PolyhedronGeometry' target='_new'>PolyhedronGeometry</a> because I could just define a set of vertices and then specify the vertices that would make up a triangular face.  On the first day, I only managed to create one triangle:
+                <a class="fancybox" href="code/shirley/triangle.jpg"> <img src="code/shirley/triangle.jpg" class="img-responsive img-month"></a>
+                And on the second day, a crystal (which took two attempts because the first had incorrect math):
+                <a class="fancybox" href="code/shirley/diamond2.gif"> <img src="code/shirley/diamond2.gif" class="img-responsive img-month"></a>
+                And then eventually the crystal shape I had in my mind:
+                <a class="fancybox" href="code/shirley/diamond3.gif"> <img src="code/shirley/diamond3.gif" class="img-responsive img-month"></a>
+                Even though I later realized there were better ways to do what I wanted (and in fact, PolyhedronGeometry was a rather tedious way to do what I wanted), I'm really glad for the practice it gave me in thinking through WebGL's x/y/z coordinates.
+              </p>
+
+              <p>
+                Once I was satisfied with creating shapes, I moved on to learning how to color the shapes.  For this, I went back through Matt's section on vertex and fragment shaders, and <a href='https://github.com/sxywu/three-workshop/blob/master/noise-shader.js' target='_new'>played around with his shader code</a>:
+                <a class="fancybox" href="code/shirley/circle_noise.jpg"> <img src="code/shirley/circle_noise.jpg" class="img-responsive img-month"></a>
+                The next goal was to use the fragment shader to color the crystal shape.  I took a bit of a detour here, because I couldn't figure out how to use <a href='https://github.com/glslify/glslify' target='_new'>glslify</a> (a node-style module system for GLSL, the language shaders are written in, that Matt's code used to load in the noise function) in Observable.  Instead, I started to explore different bundlers/build tools so that I could eventually deploy my code to the web.  In the end, I decided to go with <a href='https://parceljs.org/' target='_new'>Parcel</a> (instead of the <a href='https://cli.vuejs.org/' target='_new'>Vue CLI</a> that I've been regularly using for the last half year), because it had built-in support for both Vue and GLSL.
+              </p>
+
+              <p>
+                Here's the crystal with that same noise pattern applied:
+                <a class="fancybox" href="code/shirley/diamond4.gif"> <img src="code/shirley/diamond4.gif" class="img-responsive img-month"></a>
+
+                I wasn't a fan, so I decided I needed to learn more about shaders and using colors in shaders.  This is when I turned more heavily to <a href='https://twitter.com/patriciogv' target='_new'>Patricio Gonzalez Vivo</a>'s <a href='https://thebookofshaders.com/' target='_new'>Book of Shaders</a>, and in particular his <a href='https://thebookofshaders.com/05/' target='_new'>chapter on Shaping Functions</a>.  I learned about sines, cosines, polynomials and exponentials - functions that can take a number (or a set of numbers) and output another.  I also learned about mixing colors, and how we could take two colors and not just get a new color between those two, but also to mix colors at the RGB levels and make completely new colors.  And once we combine that with the shaping functions, we can get gradients and shapes:
+                <a class="fancybox" href="code/shirley/gradients.jpg"> <img src="code/shirley/gradients.jpg" class="img-responsive img-month"></a>
+                (These were accomplished by mixing blue and yellow, and tweaking the RGB values at each position with powers, sines, absolutes, steps, and smoothsteps.)
+              </p>
+
+              <p>
+                Once I felt happy with the potential colors, I switched gears and plugged in the data: number of faces for number of references at bottom of Wikipedia page, size for number of Wikipedia backlinks, color for the category of their Nobel Prize.
+                <a class="fancybox" href="code/shirley/data_in.png"> <img src="code/shirley/data_in.png" class="img-responsive img-month"></a>
+
+                But I really didn't like this output for two reasons:
+                <ul>
+                  <li>I was hard coding each shape, so I only had three distinct shapes: rectangle, rectangle with triangle on top, and rectangle with triangle on top and bottom.  This meant most of the "crystals" were just rectangles.</li>
+                  <li>
+                    I also wanted a color for each category for a total of six colors, so for each crystal I was only passing in one color and doing a shaping function.  The colors didn't look good at all.
+                  </li>
+                </ul>
+
+                It was around this time that I came across <a href='https://vanruesc.github.io/postprocessing/public/demo/#bloom' target='_new'>a demo for Bloom</a> (a post-processing effect to give glow), and in that example there were round, gem-like objects that looked quite close to the crystals I wanted:
+                <a class="fancybox" href="code/shirley/sphere.png"> <img src="code/shirley/sphere.png" class="img-responsive img-month"></a>
+
+                When I looked at the code, I learned that they were using SphereGeometry but with flatShading on - so instead of rendering a smooth surface it showed each distinct face.  And that was when I realized: just like how I can manipulate and mix colors to get new colors completely different from the original, I can actually manipulate the settings on a geometry (like the number of faces) and get a new geometry that looks similar but different from their name.
+              </p>
+
+              <p>
+                So I swapped out the PolyhedronGeometry with SphereGeometry, set the height segment to 4 and the width segment to the data, stretched out the shape by setting the vertical scale to twice the horizontal scale, added jitter to each vertex, and I had much more interesting shapes:
+                <a class="fancybox" href="code/shirley/shape.png"> <img src="code/shirley/shape.png" class="img-responsive img-month"></a>
+                Now that I had the shape solved, I went back to the color.  This time, I used two colors and mixed them with the shaping functions:
+                <a class="fancybox" href="code/shirley/gradient1.png"> <img src="code/shirley/gradient1.png" class="img-responsive img-month"></a>
+                <a class="fancybox" href="code/shirley/gradient2.png"> <img src="code/shirley/gradient2.png" class="img-responsive img-month"></a>
+                (I love how much the first one looks like sweet potatoes 😆)
+              </p>
+
+              <p>
+                Because the shader by default just wraps around the shape (at least that's how I like to think about it), I lost the edges.  Thankfully, Matt taught me how to get the definition back: by calling <code>computeFlatVertexNormals()</code> on the geometry, getting the normals in the vertex shader, and passing it to the fragment shader and adding it to the color.  This not only made the edges really apparent, but also gave a fake sense of light and shadow:
+                <a class="fancybox" href="code/shirley/facenormals.png"> <img src="code/shirley/facenormals.png" class="img-responsive img-month"></a>
+                (<em><a href='https://github.com/sxywu/legends/commit/fbdc2c24e20696941b694d7f4caaeb07aabf2126' target='_new'>Code for adding face normals</a></em>)
+              </p>
+
+              <p>
+                From there, I played around with two sets of gradients: one for "humanities" (Peace, Literature, Economic Sciences), and another for "natural sciences" (Physics, Chemistry, Medicine).
+                <a class="fancybox" href="code/shirley/twocolors.png"> <img src="code/shirley/twocolors.png" class="img-responsive img-month"></a>
+
+                Next came background.  I created a "floor" by using a PlaneGeometry and randomly jittering the y-position of each vertex (inspired by this <a href='https://tympanus.net/codrops/2016/04/26/the-aviator-animating-basic-3d-scene-threejs/' target='_new'>article from codrops</a>), and the "sky" by creating a huge sphere around the scene.  I experimented with three different kinds of lights: hemisphere and ambient to give the "sky" a nice sunset/sunrise sort of glow, and directional to cast shadows from the crystals to the "floor".
+                <a class="fancybox" href="code/shirley/floorandsky.png"> <img src="code/shirley/floorandsky.png" class="img-responsive img-month"></a>
+              </p>
+
+              <p>
+                To finish up the piece, I added "stars" that represent all the men who have won the prize in the same time period, as well as annotations for each crystal and the decades.  It was a fun lesson trying to get the text in, mainly because with all the text I had, using TextGeometry was completely unperformant.  The solution I found upon Googling was to render the text within an HTML5 Canvas, create a PlaneGeometry, and use that Canvas as a texture to fill the PlaneGeometry with - what an interesting approach.  (<a href='https://github.com/sxywu/legends/blob/master/components/World.vue#L295-L303' target='_new'>Here is the code</a>.)
+              </p>
+
+              <p>
+                My favorite part was that I was able to find a good reason to use that third dimension: the decade of their awards.  So the closer that they are to the front, the more recent their award, and the further back they are, the further back in history.  But I don't reveal those decades unless the user "flies up" to view the crystals from above. If they are "walking through" the crystals at the ground level, I only show information about each woman - because I want the visitor to concentrate on only the women as they "walk through".
+                <a class="fancybox" href="code/shirley/overhead.png"> <img src="code/shirley/overhead.png" class="img-responsive img-month"></a>
+              </p>
+
+              <p>
+                Here is the final (I'm sorry for the poor quality of video, I compressed it down to <1MB):
+                <video src="code/shirley/final.mp4" class="img-responsive img-month" autoplay="true" loop="true"></video>
+              </p>
+
+              <p>
+                This month was super fun, and I'm so proud that I was able to finish it in 3 weeks - which I haven't been able to achieve since my <a href='http://datasketch.es/september' target='_new'>September</a> project about travel.  I was also able to learn and teach myself three.js and a little bit of GLSL which I've been wanting to do for a long time - it's really given me the confidence to go forward with more 3D projects and I'm excited to do more with it in the future.  But most importantly, I'm so glad I chose this dataset of women Nobel Laureates - it's taught me a lot, and have given me a whole set of topics I'm interested in exploring and building out as dataviz.
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Our names and website below -->
+        <div class="row">
+          <div class="nadieh col-xs-6">
+            <div class="name kingBasil">Nadieh</div>
+            <div class="quicksand"><a href="http://www.visualcinnamon.com/">VisualCinnamon.com</a></div>
+          </div>
+
+          <div class="shirley col-xs-6">
+            <div class="name kingBasil">Shirley</div>
+            <div class="quicksand"><a href="http://sxywu.com/">sxywu.com</a></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- <section id="may-guest" class="month-page">
+      <div class="guest background-guest col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+
+      <div class="container guest-container">
+        <div class="row">
+          <div class="col-xs-12 col-md-12 write-up">
+            <div class="guest">
+			  <div class="guest-introduction quicksand">introducing our guest</div>
+              <div class="name-guest paddingBelow kingBasil">RJ Andrews</div>
+              <div class="time kingBasil"></div>
+              <div class="location quicksand paddingBelow">san francisco</div>
+
+                <h3>week 1 <span class="light-grey">|</span> data</h3>
+
+                <p></p>
+
+                <h3>week 2 <span class="light-grey">|</span> sketch</h3>
+
+                <p></p>
+
+                <h3>week 3 <span class="light-grey">|</span> code</h3>
+
+                <p></p>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="guest col-xs-12">
+            <div class="name kingBasil">RJ</div>
+            <div class="quicksand"><a href="http://infowetrust.com/">info we trust</a></div>
+          </div>
+        </div>
+
+      </div>
+    </section> -->
+
+    <footer class="guest-month">
+      <div class="container">
+        <div>
+          <span>a monthly collaboration between </span>
+          <span class="kingBasil">Nadieh Bremer & Shirley Wu</span>
+        </div>
+        <div class="quicksand">
+          <a href="https://twitter.com/datasketches">@datasketches</a><span class="pipe-divider">  |  </span>#datasketches
+        </div>
+        <div class="about-link quicksand">
+          <a href="../about">about</a><span class="pipe-divider">  |  </span><a href="../feed.xml">rss</a><span class="pipe-divider">  |  </span><a href="https://tinyletter.com/datasketches">newsletter</a>
+        </div>
+      </div>
+    </footer>
+
+	<script>
+  function setTime() {
+    var format = 'h:mm a';
+    var time = new Date();
+    var nadieh = moment(time, format).tz("Europe/Amsterdam");
+    var shirley = moment(time, format).tz("America/Los_Angeles");
+	  var guest = moment(time, format).tz("America/Los_Angeles");
+    $('.nadieh .time').text(nadieh.format(format));
+    $('.shirley .time').text(shirley.format(format));
+	  $('.guest .time').text(guest.format(format));
+
+    var nadiehColor = nadieh.hour();
+    nadiehColor = nadiehColor >= 18 || nadiehColor <= 6 ? 'dark' : 'light';
+    var shirleyColor = shirley.hour();
+    shirleyColor = shirleyColor >= 18 || shirleyColor <= 6 ? 'dark' : 'light';
+    var guestColor = guest.hour();
+    guestColor = guestColor >= 18 || guestColor <= 6 ? 'dark' : 'light';
+
+    $('.nadieh').removeClass('light dark').addClass(nadiehColor);
+    $('.shirley').removeClass('light dark').addClass(shirleyColor);
+	  $('.guest').removeClass('light dark').addClass(guestColor);
+  }
+
+  $( document ).ready( function() {
+    setTime();
+    setInterval(setTime, 60000);
+    $(".fancybox").fancybox({
+      openEffect : 'fade',
+      closeEffect : 'fade',
+      padding: 0,
+      helpers: {
+      overlay: {
+        locked: false
+      }
+      }
+    });
+  });
+    </script>
+
+    <!-- Google analytics -->
+	<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-43942889-3', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>

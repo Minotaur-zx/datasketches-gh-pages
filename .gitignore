@@ -1,0 +1,14 @@
+
+july/data/shirley/node_modules/*
+
+july/code/shirley/.DS_Store
+
+july/code/shirley/img/.DS_Store
+
+july/sketches/.DS_Store
+
+*/code/shirley/screenshots
+*/code/shirley/gifs
+*/code/shirley/videos
+
+.DS_Store

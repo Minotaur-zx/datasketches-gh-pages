@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- <meta name="viewport" content="user-scalable = yes"> -->
+
+	    <title>A Breathing Earth</title>
+		<meta name="author" content="Nadieh Bremer">
+		<meta name="description" content="Data Sketches - April - Community - Nadieh">
+	    <meta name="keywords" content="data, visualization, visualisation, data visualization, data visualisation, information, information visualization, information visualisation, dataviz, datavis, infoviz, infovis, collaboration, data art">
+	
+		<meta property="og:title" content="A Breathing Earth">
+		<meta property="og:site_name" content="data sketch|es">
+		<meta property="og:url" content="http://www.datasketch.es/april/code/nadieh">
+		<meta property="og:description" content="Watch and be mesmerized by our Earth going through a year of plant growth & decline in high detail">
+		<meta property="og:type" content="article">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:image" content="http://www.datasketch.es/april/code/nadieh/img/breathing_earth_week_23.jpg">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="2000">
+		<meta property="og:image:height" content="1016">
+	
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@datasketches">
+		<meta name="twitter:creator" content="@NadiehBremer">
+		<meta name="twitter:title" content="A Breathing Earth">
+		<meta name="twitter:description" content="Watch and be mesmerized by our Earth going through a year of plant growth & decline in high detail">
+		<meta name="twitter:image:src" content="http://www.datasketch.es/april/code/nadieh/img/breathing_earth_week_23.jpg">
+
+		<!-- JavaScript files -->
+		<script src="../../../plugins/d3.js"></script>
+		<script src="js/pixi.min.js"></script>
+		<script src="js/breathe.js"></script>
+		<script src="js/mobile-detect.js"></script>
+
+		<!-- Styling -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- Google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,700" rel="stylesheet">
+
+	</head>
+	<body>
+
+		<div id="container">
+			<div id="title">A Breathing Earth</div>
+			<div id="subtitle">50.000 circles moving through a year of data on planetary vegetation health</div>
+
+			<div id="week"></div>
+			<div id="chart">
+				<img class="mobile" src="img/breathing_earth_week_23.jpg"  alt="Image of a Breathing Earth map of week 23" height="508" width="1000">
+			</div>
+			<div id="legend"></div>
+			<div id="stopstart">loading all 52 weeks, animation will start soon...</div>
+
+			<div id="explanation">
+				<p>We all know that our Earth goes through a seasonal cycle, especially for the latitudes farther away from the equator. In the fall the "deciduous" plants lose their leaves only to grow back again in the next spring.</p>
+				<p>The animation happening in the map above, through all 52 weeks of 2016, visualizes these seasonal cycles. The rise and fall of the growing season in the Northern Hemisphere is particularly visible. However, when focusing on different parts of the planet other cycles & different seasons become noticeable as well; the Southern regions of Africa, Brazil, and New Zealand, having the reverse cycle as the North, or India getting drier and drier up until the July when the monsoons start. The more often you watch the year go by, the more small details will start to stand out.</p>
+				<p style="font-weight: 700;">Watch and see our Earth "breathing" throughout the year. All living organisms depend on these cycles in the growth of plants; for food, for oxygen, and more. Although we humans have started to affect these cycles, hopefully this gorgeous spectacle will be part of our lives for millennia to come.</p>
+			</div>
+
+			<div id="explanation-scientific">
+				<p>The data comes from <a href="https://www.star.nesdis.noaa.gov/smcd/emb/vci/VH/index.php" target="_new">NOAA STAR</a>, the center for satellite applications and research, who use the VIIRS (Visible Infrared Imager Radiometer Suite) sensor onboard Suomi National Polar-orbiting Partnership (SNPP) satellite to get detailed vegetation information of our Earth every week.</p>
+				<p>The specific variable visualized in the map is called 'Greenness', or in more scientific terms; the no noise (smoothed) Normalized Difference Vegetation Index (SMN). Greenness can be used to estimate the start and senescence of vegetation, start of the growing season and phenological phases. For areas without vegetation (desert, high mountains, etc.), the displayed values characterize surface conditions.</p>
+				<p>Animating 50.000 circles in the browser, all separately from each other through different sizes, colors & opacities became a real technical challenge. In the end 3 different methods were tested to see which one would appear most natural. For those interested to see the differences, you can find the (slow) <a href="canvas" target="_new">pure canvas version here</a>, the <a href="pixi" target="_new">pixi.js WebGL version here</a> and the <a href="regl" target="_new">regl WebGL version here</a>.</p>
+			</div>
+
+			<div id="credit">
+				<div id="made">creator <span class="divider">|</span> <a href="https://twitter.com/NadiehBremer" target="_new">Nadieh Bremer</a> <span class="divider">|</span> <a href="http://www.visualcinnamon.com/" target="_new">VisualCinnamon.com</a></div>
+				<div id="data">data <span class="divider">|</span> <a href="https://www.star.nesdis.noaa.gov/smcd/emb/vci/VH/vh_ftp.php" target="_new">Center for Satellite Applications and Research</a></br>note that weeks 1 - 4 have missing data in the North (no daylight?)</div>
+				<div id="back">Go back to <a href="../..">the datasketch|es' April page</a> to read about the data|sketch|code process</div>
+			</div>
+		</div>
+
+        <script src="js/main.js"></script>
+        
+        <!-- Google analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-43942889-3', 'auto');
+            ga('set', 'anonymizeIp', true);
+            ga('send', 'pageview');
+        </script>
+
+	</body>
+</html>

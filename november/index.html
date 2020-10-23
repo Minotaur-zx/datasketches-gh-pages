@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='shortcut icon' href='../img/favicon.ico' type='image/x-icon'/ >
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Data Sketches</title>
+    <meta name="author" content="Nadieh Bremer">
+    <meta name="description" content="Data Sketches - November - Books">
+    <meta name="keywords" content="data, visualization, visualisation, data visualization, data visualisation, information, information visualization, information visualisation, dataviz, datavis, infoviz, infovis, collaboration, data art">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Tinos:400,400i|Sacramento|Quicksand|Playfair+Display:400i" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Moment -->
+    <script src="http://momentjs.com/downloads/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	  <!-- fancyBox -->
+	  <link rel="stylesheet" href="../plugins/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	  <script type="text/javascript" src="../plugins/fancybox/jquery.fancybox.pack.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+  <header>
+    <!-- Logo and name -->
+    <div>
+      <a class="hide-mobile peach kingBasil no-border" href="../october"><div class="top-links other-month-link textRight">go to October</div></a>
+      <div class="month-logo"><a class="no-border" href=".."><img class="paddingTop20" src="../img/logo.png" width="120" /></a></div>
+      <a class="hide-mobile peach kingBasil no-border" href="../december"><div class="top-links other-month-link textLeft">go to December</div></a>
+    </div>
+    <div>
+      <a class="quicksand no-border" href=".."><div class="top-links datasketch-top-link"><span class="dark-grey">data sketch<span class="dark-pink">|</span>es</span></div></a>
+    </div>
+
+    <!-- Title above -->
+    <div class="row">
+      <div class="col-xs-12 month-page-title">
+        <h2 class="kingBasil peach">November</h2>
+        <h1 class="quicksand">Books</h1>
+      </div>
+    </div>
+  </header>
+
+    <section id="november" class="month-page">
+      <div class="nadieh background col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+      <div class="shirley background col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+
+      <div class="container">
+        <!-- Write-ups -->
+        <div class="row">
+          <!-- Nadieh -->
+          <div class="col-xs-12 col-md-6 write-up">
+            <div class="nadieh">
+              <div class="name paddingBelow kingBasil">Nadieh</div>
+              <div class="time kingBasil"></div>
+              <div class="location quicksand">amsterdam</div>
+
+  			        <a href="code/nadieh/"><img src="code/nadieh/img/the_magic_is_everywhere_header.png" class="img-responsive img-month-top" alt="The Magic is Everywhere"></a>
+
+                <h3 class="margin-top-10">week 1 <span class="light-grey">|</span> data</h3>
+
+                <p>As a note, this month was very heavy on the data side for me (besides having only 3 weeks due to a vacation at the start of the month). So don't be scared when you see the length of this section 😉</p>
+                <p>For a very long time in my youth I only read comic books, but then during a vacation I picked up a copy of Terry Goodkind's <i>The Wizard's First Rule</i> and from that moment on I was hooked on the Fantasy genre. I finally understood the feeling of disappearing inside strange and magical wolds that the authors created through their words (I also had a Manga phase for a few years). So for this month's topic I knew that I wanted to look into Fantasy books.</p>
+                <p>Since I don't think it would be very legal to dive into the words of a recent book itself (say, my favorite one), I instead tried to find a different angle. And one thing that struck me is that I always feel that the titles of Fantasy books are somewhat similar. More in terms of subjects to use for titles; about magic (makes sense), or <i>"some name/object of some fantasy place"</i>, such as "The Spears of Laconia". Maybe I could dig into trends and patterns of these titles?</p>
+                <p>I thus had to get my hands on a whole bunch of fantasy titles. Scraping the web seemed the fastest way. On Amazon I could find a section that showed the top 100 Fantasy authors from that day. I wrote <a href="https://github.com/nbremer/datasketches/blob/gh-pages/november/data/nadieh/Step%201%20-%20Get%20the%20top%20100%20Fantasy%20authors%20from%20Amazon.R" target="_new">a small scraper in R</a> with the <a href="https://blog.rstudio.org/2014/11/24/rvest-easy-web-scraping-with-r/" target="_new">rvest package</a> that went through the 5 pages (20 authors per page) and saved their names. However, I couldn't find an easy way to get their most popular books (unique ones) and the Amazon API seemed too much of a hassle. Luckily, Goodreads has a very nice API that can give back the top 30 most popular books per author, together with information about the number of ratings, average rating, publication date and such. I therefore wrote <a href="https://github.com/nbremer/datasketches/blob/gh-pages/november/data/nadieh/Step%202%20-%20Get%20top%20books%20from%20goodreads.R" target="_new">another small script</a> with help of the <a href="https://github.com/dsidavis/Rgoodreads" target="_new">rgoodreads package</a> that got back the top 10 most popular books for each of the 100 authors. I first tried 30, but most authors don't have that many and then you start getting back a whole lot of non-English translations of the same book. With 10 per author I only found 2 books that were non-English (I did a quick manual check of the result and deleted those two).</p>
+                <p>Next came the trickiest part, text mining on the titles, which consisted of a few phases: text cleaning, getting hypernyms (I'll explain later) & clustering of similar titles. For the text cleaning I made a few choices. For one, I didn't want any authors that had (co-)written only 1 popular book, based on the number of ratings of Goodreads. So I kept the authors that had a median of >20 ratings on Goodreads. That took out 3 writers, 2 of which had co-written <i>Harry Potter and the Cursed Child</i> with J.K. Rowling. Next, I wasn't looking for any omnibus, a collection, books written by too many people. For this (although not perfect) I looked at how often the exact same book title appeared in my list and took out those that appeared more than twice. Furthermore, I removed all books with terms such as <i>box, set, edition</i> (I checked each of the terms to see that I was removing the right books). Finally, I scrapped books with 0 ratings.</p>
+                <p>Next came the text cleaning. Mostly the basic stuff; removing digits, punctuation, stop words (and some specific words, such as <i>Part</i>). I did a quick word count after the title cleaning to get a sense of what words occur most often in book titles. And since these are words, I of course had to visualize it as a word cloud 😉 The bigger the size of the word, the more often it appears in titles (the location and angle have no meaning).</p>
+                <a class="fancybox" href="data/nadieh/most_occuring_words.png"> <img src="data/nadieh/most_occuring_words_small.jpg" class="img-responsive img-month" alt="The most occuring words in Fantasy titles"></a>
+
+                <p>That was nice, but I wanted to look for trends. And for a standard text mining algorithm, the words <i>wizard</i> and <i>witch</i> are as different as <i>wizard</i> and <i>radio</i>, even though we as humans know better. So I tried to find a way to automatically get hypernyms of nouns, which you can see as a word that lies higher in the hierarchy of concepts I guess. Like a dog, which is a canine, which is a mammal, which is an animal, etc. Maybe on a higher level of concepts, I could replace <i>witch</i> and <i>wizard</i> both with the same term, like <i>magical being</i> or something. I remembered that <a href="https://wordnet.princeton.edu/" target="_new">WordNet</a> might be able to help me with that, but it took me some effort and help from StackOverflow to get it installed on my Mac with Sierra (I wrote about the steps and changes I had to make <a href="https://github.com/nbremer/datasketches/tree/gh-pages/november/data/nadieh/How%20to%20install%20wordnet%20on%20a%20Mac" target="_new">here</a>).</p>
+                <p>I got the hypernyms per noun into a file and then I saw... it wasn't going to be enough. Besides many not having been given a hypernym, one of the problems was the fact that some words were already "general" enough, but I still requested a hypernym that made it even more general. Other words were still not general enough, I needed the hypernym of the hypernym (or even higher). At this point, and with about 800 different words to "generalize" I just faced the truth and set about doing it manually. The hypernyms that I had did help to classify a word faster. It took me about 2 hours I think, but afterwards I had a list of all the words and their general terms such as <i>a name</i>, <i>magic</i>, <i>location / place</i> and so on.</p>
+                <p>So I took the list back into R, replaced all the specific words with their general ones and then turned the strings of letters into a vector (a document term matrix to be precise, which has each string represented by a row and all of the unique words get a column. There are a few options, but generally a value inside this matrix contains the number of occurrences of that word in the particular title) that I could then use for clustering.</p>
+                <p>Since these titles were very short in number of words, I knew from past experience that the clustering would not really give back amazing results, there's just not enough information. Books with just one fantasy term for example, like <i>Warbreaker</i>, really don't give the algorithm much to compare with others. I therefore tried several things to see which would visually give back the most interesting result. My goal with the clustering was to get back an <i>x</i> and <i>y</i> location for each book, where similar titles were grouped together, that I could then plot in a browser. I tried K-means, Principal Component Analysis (with the 2 most important vectors) & t-SNE with 2 dimensions. Inspecting the results I found that t-SNE gave back the best result. The books were spread out nicely and there were clear groups of different topics (although sometimes a book was placed/clustered too much on one word I found). I quickly placed the most occurring terms on top of t-SNE result to get a feeling for where certain topics were located. This wasn't perfect, since most terms had a hotspot but had a few straggling books around the whole, so some terms were pulled a bit towards the middle. I'd have to "fix" that later.</p>
+                <a class="fancybox" href="data/nadieh/tsne_clustering_result_with_terms.png"> <img src="data/nadieh/tsne_clustering_result_with_terms.png" class="img-responsive img-month" alt="The clustering result of running a t-SNE on the book titles"></a>
+                <p>My very final step was to prepare the data for creating a path between all of the books from the same author. Many books didn't have publication years, so I couldn't do it chronologically sadly. The next best thing was to just draw a line that would create the shortest path, so that the visible length of lines in the final visual would be minimal. Thankfully, I could use the <i>Traveling Salesman Problem</i> approach and the <a href="https://cran.r-project.org/web/packages/TSP/index.html" target="_new">TSP</a> package in R to get the order in which the books should be connected to get the shortest path.</p>
+                <p>The entire process from text cleaning to clustering to TSP can be found <a href="https://github.com/nbremer/datasketches/blob/gh-pages/november/data/nadieh/Step%203%20-%20Investigate%20titles.R" target="_new">in this file</a>.</p>
+
+
+                <h3>week 2 <span class="light-grey">|</span> sketches</h3>
+
+                <p>Throughout the data preparation part I was thinking about how I wanted to visualize the results. From the get-go I already had the idea to place the books in a plane representing similarity in titles, hence the clustering. But how to get an interesting shape for the books?</p>
+                <p>Since I was looking at titles, I thought it would be fun to somehow base the resulting "shape" of a book on the title as well. I could split the 360 degrees of a circle in 26 parts, one for each letter in the alphabet (the English language thankfully doesn't really use any accented or "odd" letters), and then place small circles on the correct angles, one for each letter in a title. I would then connect all the letters from a word with curved lines. In the sketch below you can see the idea, where I was still deciding if I wanted the lines, connecting the letters, to only go round around the outside, or through the middle of the circle as well (if the distance between letters was too great).</p>
+                <a class="fancybox" href="sketches/nadieh/fantasy_books_sketch_1.jpg"> <img src="sketches/nadieh/fantasy_books_sketch_1_small.jpg" class="img-responsive img-month" alt="Figuring out how to visualize the books in an interesting manner"></a>
+
+                <p>I knew that the lines between the letters would eventually be made through a self written function that creates SVG arc paths. One of the elements that I had to figure out for theses paths is the <i>sweepflag</i> (when you draw a curved line between two points, should you draw it clockwise or counterclockwise? See <a href="http://www.visualcinnamon.com/2015/09/placing-text-on-arcs.html" target="_new">my blog on placing text on arcs</a> for a much more elaborate explanation of what makes up an SVG arc path). Not too difficult, but much easier to figure out if you draw it.</p>
+                <a class="fancybox" href="sketches/nadieh/fantasy_books_sketch_2.jpg"> <img src="sketches/nadieh/fantasy_books_sketch_2_small.jpg" class="img-responsive img-month" alt="Getting the SVG arc sweep angle signs correct"></a>
+
+                <p>Skipping ahead a bit to a point where I had already started on some simple coding (plotting the book circles, nothing fancy), I looked into the general terms of titles again, such as <i>magic</i> or <i>royal</i>. I knew that placing them in their average location (as in, the average <i>x</i> and <i>y</i> location of all books that contained that term) wasn't quite right. I wanted to have them more on top of their hotspots. Therefore I created simple plots in R that showed me where books relating to a certain term were located (in red below).</p>
+                <a class="fancybox" href="sketches/nadieh/top_term_locations.png"> <img src="sketches/nadieh/top_term_locations_small.jpg" class="img-responsive img-month" alt="Seeing where certain terms cluster within the whole"></a>
+                <p>So when I had a simple SVG of the book locations in my browser, I downloaded the SVG (using <a href="http://nytimes.github.io/svg-crowbar/" target="_new">SVG Crowbar</a>), took that into illustrator and manually (yes, again) started to place ovals for the top ~30 terms that had a clear hotspot. Which resulted in the SVG below that I then copied back into my html file, loading it underneath the book circles.</p>
+                <a class="fancybox" href="sketches/nadieh/term_areas.png"> <img src="sketches/nadieh/term_areas_small.jpg" class="img-responsive img-month" alt="The landscape of the top terms"></a>
+                <p>What this exercise also taught me was that <i>magic</i> is almost everywhere, hence the title of the final visual 😉 </p>
+                <a class="fancybox" href="sketches/nadieh/magic_term.png"> <img src="sketches/nadieh/magic_term.png" class="img-responsive img-month" alt="Words relating to magic are spread throughout the visual"></a>
+
+                <h3>week 3 & 4 <span class="light-grey">|</span> code</h3>
+
+                <p>With the <i>x</i> & <i>y</i> locations finally attached to my books. I could get around to coding it up with d3.js. The start was rather straightforward, just like creating a scatterplot. Through past experience with creating arced paths between locations (like <a href="../october/code/nadieh">my previous month's visual</a>) that went without issues as well. I did size the circles in area according to how many ratings the book had gotten (Goodreads people definitely like J.K. Rowling 😄 ). The thickness of the path that connected books of the same author were based on the author's rank in the Amazon top 100.</p>
+                <a class="fancybox" href="code/nadieh/img/books_paths_terms_simple.png"> <img src="code/nadieh/img/books_paths_terms_simple_small.jpg" class="img-responsive img-month" alt="Books plotted and the most common terms"></a>
+
+                <p>Next, I focused on the book "shape", adding the small circles, one for each letter in a title, around the main book circle and then connecting the letters of one word with a path. I had some fun with these arcs, trying to make them swoosh a bit. The image below is still my favorite visual result, but the paths were getting way too big, obscuring titles and other books. So I tuned it down a bit.</p>
+                <a class="fancybox" href="code/nadieh/img/books_word_swooshes.png"> <img src="code/nadieh/img/books_word_swooshes_small.jpg" class="img-responsive img-month" alt="Big swooshes between two letters of a word"></a>
+
+                <p>To make the visual a bit more personal, I chose my top 3 authors and my favorite books of these 3 (and 2 others that I enjoyed a series from) and marked these with colors, both in terms of circles and paths.</p>
+                <p>As you can already see from the image above, although the t-SNE algorithm had done a great job of separating the locations of the books, when I resized the books according to their ratings and added the full titles above, many books were overlapping. And since it was important to be able to read the title of a book I wanted to slightly adjust the positions of the circles to reduce overlap. I thought about using the collision algorithm that is in d3 v4's new force layout. But I was afraid that might shuffle the books around too much, their locations within the current layout were rather important. So, yes for a 3rd time, I took the manual approach. I wrote a small function that made it possible to drag each book around (using <i>d3.drag</i>) and then would save the new location in the data. I've since come to love the fact that you can save variables into your local browser (using <i>window.localStorage.setItem('books',JSON.stringify(books))</i> ) so that, even after a refresh, the books would reappear on their moved locations! Surprisingly, it only took me about an hour to slightly shift the ~850 remaining books. With these updated locations I created a new csv (also redid the Traveling Salesman Problem algorithm, just to be sure) and this became the data that is used for the final result.</p>
+                <p>With the updated locations and the term areas added underneath, the visual looked like this</p>
+                <a class="fancybox" href="code/nadieh/img/books_new_locations_term_areas.png"> <img src="code/nadieh/img/books_new_locations_term_areas_small.jpg" class="img-responsive img-month" alt="The new book locations and term areas"></a>
+
+                <p>Now I really had to think about layout, legends, text. It was the end of November and I was going to Melbourne to speak at CSSConf AU, which was amazing, but that did severely limit the time that I could spend on my visual. So December came and I still wasn't finished. As I usually seem to have, I'm trying to plot too much data on the screen, which doesn't help performance. And this month was no different. For mobile I decided to replace the SVG with an image and a note that the desktop version was interactive. But sadly I again didn't have the time to move the whole visual to canvas.</p>
+                <p>On a 13 hour flight from Melbourne to Abu Dhabi I created the layout surrounding the visual; title, intro text and legends below. Creating the animated legend of the swooshes has turned out to be one of my favorite pieces of the visual. And it was a bit of a challenge to create without the a connection to the internet, and thus stackOverflow, at 10,000 feet high. It's probably not the most efficient code, but it works!</p>
+                <a class="fancybox" href="code/nadieh/img/swoosh_legend.gif"> <img src="code/nadieh/img/swoosh_legend.gif" class="img-responsive img-month" alt="The animated legend about the swooshes"></a>
+
+                <p>There's only a minor interactive element in the final visual; when you hover over a book, it highlights all the books by that author. So I thought it would be a nice idea to turn the visual into a high quality print (which is an area I'd love to explore more, creating printable visuals). I did take out the personal touches of my favorite authors, which didn't seem to make sense for a general print. And since I'm already selling a few other prints, I just added it to my <a href="https://www.inprnt.com/gallery/visualcinnamon/magic-is-everywhere/" target="_new">INPRNT</a> and <a href="https://society6.com/product/magic-is-everywhere128478_print#s6-6284086p4a1v45" target="_new">Society6</a> store, in case you like it ^_^</p>
+                <a class="fancybox" href="code/nadieh/img/magic_is_everywhere_print.jpg"> <img src="code/nadieh/img/magic_is_everywhere_print_small.jpg" class="img-responsive img-month" alt="The static print of the final visual"></a>
+
+                <p>As you might have noticed, I've turned all books white, since there's a rather bright rainbow like background. It seemed like the only remaining "color" to use that truly fitted was white. But that was really it. The coding part itself wasn't too difficult this month, the swooshes were probably the most intricate. It was more about going back and forth between data, illustrator and d3.js that took more time than expected. I'm happy with the end result ^_^ I love rainbow colors, and the blurry aspect makes it look a bit <i>magical</i>, haha. It perhaps goes a bit more towards the data art side, but I always like that anyway.</p>
+                <p>I did notice that there are far more therms that relate to <i>bad</i> things, such as blood, death, fire, than things relating to good aspects, such as light. Maybe bad things sell better 😉  Also, I had expected that many authors would probably be fixed within a certain region of the map, all their books following the same trend. But that turned out to be false, most authors are spread across the map. Only a few really stick within one location.</p>
+                <p>Well, I hope you'll have fun investigating and exploring the map to find your own favorite authors and get to know the wonderful world of fantasy book titles. You can find the final result <a href="code/nadieh">here</a></p>
+                <a href="code/nadieh"> <img src="code/nadieh/img/the_magic_is_everywhere_final.jpg" class="img-responsive img-month" alt="The final result of the patterns in Fantasy books"></a>
+
+                <p>And now I really need to start on December!</p>
+
+            </div>
+          </div>
+
+          <!-- Shirley -->
+          <div class="col-xs-12 col-md-6 write-up">
+            <div class="shirley">
+              <div class="name paddingBelow kingBasil">Shirley</div>
+              <div class="time kingBasil"></div>
+              <div class="location quicksand">san francisco</div>
+
+              <a href="http://polygraph.cool/hamilton/" target='_new'><img src="code/shirley/header.png" class="img-responsive img-month-top" alt=""></a>
+
+              <h3 class="margin-top-10">start of forever <span class="light-grey">|</span> data</h3>
+
+              <p>
+                I have so many things to say and feels to declare for this month, it has been a long and arduous journey.  First, I took out the "week 1" part of the header because I started this thing in the last week of August.  And it took until second week of December.  It's been a long time.  Second, my November was Hamilton the musical - not quite a book, unless you count Hamilton the Revolution (aka. the Hamiltome).  Third, this Hamilton project is actually a contract for <a href='http://polygraph.cool' target='_new'>Polygraph</a>, published on their site.
+              </p>
+
+              <p>
+                So I want to thank Nadieh and <a href='https://twitter.com/matthew_daniels' target='_new'>Matt</a> from Polygraph a bucket load, for letting me finish Hamilton as my November data sketch.  It helped me loads, because there was no way I was going to be able to finish Hamilton <em>and</em> another data sketch in November, with my travels to Singapore taking up half the month.  It also worked out well because I had wanted to do a write-up for all the things I went through for Hamilton anyways, and Nadieh was encouraging of that.
+              </p>
+
+              <p>
+                The first thing I did was go through the Hamiltome, and mark any recurring phrases with a corresponding number and note it in my sketchbook:
+                <a class="fancybox" href="data/shirley/book_notes.jpg"> <img src="data/shirley/book_notes.jpg" class="img-responsive img-month"></a>
+                After that, I had to manually enter all the data.  Thankfully, there were already the <a href='https://github.com/amandavisconti/ham4corpus/blob/master/All_Lyrics_Speakers' target='_new'>full set of lyrics online</a>, but I had to go through all the lyrics again to enter the characters, the conversations, and themes in a format that I could use.  This whole process took a painstaking three days (and then afterwards Boyfriend wondered if I could have done it in a more automated fashion and I glared at him).
+                <a class="fancybox" href="data/shirley/book_closed.jpg"> <img src="data/shirley/book_closed.jpg" class="img-responsive img-month"></a>
+                <a class="fancybox" href="data/shirley/data_csv.jpg"> <img src="data/shirley/data_csv.jpg" class="img-responsive img-month"></a>
+                (<em><a href='https://github.com/sxywu/hamilton/tree/master/data/meta/characters.csv' target='_new'>Raw characters and conversations data</a></em>)<br />
+                (<em><a href='https://github.com/sxywu/hamilton/tree/master/data/meta/themes.csv' target='_new'>Raw themes data</a></em>)<br />
+              </p>
+
+              <p>
+                Now that I had all the raw data, I wanted to join the metadata (characters.csv and themes.csv) with the actual lyrics.  At first, I gave each line a key and mapped the data onto that, but after seeing how messy and abundant the small dots were, I decided to group the lines by a consecutive set of lines by a singer.
+                <a class="fancybox" href="data/shirley/dots_before_after.jpg"> <img src="data/shirley/dots_before_after.jpg" class="img-responsive img-month"></a>
+                The code for joining the metadata to the lines can be found in <a href='https://github.com/sxywu/hamilton/tree/master/merge.js' target='_new'>merge.js</a>, and the resulting processed data can be found in <a href='https://github.com/sxywu/hamilton/tree/master/src/data' target='_new'>src/data</a> (which has a README).  The format of the processed data is unfortunately convoluted, since I had to deal with the fact that themes could start in the middle of a set of lines and span several of them.
+              </p>
+
+              <!-- <a class="fancybox" href="data/shirley/all_appearances.png"> <img src="data/shirley/all_appearances.png" class="img-responsive img-month"></a> -->
+
+              <h3>forever <span class="light-grey">|</span> sketch, code, repeat</h3>
+
+              <p>
+                <a class="fancybox" href="sketches/shirley/sketch1.jpg"> <img src="sketches/shirley/sketch1.jpg" class="img-responsive img-month"></a>
+                Once I had the data, I knew I wanted to lay out the lines in a way I could get a sense of who was singing when and for how long.  To do that, I thought of two versions of how to depict a line: a circle and a long, narrow bar.  To indicate when a line was a recurring phrase, I played around with the idea of a diamond that stretched across lines.  And to deal with multiple singers in a line, I thought of overlapping narrower bars on top of each other.
+              </p>
+
+              <p>
+                (Looking at the original sketches, I am amazed by how foolishly ambitious I was; to think that I wanted to switch between views grouped by characters, songs, and layed out by song, and then also have filter capabilities in all those views.  I was young and naive.)
+              </p>
+
+              <p>
+                <a class="fancybox" href="code/shirley/position.jpg"> <img src="code/shirley/position.jpg" class="img-responsive img-month"></a>
+                (<em><a href='https://github.com/sxywu/hamilton/blob/28c7986e4cc582d1229d10836afc89861fdd3caa/src/PositionGraph.js' target='_new'>The convoluted code for positioning the lines</a></em>)
+              </p>
+
+              <p>
+                The first thing I did when I got back to the computer was to figure out how to lay out the lines by song.  Positioning things always always turns out more painful than I give it credit for, and after some bugs and mishaps (<em>math</em> and <em>svg paths</em>) I ended up with the first vertical version, and eventually the horizontal version with the themed diamonds.  (That last one has a <em>super</em> subtle bug that took me a while to notice - any Hamilton fans notice it?)
+              </p>
+
+              <p>
+                Now if I thought the positioning was bad (that thing only took a few days), the filters were a nightmare.  It took me a few weeks on and off to work through all the logic and bugs - I paced around my bedroom and around my living room muttering to myself (the whole freelancing and working by myself thing has had an interesting effect on my social skills).  I hadn't felt so frustrated and happy and alive with a piece of code in a long time.
+              </p>
+
+              <p>
+                <a class="fancybox" href="code/shirley/filter.jpg"> <img src="code/shirley/filter.jpg" class="img-responsive img-month"></a>
+                The final logic I ended up with:
+                <ul>
+                  <li>filtering by characters is an AND operation; I only keep the songs with <em>all</em> the selected characters</li>
+                  <li>filtering by conversations is an OR operation; I keep any song with even one of the selected conversations</li>
+                  <li>filtering by themes is an OR operation; I keep any song with even one of the selected themes</li>
+                  <li>filtering between the categories is an AND operation</li>
+                </ul>
+                (Again, I've no idea why I chose something so convoluted...)
+              </p>
+
+              <p>
+                And the interaction that stumped me a bit when filtering: after a certain combination of filters, there are characters, conversations, and themes that can no longer be selected.  Take, for example, if we filter by Philip Hamilton (#4 in the above image): notice that some characters, conversations, and themes are missing, denoted only with dotted outlines.  This is because Philip doesn't have that many lines, so the songs that he is in (Take a Break, Schuyler Defeated, Stay Alive (Reprise)) don't have many other characters singing.  If I allow a user to select any of those characters that don't have a line in those songs, no songs will show up and confuse the user, so after a bit of consideration, I decided to simply disable those users if they no longer appear in the songs.
+              </p>
+
+              <p>
+                I worked out four states that a character, conversation, or theme could be in:
+                <ul>
+                  <li>it is selected (colored and 100% opacity)</li>
+                  <li>at least one of its corresponding lines are highlighted because of some other filter applied (colored and partial opacity).  For example, if Eliza the character is selected, her corresponding conversations and themes should be highlighted.</li>
+                  <li>at least one of its corresponding lines are in the song, but not highlighted (gray and partial opacity)</li>
+                  <li>none of its corresponding lines are in the song (missing with dotted outline)</li>
+                </ul>
+                (The only difference between this and the final version is that for missing characters, conversations, and themes, I don't show them all together.)
+              </p>
+
+              <p>
+                <center>✨✨✨</center>
+              </p>
+
+              <p>
+                After I had worked out most of the bugs in the filter, I started to use it to look for insights.  At first, I concentrated on the relationship between Hamilton and Burr, but after talking to Taia (my Hamilton expert), she convinced me that there were enough Hamilton-Burr analysis out there and that Eliza and Angelica would be so much more interesting instead.  I wholeheartedly agreed.
+              </p>
+
+              <p>
+                I filtered by Eliza and Angelica, then by Eliza-Alexander and Angelica-Alexander, and then by their conversations.  I then looked at what themes were most commonly associated with all of them.  The most awesomely pleasant surprise: I had expected Eliza to most frequently sing "Helpless", but instead, she sang "look around at how lucky we are alive right now" and "that would be enough/what would be enough" far more often.  I think that is the point at which I really fell in love with her character, at how optismitic she was, and how much she matures throughout the story.
+              </p>
+
+              <p>
+                Here are the notes from my analysis:
+                <a class="fancybox" href="code/shirley/notes.jpg"> <img src="code/shirley/notes.jpg" class="img-responsive img-month"></a>
+              </p>
+
+              <p>
+                And then came a long stretch of writer's block.  I went through 3 rounds of rough drafts, none of which I was satisfied with (and none of which anybody will ever see again haha).  I knew starting out that I was going to struggle with writing the most - I like to say I'm a horrid writer, but it's really just that I'm a horribly <em>slow</em> writer.  I reassured myself that hey - I got the visuals part covered, and though I'm a very <em>slow</em> writer, I'm not a <em>bad</em> writer.  How hard could it be to combine those two?
+              </p>
+
+              <p>
+                Very <em>very</em> hard.  I was naive (again).
+              </p>
+
+              <p>
+                It was like a muscle I've never exercised, and though I could do both tasks separately, I had never thought of how to weave both the visuals and the words together.  My mind naturally thought of how to code all the visuals (a very well exercised muscle), and it was hard forcing my brain to think of any words.  This whole struggle gave me an even bigger respect for data journalists.  So much respect.
+              </p>
+
+              <p>
+                <a class="fancybox" href="sketches/shirley/sketch2.jpg"> <img src="sketches/shirley/sketch2.jpg" class="img-responsive img-month"></a>
+                This was one of my first attempts at laying out the story.  From the beginning, I knew I wanted to try to appeal to a wider audience, many that may not be used to the dataviz that I'm used to (a point Elijah also made to me when I showed him my filter tool for feedback).  I wanted to ease them in slowly to get them used to all the different layouts and the concept of my filter tool, so I originally had a lot of introduction planned.  I also knew that it'd be a long article, and so wanted to delight the viewer to stick around (an important lesson I learned from Tony's <a href='https://www.youtube.com/watch?v=Z4tB6qyxHJA' target='_new'>Animation, Pacing, and Exposition</a>).  To do that, I used D3's new force layout to position the dots, and then have them explode out, and then zoom back together.  It's a (cheap but) fun effect, and did indeed seem to delight when I showed it to a few people at d3.unconf:
+                <a class="fancybox" href="code/shirley/hamilton_scroll.gif"> <img src="code/shirley/hamilton_scroll.gif" class="img-responsive img-month"></a>
+              </p>
+
+              <p>
+                At this point after the intro sections, I was stuck.  I didn't know how I wanted to get to the meat of my analysis, and it languished for most of October as I worked on other projects.
+              </p>
+
+              <p>
+                <center>✨✨✨</center>
+              </p>
+
+              <p>
+                <a class="fancybox" href="sketches/shirley/sketch3.jpg"> <img src="sketches/shirley/sketch3.jpg" class="img-responsive img-month"></a>
+                I got back to Hamilton on Election Day, right after finishing my October data sketches and write-up.  The break from Hamilton was especially helpful to clear up my head, and I went back to my notebook to figure out how I wanted to convey my analysis and insights.
+              </p>
+
+              <p>
+                The biggest breakthrough for me in this sketch was how to convey the themes, which I was struggling with; the diamonds were good to point out where the recurring phrases were, but it made the visual too cluttered especially with all the colors I had to use to distinguish them (which also added to the confusion, because I was already using colors to identify characters).  This version of an arc and then a label (first letter of theme and a number) appealed to me not only because it was so much simpler and used no color, but because it also looked like the notations on a music sheet.  To add to the reference further, I wanted to also have the musical staff, which could help indicate length of the lines:
+                <a class="fancybox" href="code/shirley/with_staff.png"> <img src="code/shirley/with_staff.png" class="img-responsive img-month"></a>
+                Each section indicates 10 lines, with 70 lines across.  I quite liked the effect, but it also looked cluttered and created confusion when I showed it to a few people.  I had to agree that removing the staff was for the better, but kept the themes as the arcs looked so much cleaner than the diamonds:
+                <a class="fancybox" href="code/shirley/without_staff.png"> <img src="code/shirley/without_staff.png" class="img-responsive img-month"></a>
+                With the visual part of the analysis figured out, the outline came much easier, and I managed to finish most of my final draft on my flight to Singapore (17...hours...never...again...):
+                <a class="fancybox" href="sketches/shirley/sketch4.jpg"> <img src="sketches/shirley/sketch4.jpg" class="img-responsive img-month"></a>
+              </p>
+
+              <p>
+                <center>✨✨✨</center>
+              </p>
+
+              <p>
+                When I was almost to the finish line, I showed <a href='https://twitter.com/sarah_edo' target='_new'>Sarah Drasner</a> (who I got to meet at JSConf Asia and she was such an awesome individual) for feedback on the animation, and her immediate reaction was, "Canvas!  You need Canvas."  At ~1700 path elements, SVG was doing alright.  But on scroll, you could start to see the lag in update.
+              </p>
+
+              <p>
+                So I started on converting all the SVG to Canvas.  And as <a href='https://twitter.com/syntagmatic' target='_new'>Kai</a> always says, when Canvas breaks, it breaks in the most wonderful way; my very first attempt, it broke and made very Jackson Pollock art (be patient with the gif, it's large and may take a bit to load):
+                <a class="fancybox" href="code/shirley/hamilton_broke.gif"> <img src="code/shirley/hamilton_broke.gif" class="img-responsive img-month"></a>
+                Once I got Canvas rendering everything as it did before, the performance was indeed so much better.  The next step was to add in the interaction with hidden Canvas (if you're not familiar, Nadieh has a great explanation <a href='http://www.visualcinnamon.com/2015/11/learnings-from-a-d3-js-addict-on-starting-with-canvas.html' target='_new'>here</a>):
+                <a class="fancybox" href="code/shirley/canvas_interaction.jpg"> <img src="code/shirley/canvas_interaction.jpg" class="img-responsive img-month"></a>
+                This is where I encountered the most frustrating bug I've had in a while.  I would hover over a line, and though the Canvas and hidden Canvas were clearly positioned at the same x and y, the tooltip would react incorrectly:
+                <a class="fancybox" href="code/shirley/hamilton_hover_bug.gif"> <img src="code/shirley/hamilton_hover_bug.gif" class="img-responsive img-month"></a>
+                It took me hours of agony to realize that, because I had scaled both of the canvases by 2x to make sure Canvas would display crisply on retina, the underlying Canvas image data was also scaled by 2x.  But I was getting the x- and y-positions and instead of multiplying those numbers by 2, was directly querying for the data.  Which is why when I hovered, the tooltips that popped up were all at about half the x and y-positions of where I was truly hovering.
+              </p>
+
+              <p>
+                Once I had that figured out, everything was relatively smooth after.  I made final edits to my content, fixed some more positioning bugs with the tooltip, and spent another agonizing day making everything mobile-friendly.  (Making things mobile-friendly is always emotionally draining for me.)  One of my favorite final things I did, was to highlight the corresponding song that I mention in the analysis as user scrolls:
+                <a class="fancybox" href="code/shirley/hamilton_focus.gif"> <img src="code/shirley/hamilton_focus.gif" class="img-responsive img-month"></a>
+                And one more Canvas broke and made beautiful art:
+                <a class="fancybox" href="code/shirley/canvas_bug.png"> <img src="code/shirley/canvas_bug.png" class="img-responsive img-month"></a>
+              </p>
+
+              <p>
+                Here's the (filter tool) I ended up with.  Click on the gif to read and explore:
+                <a href="http://polygraph.cool/hamilton" target='_new'> <img src="code/shirley/hamilton5.gif" class="img-responsive img-month"></a>
+                Hamilton has been a journey.  While working on the project, I also designed and coded the first version of <a href='http://sxywu.com/' target='_new'>my portfolio website</a>, partially designed the data sketch|es website, helped organize <a href='http://visfest.com/d3unconf-2016/' target='_new'>d3.unconf</a>, finished <a href='http://datasketch.es/august' target='_new'>August</a>, <a href='http://datasketch.es/september' target='_new'>September</a>, and <a href='http://datasketch.es/october' target='_new'>October</a> data sketches, went to Singapore for JSConf Asia, and worked on two other contracts (one of which was a <a href='http://politics.andyourbrain.com/debate/' target='_new'>visualization of viewer response to the second presidential debate</a>, which I thoroughly enjoyed).  It was hard and I got stuck quite a few times, but I'm so glad to have the experience and am ridiculously happy with how it turned out.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Our names and website below -->
+        <div class="row">
+          <div class="nadieh col-xs-6">
+            <div class="name kingBasil">Nadieh</div>
+            <div class="quicksand"><a href="http://www.visualcinnamon.com/">VisualCinnamon.com</a></div>
+          </div>
+
+          <div class="shirley col-xs-6">
+            <div class="name kingBasil">Shirley</div>
+            <div class="quicksand"><a href="http://sxywu.com/">sxywu.com</a></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div>
+          <span>a monthly collaboration between </span>
+          <span class="kingBasil">Nadieh Bremer & Shirley Wu</span>
+        </div>
+        <div class="quicksand">
+          <a href="https://twitter.com/datasketches">@datasketches</a><span class="pipe-divider">  |  </span>#datasketches
+        </div>
+        <div class="about-link quicksand">
+          <a href="../about">about</a><span class="pipe-divider">  |  </span><a href="../feed.xml">rss</a><span class="pipe-divider">  |  </span><a href="https://tinyletter.com/datasketches">newsletter</a>
+        </div>
+      </div>
+    </footer>
+
+	<script>
+  function setTime() {
+    var format = 'h:mm a';
+    var time = new Date();
+    var nadieh = moment(time, format).tz("Europe/Amsterdam");
+    var shirley = moment(time, format).tz("America/Los_Angeles");
+    $('.nadieh .time').text(nadieh.format(format));
+    $('.shirley .time').text(shirley.format(format));
+
+    var nadiehColor = nadieh.hour();
+    nadiehColor = nadiehColor >= 18 || nadiehColor <= 6 ? 'dark' : 'light';
+    var shirleyColor = shirley.hour();
+    shirleyColor = shirleyColor >= 18 || shirleyColor <= 6 ? 'dark' : 'light';
+
+    $('.nadieh').removeClass('light dark').addClass(nadiehColor);
+    $('.shirley').removeClass('light dark').addClass(shirleyColor);
+  }
+
+  $( document ).ready( function() {
+    setTime();
+    setInterval(setTime, 60000);
+    $(".fancybox").fancybox({
+      openEffect : 'fade',
+      closeEffect : 'fade',
+      padding: 0,
+      helpers: {
+      overlay: {
+        locked: false
+      }
+      }
+    });
+  });
+    </script>
+    
+    <!-- Google analytics -->
+	<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-43942889-3', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+
+	<channel>
+		<title>data sketches</title>
+		<atom:link href="http://www.datasketch.es/feed" rel="self" type="application/rss+xml" />
+		<link>http://www.datasketch.es</link>
+		<description>A Nadieh and Shirley collaboration - Creating a data visualization a month on the same topic and sharing the data, sketching and coding steps along the way</description>
+		<image>
+	    	<url>http://www.datasketch.es/img/logo.png</url>
+	    	<title>data sketches</title>
+	      	<link>http://www.datasketch.es</link>
+	  	</image>
+	  	<category>Data Visualization</category>
+	  	<category>Data Art</category>
+	  	<language>en-US</language>
+
+		<item>
+			<title>March - Culture</title>
+			<link>http://www.datasketch.es/march</link>
+			<guid>http://www.datasketch.es/march</guid>
+			<pubDate>Fri, 31 Mar 2017 08:00:00 GMT</pubDate>
+			<description><![CDATA[<img width="1020" height="520" src="http://www.datasketch.es/img/march.jpg" alt="The final March visuals" style="display: block; margin: auto; margin-bottom: 5px;" />
+			<p>This month we've had a lot of fun collaborating with Google News Lab! Nadieh dove into what other languages want translated into English the most. Shirley instead focused on figuring out what other countries search for as tourist destinations in other countries. Read more about the exact data + sketch + code that we performed in our write-up...</p>]]></description>
+		</item>
+
+		<item>
+			<title>January - Nostalgia</title>
+			<link>http://www.datasketch.es/january</link>
+			<guid>http://www.datasketch.es/january</guid>
+			<pubDate>Tue, 31 Jan 2017 08:00:00 GMT</pubDate>
+			<description><![CDATA[<img width="1020" height="520" src="http://www.datasketch.es/img/january.jpg" alt="The final January visuals" style="display: block; margin: auto; margin-bottom: 5px;" />
+			<p>Nadieh looked back at her favorite childhood past times, and packed in arcs, gifs, and annotations to visualize all of the fights in Dragon Ball Z. Shirley finally got her wish to visualize something from the Harry Potter franchise, and looked into the most popular ships in fanfiction. And our guest Nicholas created fireworks for every Scrabble game he played with his family in 2013 - and he did it in only (one year and) three days! Read more about the exact data + sketch + code that we performed in our write-up...</p>]]></description>
+		</item>
+
+		<item>
+			<title>December - Music</title>
+			<link>http://www.datasketch.es/december</link>
+			<guid>http://www.datasketch.es/december</guid>
+			<pubDate>Sat, 31 Dec 2016 08:00:00 GMT</pubDate>
+			<description><![CDATA[<img width="1020" height="400" src="http://www.datasketch.es/img/december.jpg" alt="The final December visuals" style="display: block; margin: auto; margin-bottom: 5px;" />
+			<p>Shirley got her hands on the dance moves of 2000 DDR songs and went crazy with spirals, while Nadieh visualized the distribution of release year of the Top 2000 songs ever made to see which decade is loved the most. Read more about the exact data + sketch + code that we performed in our write-up...</p>]]></description>
+		</item>
+
+		<item>
+			<title>November - Books</title>
+			<link>http://www.datasketch.es/november</link>
+			<guid>http://www.datasketch.es/november</guid>
+			<pubDate>Wed, 30 Nov 2016 08:00:00 GMT</pubDate>
+			<description><![CDATA[<img width="1020" height="400" src="http://www.datasketch.es/img/november.jpg" alt="The final November visuals" style="display: block; margin: auto; margin-bottom: 5px;" />
+			<p>Nadieh's love for Fantasy books turned into an investigation of the titles of ±900 fantasy books to look for similar themes. While Shirley dove deep into Hamilton and the lines & themes present to tell the stories of Eliza and Angelica. Read more about the exact data + sketch + code that we performed in our write-up...</p>]]></description>
+		</item>
+
+		<item>
+			<title>October - Presidents and Royals</title>
+			<link>http://www.datasketch.es/october</link>
+			<guid>http://www.datasketch.es/october</guid>
+			<pubDate>Mon, 31 Oct 2016 08:00:00 GMT</pubDate>
+			<description><![CDATA[<img width="1020" height="400" src="http://www.datasketch.es/img/october.jpg" alt="The final October visuals" style="display: block; margin: auto; margin-bottom: 5px;" />
+			<p>With the Obama's leaving the white house soon Shirley investigated the emotions displayed in their tv-appearances to give the elections a bit of fun. In Europe, on the other hand, a presidential family is more equivalent to the Royal houses. Therefore, Nadieh investigated the family trees and how connected the current royal leaders really are. Read more about the exact data + sketch + code that we performed in our write-up...</p>]]></description>
+		</item>
+
+		<item>
+			<title>September - Travel</title>
+			<link>http://www.datasketch.es/september</link>
+			<guid>http://www.datasketch.es/september</guid>
+			<pubDate>Fri, 30 Sep 2016 08:00:00 GMT</pubDate>
+			<description><![CDATA[<img width="1020" height="400" src="http://www.datasketch.es/img/september.jpg" alt="The final September visuals" style="display: block; margin: auto; margin-bottom: 5px;" />
+			<p>Another month with a personal angle. Since we both like to travel and see the world we wanted to dive into our past vacations. Nadieh digged up as much information as she could about every vacation that she's ever been on since birth. Shirley focused on the colors in the photos taken in the last few years. Read more about the exact data + sketch + code that we performed in our write-up...</p>]]></description>
+		</item>
+
+		<item>
+			<title>August - Olympics</title>
+			<link>http://www.datasketch.es/august</link>
+			<guid>http://www.datasketch.es/august</guid>
+			<pubDate>Wed, 31 Aug 2016 08:00:00 GMT</pubDate>
+			<description><![CDATA[<img width="1020" height="400" src="http://www.datasketch.es/img/august.jpg" alt="The final August visuals" style="display: block; margin: auto; margin-bottom: 5px;" />
+			<p>With both of us Olympics fans we couldn't have any other topic this month. Shirley focused on creating an artful representation of the diving routines, while Nadieh visualized all 5000 gold medal winners of the summer editions since the very first Olympic Games in 1896. Read more about the exact data + sketch + code that we performed in our write-up...</p>]]></description>
+		</item>
+
+		<item>
+			<title>July - Movies</title>
+			<link>http://www.datasketch.es/july</link>
+			<guid>http://www.datasketch.es/july</guid>
+			<pubDate>Sun, 31 Jul 2016 08:00:00 GMT</pubDate>
+			<description><![CDATA[<img width="1020" height="400" src="http://www.datasketch.es/img/july.jpg" alt="The final July visuals" style="display: block; margin: auto; margin-bottom: 5px;" />
+			<p>For our very first month we looked into movies that have a personal connection to us. For Nadieh that turned out to be a deep dive into the number of words spoken in all 3 extended editions of the Lord of the Rings. Shirley looked into the top summer movies since the year of her birth. Read more about the exact data + sketch + code that we performed in our write-up...</p>]]></description>
+		</item>
+
+	</channel>
+</rss>
